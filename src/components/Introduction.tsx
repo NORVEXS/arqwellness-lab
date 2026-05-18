@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
     <section
       id="introduction"
       aria-label={t('hero.eyebrow')}
-      className="relative isolate overflow-hidden bg-surface pt-32 pb-24 dark:bg-surface-dark sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-32"
+      className="relative isolate overflow-hidden bg-surface pt-24 pb-16 dark:bg-surface-dark sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
     >
       {/* Layer 1 — diffuse colour wash */}
       <div
@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={80}>
-          <h1 className="mt-8 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white">
+          <h1 className="mt-6 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white sm:mt-8">
             <span>{t('hero.titleA')}</span>{' '}
             <span className="text-brand-blue dark:text-brand-blue-soft">
               {t('hero.titleB')}
@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={160}>
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:mt-7 sm:text-lg">
             {emphasize(t('hero.lede'), [
               'salud',
               'confort',
@@ -155,7 +155,7 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={240}>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8">
             <button type="button" onClick={() => goTo('about')} className="btn-primary">
               <span>{t('hero.ctaPrimary')}</span>
               <ArrowRight className="h-4 w-4" />
@@ -170,7 +170,7 @@ const Hero: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-2 gap-x-8 gap-y-10 sm:mt-24 sm:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-7 sm:mt-20 sm:grid-cols-4 sm:gap-y-10">
           {STATS.map((key, i) => (
             <HeroStat
               key={key}

@@ -206,12 +206,14 @@ const Contact: React.FC = () => {
 
           {/* Form */}
           <Reveal delay={120} className="lg:col-span-7">
-            <div className="rounded-2xl bg-white p-6 shadow-large sm:p-8">
+            <div className="rounded-2xl border border-line bg-white p-6 shadow-large dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none sm:p-8">
               <header>
-                <h3 className="font-display text-2xl font-medium text-ink">
+                <h3 className="font-display text-2xl font-medium text-ink dark:text-white">
                   {t('contact.form.title')}
                 </h3>
-                <p className="mt-2 text-sm text-ink-soft">{t('contact.form.lede')}</p>
+                <p className="mt-2 text-sm text-ink-soft dark:text-white/65">
+                  {t('contact.form.lede')}
+                </p>
               </header>
 
               <form onSubmit={onSubmit} className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -219,43 +221,43 @@ const Contact: React.FC = () => {
                 <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} />
 
                 <label className="text-left sm:col-span-1">
-                  <span className="eyebrow !text-ink-mute">{t('contact.form.name')}</span>
+                  <span className="eyebrow !text-ink-mute dark:!text-white/55">{t('contact.form.name')}</span>
                   <input
                     required
                     name="name"
                     type="text"
                     placeholder={t('contact.form.namePlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30"
+                    className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/40 dark:focus:border-brand-blue-soft dark:focus:ring-brand-blue-soft/30"
                   />
                 </label>
                 <label className="text-left sm:col-span-1">
-                  <span className="eyebrow !text-ink-mute">{t('contact.form.email')}</span>
+                  <span className="eyebrow !text-ink-mute dark:!text-white/55">{t('contact.form.email')}</span>
                   <input
                     required
                     name="email"
                     type="email"
                     placeholder={t('contact.form.emailPlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30"
+                    className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/40 dark:focus:border-brand-blue-soft dark:focus:ring-brand-blue-soft/30"
                   />
                 </label>
                 <label className="text-left sm:col-span-2">
-                  <span className="eyebrow !text-ink-mute">{t('contact.form.subject')}</span>
+                  <span className="eyebrow !text-ink-mute dark:!text-white/55">{t('contact.form.subject')}</span>
                   <input
                     required
                     name="subject"
                     type="text"
                     placeholder={t('contact.form.subjectPlaceholder')}
-                    className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30"
+                    className="mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/40 dark:focus:border-brand-blue-soft dark:focus:ring-brand-blue-soft/30"
                   />
                 </label>
                 <label className="text-left sm:col-span-2">
-                  <span className="eyebrow !text-ink-mute">{t('contact.form.message')}</span>
+                  <span className="eyebrow !text-ink-mute dark:!text-white/55">{t('contact.form.message')}</span>
                   <textarea
                     required
                     name="message"
                     rows={5}
                     placeholder={t('contact.form.messagePlaceholder')}
-                    className="mt-2 w-full resize-none rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30"
+                    className="mt-2 w-full resize-none rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/40 dark:focus:border-brand-blue-soft dark:focus:ring-brand-blue-soft/30"
                   />
                 </label>
 
@@ -264,20 +266,20 @@ const Contact: React.FC = () => {
                     required
                     type="checkbox"
                     name="consent"
-                    className="mt-1 h-4 w-4 rounded border-line text-brand-blue focus:ring-brand-blue/40"
+                    className="mt-1 h-4 w-4 rounded border-line text-brand-blue focus:ring-brand-blue/40 dark:border-white/20 dark:bg-white/[0.04] dark:text-brand-blue-soft"
                   />
-                  <span className="text-xs text-ink-mute">{t('contact.form.consent')}</span>
+                  <span className="text-xs text-ink-mute dark:text-white/55">{t('contact.form.consent')}</span>
                 </label>
 
                 <div className="flex items-center justify-between gap-3 sm:col-span-2">
                   <div role="status" aria-live="polite" className="text-sm">
                     {status === 'success' && (
-                      <span className="inline-flex items-center gap-1.5 text-brand-blue">
+                      <span className="inline-flex items-center gap-1.5 text-brand-blue dark:text-brand-blue-soft">
                         <Check className="h-4 w-4" /> {t('contact.form.success')}
                       </span>
                     )}
                     {status === 'error' && (
-                      <span className="inline-flex items-center gap-1.5 text-brand-red">
+                      <span className="inline-flex items-center gap-1.5 text-brand-red dark:text-brand-red-soft">
                         <AlertTriangle className="h-4 w-4" /> {t('contact.form.error')}
                       </span>
                     )}
