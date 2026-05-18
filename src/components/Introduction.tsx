@@ -47,18 +47,14 @@ const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
   const counted = useCountUp(num ?? 0, 1400, active && num !== null);
 
   return (
-    <div
-      ref={ref}
-      className="reveal min-w-0"
-      style={{ transitionDelay: `${index * 60}ms` }}
-    >
-      <div className="flex items-baseline gap-1">
-        <span className="text-xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
+    <div ref={ref} className="reveal" style={{ transitionDelay: `${index * 60}ms` }}>
+      <div className="flex items-baseline gap-1.5">
+        <span className="text-2xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
           {num === null ? value : `${prefix}${counted}${suffix}`}
         </span>
       </div>
 
-      <div className="mt-0.5 max-w-full break-words font-mono text-[8px] uppercase leading-snug tracking-[0.12em] text-ink-mute dark:text-white/55 sm:mt-1.5 sm:text-[10px] sm:tracking-[0.2em]">
+      <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/55 sm:mt-1.5 sm:text-[10px] sm:tracking-[0.2em]">
         {label}
       </div>
     </div>
@@ -73,7 +69,7 @@ const Hero: React.FC = () => {
     <section
       id="introduction"
       aria-label={t('hero.eyebrow')}
-      className="relative isolate flex min-h-screen flex-col justify-center overflow-hidden bg-surface pt-24 pb-16 dark:bg-surface-dark sm:block sm:min-h-0 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
+      className="relative isolate flex min-h-screen flex-col justify-center overflow-hidden bg-surface pt-16 pb-10 dark:bg-surface-dark sm:block sm:min-h-0 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
     >
       {/* Layer 1 — diffuse colour wash */}
       <div
@@ -183,7 +179,7 @@ const Hero: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-3 sm:mt-20 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-10">
+        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:mt-20 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-10">
           {STATS.map((key, i) => (
             <HeroStat
               key={key}
