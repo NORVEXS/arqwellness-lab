@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Compass, Target, FlaskConical } from 'lucide-react';
+import { Crosshair, Telescope, Microscope } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
@@ -9,9 +9,9 @@ import { LEADS, SENIORS, OTHERS } from '../data/team';
 import TeamCard from './ui/TeamCard';
 
 const PILLARS: { key: 'mission' | 'vision' | 'approach'; Icon: any; tone: string }[] = [
-  { key: 'mission', Icon: Target, tone: 'text-brand-blue' },
-  { key: 'vision', Icon: Compass, tone: 'text-brand-purple' },
-  { key: 'approach', Icon: FlaskConical, tone: 'text-brand-red' },
+  { key: 'mission', Icon: Crosshair, tone: 'text-brand-blue' },
+  { key: 'vision', Icon: Telescope, tone: 'text-brand-purple' },
+  { key: 'approach', Icon: Microscope, tone: 'text-brand-red' },
 ];
 
 const AboutUs: React.FC = () => {
