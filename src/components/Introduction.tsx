@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import Reveal from './ui/Reveal';
+import HeroCanvas from './ui/HeroCanvas';
 import { scrollToSection } from '../lib/scroll';
 import { useCountUp } from '../hooks/useCountUp';
 import { useReveal } from '../hooks/useReveal';
@@ -71,6 +72,13 @@ const Hero: React.FC = () => {
             'radial-gradient(60% 50% at 80% 0%, rgba(45, 92, 136, 0.07) 0%, transparent 60%), radial-gradient(50% 45% at 10% 20%, rgba(59, 48, 130, 0.06) 0%, transparent 60%)',
         }}
       />
+      {/* Subtle constellation — fades into background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40 [mask-image:radial-gradient(ellipse_at_center,#000_0%,transparent_75%)]"
+      >
+        <HeroCanvas />
+      </div>
 
       <div className="container-x">
         <Reveal>
