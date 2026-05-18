@@ -63,22 +63,54 @@ const Hero: React.FC = () => {
       aria-label={t('hero.eyebrow')}
       className="relative isolate overflow-hidden bg-surface pt-32 pb-24 sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-32"
     >
-      {/* Quiet radial wash */}
+      {/* Layer 1 — diffuse colour wash */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            'radial-gradient(60% 50% at 80% 0%, rgba(45, 92, 136, 0.07) 0%, transparent 60%), radial-gradient(50% 45% at 10% 20%, rgba(59, 48, 130, 0.06) 0%, transparent 60%)',
+            'radial-gradient(65% 55% at 82% -5%, rgba(45, 92, 136, 0.11) 0%, transparent 65%), radial-gradient(55% 50% at 8% 18%, rgba(59, 48, 130, 0.09) 0%, transparent 65%), radial-gradient(40% 40% at 95% 95%, rgba(162, 1, 3, 0.05) 0%, transparent 70%)',
         }}
       />
-      {/* Subtle constellation — fades into background */}
+
+      {/* Layer 2 — engineering grid, very faint */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,#000_30%,transparent_80%)]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(16,21,36,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(16,21,36,0.045) 1px, transparent 1px)',
+          backgroundSize: '64px 64px',
+        }}
+      />
+
+      {/* Layer 3 — paper noise for analog feel */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] mix-blend-multiply"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.08 0 0 0 0 0.14 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+        }}
+      />
+
+      {/* Layer 4 — constellation */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 opacity-90 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_85%)]"
       >
         <HeroCanvas />
       </div>
+
+      {/* Layer 5 — subtle vignette on the edges */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(16,21,36,0.06) 100%)',
+        }}
+      />
 
       <div className="container-x">
         <Reveal>
