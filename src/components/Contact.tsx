@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
                     name="message"
                     rows={5}
                     placeholder={t('contact.form.messagePlaceholder')}
-                    className="mt-2 w-full resize-none rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/40 dark:focus:border-brand-blue-soft dark:focus:ring-brand-blue-soft/30"
+                    className="mt-2 block w-full resize-none appearance-none rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-subtle focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/30 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/40 dark:focus:border-brand-blue-soft dark:focus:ring-brand-blue-soft/30 [-webkit-appearance:none]"
                   />
                 </label>
 
