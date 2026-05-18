@@ -361,10 +361,10 @@
         "value": "+34 954 55 65 60"
       },
       "social": {
-        "label": "Social",
-        "twitter": "Twitter / X",
-        "instagram": "Instagram",
-        "linkedin": "LinkedIn"
+        "label": "Social & publications",
+        "instagram": "Instagram @arqwellness_us",
+        "youtube": "YouTube channel",
+        "scholar": "Google Scholar profile"
       }
     },
     "form": {

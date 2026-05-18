@@ -166,7 +166,7 @@
     },
     "tep1000": {
       "code": "TEP-1000",
-      "name": "Comfort and Energy Use in Buildings",
+      "name": "Confort y eficiencia energética en edificios",
       "description": "Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla, radicado en la Escuela Técnica Superior de Arquitectura. Reúne investigadores de Construcciones Arquitectónicas I y Medicina Preventiva y Pediátrica.",
       "members": [
         "Carmen Galán",
@@ -361,10 +361,10 @@
         "value": "+34 954 55 65 60"
       },
       "social": {
-        "label": "Redes",
-        "twitter": "Twitter / X",
-        "instagram": "Instagram",
-        "linkedin": "LinkedIn"
+        "label": "Redes y publicaciones",
+        "instagram": "Instagram @arqwellness_us",
+        "youtube": "Canal de YouTube",
+        "scholar": "Perfil en Google Scholar"
       }
     },
     "form": {

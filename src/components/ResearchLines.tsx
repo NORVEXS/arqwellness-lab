@@ -74,7 +74,7 @@ const ResearchLines: React.FC = () => {
 
                 <footer className="mt-8 flex items-end justify-between border-t border-line/80 pt-5">
                   <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
-                    ArqWellness · Line {line.key.toUpperCase()}
+                    ArqWellness · {line.key.toUpperCase()}
                   </span>
                   <ArrowUpRight
                     className={`h-5 w-5 transition-transform duration-300 ${accentText[line.accent]} group-hover:-translate-y-0.5 group-hover:translate-x-0.5`}

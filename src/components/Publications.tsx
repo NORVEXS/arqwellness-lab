@@ -110,12 +110,10 @@ const Publications: React.FC = () => {
                   />
                 </button>
 
+                {isOpen && (
                 <div
                   id={`pub-${pub.id}`}
-                  hidden={!isOpen}
-                  className={`grid gap-8 px-6 pb-7 pt-1 md:grid-cols-[44%_1fr] md:pl-[calc(1.5rem+12rem+1rem)] ${
-                    isOpen ? 'animate-fade-in' : ''
-                  }`}
+                  className="grid animate-fade-in gap-8 px-6 pb-7 pt-1 md:grid-cols-[44%_1fr] md:pl-[calc(1.5rem+12rem+1rem)]"
                 >
                   <div>
                     <h4 className="eyebrow">{t('publications.abstract')}</h4>
@@ -151,6 +149,7 @@ const Publications: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                )}
               </article>
             </Reveal>
           );

@@ -9,9 +9,9 @@ import {
   Check,
   AlertTriangle,
   ArrowUpRight,
-  Twitter,
   Instagram,
-  Linkedin,
+  Youtube,
+  GraduationCap,
 } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
@@ -162,33 +162,36 @@ const Contact: React.FC = () => {
                 <span className="eyebrow text-white/55">
                   {t('contact.channels.social.label')}
                 </span>
-                <div className="mt-4 flex gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   <a
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={t('contact.channels.social.twitter')}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-white/75 transition hover:bg-white/[0.12] hover:text-white"
-                  >
-                    <Twitter className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="https://instagram.com/"
+                    href="https://www.instagram.com/arqwellness_us/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t('contact.channels.social.instagram')}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-white/75 transition hover:bg-white/[0.12] hover:text-white"
+                    className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs text-white/75 transition hover:border-white/25 hover:bg-white/[0.1] hover:text-white"
                   >
                     <Instagram className="h-4 w-4" />
+                    <span>@arqwellness_us</span>
                   </a>
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.youtube.com/channel/UC4D5P6QBasZ4GsBK_hEZeaA"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t('contact.channels.social.linkedin')}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-white/75 transition hover:bg-white/[0.12] hover:text-white"
+                    aria-label={t('contact.channels.social.youtube')}
+                    className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs text-white/75 transition hover:border-white/25 hover:bg-white/[0.1] hover:text-white"
                   >
-                    <Linkedin className="h-4 w-4" />
+                    <Youtube className="h-4 w-4" />
+                    <span>YouTube</span>
+                  </a>
+                  <a
+                    href="https://scholar.google.es/citations?hl=es&user=ma8__HYAAAAJ&view_op=list_works"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t('contact.channels.social.scholar')}
+                    className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs text-white/75 transition hover:border-white/25 hover:bg-white/[0.1] hover:text-white"
+                  >
+                    <GraduationCap className="h-4 w-4" />
+                    <span>Google Scholar</span>
                   </a>
                 </div>
               </div>
