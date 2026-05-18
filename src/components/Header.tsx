@@ -5,6 +5,7 @@ import { NAV_IDS } from '../data/navigation';
 import { useScrollPosition } from '../hooks/useScrollPosition';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { scrollToSection } from '../lib/scroll';
+import ThemeToggle from './ui/ThemeToggle';
 import logo from '../assets/images/logo.png';
 
 const LANGS = [
@@ -51,15 +52,18 @@ const Header: React.FC = () => {
             goTo('introduction');
           }}
           className="flex items-center gap-3"
+          aria-label={t('logoAlt')}
         >
-          <img
-            src={logo}
-            alt={t('logoAlt')}
-            className="h-8 w-auto sm:h-9"
-            width={420}
-            height={70}
-            decoding="async"
-          />
+          <span className="block dark:rounded-lg dark:bg-white dark:px-2 dark:py-1.5 dark:shadow-sog">
+            <img
+              src={logo}
+              alt={t('logoAlt')}
+              className="h-7 w-auto sm:h-8"
+              width={420}
+              height={70}
+              decoding="async"
+            />
+          </span>
         </a>
 
         {/* Desktop nav */}
@@ -76,7 +80,9 @@ const Header: React.FC = () => {
                 onClick={() => goTo(id)}
                 aria-current={isActive ? 'page' : undefined}
                 className={`group relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-300 ${
-                  isActive ? 'text-brand-blue' : 'text-ink-soft hover:text-ink'
+                  isActive
+                    ? 'text-brand-blue dark:text-brand-blue-soft'
+                    : 'text-ink-soft hover:text-ink dark:text-white/70 dark:hover:text-white'
                 }`}
               >
                 <span>{t(`nav.${id}`)}</span>
@@ -91,6 +97,7 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-1.5">
+          <ThemeToggle />
           {/* Language */}
           <div className="relative">
             <button
@@ -99,7 +106,7 @@ const Header: React.FC = () => {
               aria-haspopup="menu"
               aria-expanded={langOpen}
               aria-label={t('nav.ariaLang')}
-              className="flex items-center gap-1.5 rounded-full border border-line bg-white/70 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-ink-soft transition-colors hover:border-line-strong hover:text-ink"
+              className="flex items-center gap-1.5 rounded-full border border-line bg-white/70 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-ink-soft transition-colors hover:border-line-strong hover:text-ink dark:border-white/15 dark:bg-white/[0.04] dark:text-white/75 dark:hover:border-white/25 dark:hover:text-white"
             >
               <Globe2 className="h-4 w-4" />
               <span>{i18n.language.split('-')[0]}</span>
@@ -107,7 +114,7 @@ const Header: React.FC = () => {
             {langOpen && (
               <div
                 role="menu"
-                className="absolute right-0 mt-2 w-44 overflow-hidden rounded-xl border border-line bg-white shadow-medium"
+                className="absolute right-0 mt-2 w-44 overflow-hidden rounded-xl border border-line bg-white shadow-medium dark:border-white/10 dark:bg-surface-dark-alt"
               >
                 {LANGS.map((l) => (
                   <button
@@ -116,7 +123,7 @@ const Header: React.FC = () => {
                     role="menuitemradio"
                     aria-checked={i18n.language.startsWith(l.code)}
                     onClick={() => changeLang(l.code)}
-                    className="flex w-full items-center justify-between px-4 py-2.5 text-sm text-ink-soft transition hover:bg-surface-alt hover:text-ink"
+                    className="flex w-full items-center justify-between px-4 py-2.5 text-sm text-ink-soft transition hover:bg-surface-alt hover:text-ink dark:text-white/75 dark:hover:bg-white/[0.05] dark:hover:text-white"
                   >
                     <span>{l.label}</span>
                     {i18n.language.startsWith(l.code) && (
@@ -140,7 +147,7 @@ const Header: React.FC = () => {
 
           <button
             type="button"
-            className="rounded-full p-2 text-ink-soft transition-colors hover:bg-surface-alt hover:text-ink lg:hidden"
+            className="rounded-full p-2 text-ink-soft transition-colors hover:bg-surface-alt hover:text-ink dark:text-white/75 dark:hover:bg-white/[0.06] dark:hover:text-white lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t('nav.closeMenu') : t('nav.openMenu')}
@@ -158,7 +165,7 @@ const Header: React.FC = () => {
       >
         <nav
           aria-label={t('nav.ariaPrimary')}
-          className="container-x mt-2 overflow-hidden rounded-2xl border border-line bg-white shadow-large"
+          className="container-x mt-2 overflow-hidden rounded-2xl border border-line bg-white shadow-large dark:border-white/10 dark:bg-surface-dark-alt"
         >
           <ul className="flex flex-col p-2">
             {NAV_IDS.map((id) => {
@@ -170,12 +177,12 @@ const Header: React.FC = () => {
                     onClick={() => goTo(id)}
                     className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-base transition ${
                       isActive
-                        ? 'bg-brand-blue/[0.06] font-semibold text-brand-blue'
-                        : 'text-ink-soft hover:bg-surface-alt hover:text-ink'
+                        ? 'bg-brand-blue/[0.06] font-semibold text-brand-blue dark:bg-brand-blue-soft/15 dark:text-brand-blue-soft'
+                        : 'text-ink-soft hover:bg-surface-alt hover:text-ink dark:text-white/75 dark:hover:bg-white/[0.05] dark:hover:text-white'
                     }`}
                   >
                     <span>{t(`nav.${id}`)}</span>
-                    <span className="font-mono text-[11px] text-ink-mute">
+                    <span className="font-mono text-[11px] text-ink-mute dark:text-white/45">
                       0{NAV_IDS.indexOf(id) + 1}
                     </span>
                   </button>

@@ -110,8 +110,22 @@
         ]
       }
     </script>
+    <script>
+      // Avoid FOUC: apply saved theme before paint
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && prefersDark)) {
+            document.documentElement.classList.add('dark');
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute('content', '#0B0F1A');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body class="bg-surface text-ink antialiased">
+  <body class="bg-surface text-ink antialiased transition-colors duration-300 dark:bg-surface-dark dark:text-white">
     <a href="#main" class="skip-link">Saltar al contenido</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -36,7 +36,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
     return (
       <Tag
         {...linkProps}
-        className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-glow sm:p-6 lg:items-start lg:p-7"
+        className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-glow dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-brand-blue-soft/40 dark:hover:shadow-none sm:p-6 lg:items-start lg:p-7"
       >
         <div
           className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-gradient-to-br from-brand-blue/20 via-brand-purple/15 to-brand-red/10 blur-2xl"
@@ -59,7 +59,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
           </h4>
         </div>
         {person.href && (
-          <ArrowUpRight className="relative mt-0.5 h-4 w-4 shrink-0 text-ink-mute transition-colors group-hover:text-brand-blue" />
+          <ArrowUpRight className="relative mt-0.5 h-4 w-4 shrink-0 text-ink-mute transition-colors group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft" />
         )}
       </Tag>
     );
@@ -69,7 +69,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
     return (
       <Tag
         {...linkProps}
-        className="group flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 transition-colors hover:border-brand-blue/30 hover:bg-surface-alt"
+        className="group flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 transition-colors hover:border-brand-blue/30 hover:bg-surface-alt dark:border-white/10 dark:bg-surface-dark-alt dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.04]"
       >
         <span
           aria-hidden="true"
@@ -78,15 +78,15 @@ const TeamCard: React.FC<TeamCardProps> = ({
           {initials(name)}
         </span>
         <div className="min-w-0 flex-1">
-          <span className="block truncate text-sm font-medium text-ink">{name}</span>
+          <span className="block truncate text-sm font-medium text-ink dark:text-white">{name}</span>
           {showRole && (
-            <span className="block truncate font-mono text-[10px] uppercase tracking-[0.18em] text-ink-mute">
+            <span className="block truncate font-mono text-[10px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/50">
               {role}
             </span>
           )}
         </div>
         {person.href && (
-          <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-ink-subtle transition-colors group-hover:text-brand-blue" />
+          <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-ink-subtle transition-colors group-hover:text-brand-blue dark:text-white/35 dark:group-hover:text-brand-blue-soft" />
         )}
       </Tag>
     );
@@ -96,7 +96,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
   return (
     <Tag
       {...linkProps}
-      className="group flex h-full flex-col items-center justify-start rounded-2xl border border-line bg-white p-4 text-center transition-all duration-300 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-medium sm:p-5"
+      className="group flex h-full flex-col items-center justify-start rounded-2xl border border-line bg-white p-4 text-center transition-all duration-300 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.04] sm:p-5"
     >
       <span
         aria-hidden="true"
@@ -104,16 +104,16 @@ const TeamCard: React.FC<TeamCardProps> = ({
       >
         {initials(name)}
       </span>
-      <h4 className="mt-3 font-display text-sm font-medium leading-snug text-ink display-balance">
+      <h4 className="mt-3 font-display text-sm font-medium leading-snug text-ink display-balance dark:text-white">
         {name}
       </h4>
       {showRole && (
-        <span className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-mute">
+        <span className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/50">
           {role}
         </span>
       )}
       {person.href && (
-        <span className="mt-3 inline-flex items-center gap-1 text-[11px] text-brand-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <span className="mt-3 inline-flex items-center gap-1 text-[11px] text-brand-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-brand-blue-soft">
           {t('team.viewProfile')}
           <ArrowUpRight className="h-3 w-3" />
         </span>

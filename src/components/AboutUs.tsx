@@ -29,7 +29,7 @@ const AboutUs: React.FC = () => {
         <div className="lg:col-span-7">
           <Reveal>
             <figure>
-              <div className="overflow-hidden rounded-2xl bg-white shadow-medium ring-1 ring-line">
+              <div className="overflow-hidden rounded-2xl bg-white shadow-medium ring-1 ring-line dark:bg-surface-dark-alt dark:shadow-none dark:ring-white/10">
                 <img
                   src={membersImg}
                   alt={t('about.imageAlt')}
@@ -38,14 +38,14 @@ const AboutUs: React.FC = () => {
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
-              <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
+              <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/55">
                 <span>Equipo · ETSA Sevilla</span>
-                <span className="text-ink-subtle">TEP-130 · TEP-1000</span>
+                <span className="text-ink-subtle dark:text-white/35">TEP-130 · TEP-1000</span>
               </figcaption>
             </figure>
           </Reveal>
 
-          <div className="mt-8 space-y-5 text-ink-soft">
+          <div className="mt-8 space-y-5 text-ink-soft dark:text-white/70">
             <Reveal as="p" delay={80}>
               {t('about.longA')}
             </Reveal>
@@ -62,15 +62,15 @@ const AboutUs: React.FC = () => {
                 <div className="flex items-start gap-4">
                   <span
                     aria-hidden="true"
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-surface-alt ${tone}`}
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-surface-alt dark:bg-white/[0.06] ${tone}`}
                   >
                     <Icon className="h-5 w-5" />
                   </span>
                   <div className="min-w-0">
-                    <h3 className="font-display text-xl font-medium text-ink">
+                    <h3 className="font-display text-xl font-medium text-ink dark:text-white">
                       {t(`about.pillars.${key}.title`)}
                     </h3>
-                    <p className="mt-2 text-ink-soft leading-relaxed">
+                    <p className="mt-2 text-ink-soft leading-relaxed dark:text-white/70">
                       {t(`about.pillars.${key}.text`)}
                     </p>
                   </div>
@@ -92,9 +92,9 @@ const AboutUs: React.FC = () => {
         {/* Liderazgo */}
         <div className="mt-12">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <h3 className="eyebrow !text-ink-mute">{t('team.groups.leadership')}</h3>
-            <span className="hidden h-px flex-1 bg-line sm:block" />
-            <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle">
+            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">{t('team.groups.leadership')}</h3>
+            <span className="hidden h-px flex-1 bg-line dark:bg-white/10 sm:block" />
+            <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle dark:text-white/40">
               02 / 09
             </span>
           </div>
@@ -110,9 +110,9 @@ const AboutUs: React.FC = () => {
         {/* Senior */}
         <div className="mt-14">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <h3 className="eyebrow !text-ink-mute">{t('team.groups.senior')}</h3>
-            <span className="hidden h-px flex-1 bg-line sm:block" />
-            <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle">
+            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">{t('team.groups.senior')}</h3>
+            <span className="hidden h-px flex-1 bg-line dark:bg-white/10 sm:block" />
+            <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle dark:text-white/40">
               {String(SENIORS.length).padStart(2, '0')} / 09
             </span>
           </div>
@@ -140,9 +140,9 @@ const AboutUs: React.FC = () => {
         {/* Otros */}
         <div className="mt-14">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <h3 className="eyebrow !text-ink-mute">{t('team.groups.others')}</h3>
-            <span className="hidden h-px flex-1 bg-line sm:block" />
-            <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle">
+            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">{t('team.groups.others')}</h3>
+            <span className="hidden h-px flex-1 bg-line dark:bg-white/10 sm:block" />
+            <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle dark:text-white/40">
               {String(OTHERS.length).padStart(2, '0')} / 09
             </span>
           </div>

@@ -410,5 +410,9 @@
     "to": "→"
   },
   "scrollToTop": "Volver al inicio",
-  "logoAlt": "ArqWellness Lab — Universidad de Sevilla"
+  "logoAlt": "ArqWellness Lab — Universidad de Sevilla",
+  "theme": {
+    "toDark": "Cambiar a modo oscuro",
+    "toLight": "Cambiar a modo claro"
+  }
 }

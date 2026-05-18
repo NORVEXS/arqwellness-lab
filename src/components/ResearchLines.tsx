@@ -38,7 +38,7 @@ const ResearchLines: React.FC = () => {
           return (
             <Reveal key={line.key} delay={idx * 80}>
               <article
-                className={`group relative flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-all duration-500 ease-out-quart hover:-translate-y-1.5 ${accentBorder[line.accent]}`}
+                className={`group relative flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-all duration-500 ease-out-quart hover:-translate-y-1.5 dark:border-white/10 dark:bg-surface-dark-alt ${accentBorder[line.accent]}`}
               >
                 <header className="flex items-start justify-between gap-3">
                   <span
@@ -48,19 +48,19 @@ const ResearchLines: React.FC = () => {
                   </span>
                   <span
                     aria-hidden="true"
-                    className={`flex h-11 w-11 items-center justify-center rounded-xl bg-surface-alt ${accentText[line.accent]} transition-transform duration-450 ease-out-quart group-hover:rotate-6`}
+                    className={`flex h-11 w-11 items-center justify-center rounded-xl bg-surface-alt dark:bg-white/[0.06] ${accentText[line.accent]} transition-transform duration-450 ease-out-quart group-hover:rotate-6`}
                   >
                     <Icon className="h-5 w-5" />
                   </span>
                 </header>
-                <h3 className="mt-6 font-display text-2xl font-medium text-ink display-balance">
+                <h3 className="mt-6 font-display text-2xl font-medium text-ink display-balance dark:text-white">
                   {t(`research.lines.${line.key}.title`)}
                 </h3>
-                <p className="mt-3 text-ink-soft leading-relaxed">
+                <p className="mt-3 text-ink-soft leading-relaxed dark:text-white/70">
                   {t(`research.lines.${line.key}.summary`)}
                 </p>
 
-                <ul className="mt-6 space-y-2.5 text-sm text-ink-soft">
+                <ul className="mt-6 space-y-2.5 text-sm text-ink-soft dark:text-white/70">
                   {items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span
@@ -72,8 +72,8 @@ const ResearchLines: React.FC = () => {
                   ))}
                 </ul>
 
-                <footer className="mt-8 flex items-end justify-between border-t border-line/80 pt-5">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
+                <footer className="mt-8 flex items-end justify-between border-t border-line/80 pt-5 dark:border-white/10">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/50">
                     ArqWellness · {line.key.toUpperCase()}
                   </span>
                   <ArrowUpRight

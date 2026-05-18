@@ -53,8 +53,8 @@ const Publications: React.FC = () => {
               aria-pressed={isActive}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
                 isActive
-                  ? 'bg-ink text-white shadow-medium'
-                  : 'border border-line bg-white text-ink-soft hover:border-ink/30 hover:text-ink'
+                  ? 'bg-ink text-white shadow-medium dark:bg-white dark:text-surface-dark'
+                  : 'border border-line bg-white text-ink-soft hover:border-ink/30 hover:text-ink dark:border-white/15 dark:bg-white/[0.04] dark:text-white/70 dark:hover:border-white/30 dark:hover:text-white'
               }`}
             >
               {t(`publications.filters.${f}`)}
@@ -63,15 +63,15 @@ const Publications: React.FC = () => {
         })}
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
+      <div className="mt-8 overflow-hidden rounded-2xl border border-line bg-white shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none">
         {visible.map((pub, i) => {
           const isOpen = expanded === pub.id;
           const keywords = t(`${pub.i18nKey}.keywords`, { returnObjects: true }) as string[];
           return (
             <Reveal key={pub.id} delay={(i % 4) * 50}>
               <article
-                className={`group border-b border-line last:border-0 ${
-                  isOpen ? 'bg-surface-alt/40' : ''
+                className={`group border-b border-line last:border-0 dark:border-white/10 ${
+                  isOpen ? 'bg-surface-alt/40 dark:bg-white/[0.03]' : ''
                 }`}
               >
                 <button
@@ -79,33 +79,33 @@ const Publications: React.FC = () => {
                   onClick={() => setExpanded(isOpen ? null : pub.id)}
                   aria-expanded={isOpen}
                   aria-controls={`pub-${pub.id}`}
-                  className="flex w-full flex-col items-start gap-4 px-6 py-6 text-left transition-colors hover:bg-surface-alt md:flex-row md:items-start"
+                  className="flex w-full flex-col items-start gap-4 px-6 py-6 text-left transition-colors hover:bg-surface-alt dark:hover:bg-white/[0.04] md:flex-row md:items-start"
                 >
                   <div className="flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-1.5 md:w-48 md:flex-col md:items-start md:gap-1.5">
-                    <span className="font-mono text-sm font-medium text-ink">
+                    <span className="font-mono text-sm font-medium text-ink dark:text-white">
                       {pub.year}
                     </span>
-                    <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
+                    <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/55">
                       <span
                         aria-hidden="true"
                         className={`h-1.5 w-1.5 rounded-full ${topicDot[pub.topic]}`}
                       />
                       {t(topicLabel[pub.topic])}
                     </span>
-                    <span className="block w-full truncate text-xs italic text-ink-mute md:text-[13px]">
+                    <span className="block w-full truncate text-xs italic text-ink-mute dark:text-white/50 md:text-[13px]">
                       {pub.journal}
                     </span>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-lg font-medium leading-snug text-ink transition-colors display-balance group-hover:text-brand-blue">
+                    <h3 className="font-display text-lg font-medium leading-snug text-ink transition-colors display-balance group-hover:text-brand-blue dark:text-white dark:group-hover:text-brand-blue-soft">
                       {t(`${pub.i18nKey}.title`)}
                     </h3>
-                    <p className="mt-2 text-sm text-ink-soft">{pub.authors}</p>
+                    <p className="mt-2 text-sm text-ink-soft dark:text-white/65">{pub.authors}</p>
                   </div>
                   <ChevronDown
                     aria-hidden="true"
-                    className={`hidden h-5 w-5 shrink-0 text-ink-mute transition-transform duration-300 md:block ${
-                      isOpen ? 'rotate-180 text-brand-blue' : ''
+                    className={`hidden h-5 w-5 shrink-0 text-ink-mute transition-transform duration-300 dark:text-white/45 md:block ${
+                      isOpen ? 'rotate-180 text-brand-blue dark:text-brand-blue-soft' : ''
                     }`}
                   />
                 </button>
@@ -117,7 +117,7 @@ const Publications: React.FC = () => {
                 >
                   <div>
                     <h4 className="eyebrow">{t('publications.abstract')}</h4>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-soft text-pretty">
+                    <p className="mt-3 text-sm leading-relaxed text-ink-soft text-pretty dark:text-white/70">
                       {t(`${pub.i18nKey}.abstract`)}
                     </p>
                   </div>
@@ -128,7 +128,7 @@ const Publications: React.FC = () => {
                         href={`https://doi.org/${pub.doi}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center gap-1.5 break-all font-mono text-sm text-brand-blue transition-colors hover:text-brand-purple"
+                        className="mt-2 inline-flex items-center gap-1.5 break-all font-mono text-sm text-brand-blue transition-colors hover:text-brand-purple dark:text-brand-blue-soft dark:hover:text-[#B9B2E8]"
                       >
                         {pub.doi}
                         <ExternalLink className="h-3.5 w-3.5 shrink-0" />
@@ -140,7 +140,7 @@ const Publications: React.FC = () => {
                         {keywords.map((k) => (
                           <span
                             key={k}
-                            className="rounded-md bg-ink/[0.04] px-2.5 py-1 text-xs text-ink-soft"
+                            className="rounded-md bg-ink/[0.04] px-2.5 py-1 text-xs text-ink-soft dark:bg-white/[0.06] dark:text-white/70"
                           >
                             {k}
                           </span>
@@ -156,8 +156,8 @@ const Publications: React.FC = () => {
         })}
       </div>
 
-      <div className="mt-12 border-t border-line/70 pt-6">
-        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty">
+      <div className="mt-12 border-t border-line/70 pt-6 dark:border-white/10">
+        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty dark:text-white/55">
           {t('publications.disclaimer')}
         </p>
       </div>

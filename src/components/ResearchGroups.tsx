@@ -46,7 +46,7 @@ const ResearchGroups: React.FC = () => {
           return (
             <Reveal key={g} delay={idx * 100} className="h-full">
               <article
-                className={`relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-8 shadow-soft transition-all duration-500 ease-out-quart ${accent[g].glow}`}
+                className={`relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-soft transition-all duration-500 ease-out-quart dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none ${accent[g].glow}`}
               >
                 <div
                   className={`pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-[0.07] bg-gradient-to-br ${accent[g].chip}`}
@@ -55,10 +55,10 @@ const ResearchGroups: React.FC = () => {
 
                 <header className="flex flex-wrap items-baseline justify-between gap-3">
                   <div>
-                    <span className="font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute">
+                    <span className="font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/50">
                       {t(`groups.${g}.code`)}
                     </span>
-                    <h3 className="mt-2 font-display text-2xl font-medium text-ink display-balance">
+                    <h3 className="mt-2 font-display text-2xl font-medium text-ink display-balance dark:text-white">
                       {t(`groups.${g}.name`)}
                     </h3>
                   </div>
@@ -70,12 +70,12 @@ const ResearchGroups: React.FC = () => {
                   </span>
                 </header>
 
-                <p className="mt-5 text-ink-soft leading-relaxed text-pretty">
+                <p className="mt-5 text-ink-soft leading-relaxed text-pretty dark:text-white/70">
                   {t(`groups.${g}.description`)}
                 </p>
 
                 <div className="mt-7">
-                  <h4 className="flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute">
+                  <h4 className="flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/55">
                     <Users className="h-3.5 w-3.5" />
                     <span>{t('groups.membersTitle')}</span>
                   </h4>
@@ -83,7 +83,7 @@ const ResearchGroups: React.FC = () => {
                     {members.map((m) => (
                       <li
                         key={m}
-                        className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-alt px-3 py-1.5 text-xs"
+                        className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-alt px-3 py-1.5 text-xs dark:border-white/10 dark:bg-white/[0.04]"
                       >
                         <span
                           aria-hidden="true"
@@ -91,18 +91,18 @@ const ResearchGroups: React.FC = () => {
                         >
                           {initials(m)}
                         </span>
-                        <span className="text-ink-soft">{m}</span>
+                        <span className="text-ink-soft dark:text-white/80">{m}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="mt-7">
-                  <h4 className="flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute">
+                  <h4 className="flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/55">
                     <Layers className="h-3.5 w-3.5" />
                     <span>{t('groups.focusTitle')}</span>
                   </h4>
-                  <ul className="mt-3 space-y-2 text-sm text-ink-soft">
+                  <ul className="mt-3 space-y-2 text-sm text-ink-soft dark:text-white/70">
                     {focus.map((f) => (
                       <li key={f} className="flex items-start gap-2.5">
                         <span

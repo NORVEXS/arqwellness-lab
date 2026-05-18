@@ -65,12 +65,12 @@ const Modal: React.FC<ModalProps> = ({ children, title, onClose, eyebrow }) => {
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="relative max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-t-3xl bg-white shadow-large animate-scale-in sm:rounded-2xl"
+        className="relative max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-t-3xl bg-white shadow-large animate-scale-in dark:bg-surface-dark-alt dark:shadow-none dark:ring-1 dark:ring-white/10 sm:rounded-2xl"
       >
-        <div className="flex items-start justify-between gap-4 border-b border-line/70 px-6 py-5">
+        <div className="flex items-start justify-between gap-4 border-b border-line/70 px-6 py-5 dark:border-white/10">
           <div>
             {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-            <h3 id={titleId} className="mt-1 font-display text-2xl font-medium text-ink">
+            <h3 id={titleId} className="mt-1 font-display text-2xl font-medium text-ink dark:text-white">
               {title}
             </h3>
           </div>
@@ -78,12 +78,12 @@ const Modal: React.FC<ModalProps> = ({ children, title, onClose, eyebrow }) => {
             type="button"
             onClick={onClose}
             aria-label={t('common.close')}
-            className="rounded-full p-2 text-ink-mute transition hover:bg-line-soft hover:text-ink"
+            className="rounded-full p-2 text-ink-mute transition hover:bg-line-soft hover:text-ink dark:text-white/55 dark:hover:bg-white/[0.06] dark:hover:text-white"
           >
             <X className="h-5 w-5" />
           </button>
         </div>
-        <div className="max-h-[70vh] overflow-auto px-6 py-6 text-ink-soft leading-relaxed">
+        <div className="max-h-[70vh] overflow-auto px-6 py-6 text-ink-soft leading-relaxed dark:text-white/75">
           {children}
         </div>
       </div>

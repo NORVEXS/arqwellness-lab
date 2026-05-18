@@ -42,11 +42,11 @@ const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
   return (
     <div ref={ref} className="reveal" style={{ transitionDelay: `${index * 60}ms` }}>
       <div className="flex items-baseline gap-1.5">
-        <span className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+        <span className="text-3xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
           {num === null ? value : `${prefix}${counted}${suffix}`}
         </span>
       </div>
-      <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute">
+      <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute dark:text-white/55">
         {label}
       </div>
     </div>
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
     <section
       id="introduction"
       aria-label={t('hero.eyebrow')}
-      className="relative isolate overflow-hidden bg-surface pt-32 pb-24 sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-32"
+      className="relative isolate overflow-hidden bg-surface pt-32 pb-24 dark:bg-surface-dark sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-32"
     >
       {/* Layer 1 — diffuse colour wash */}
       <div
@@ -76,18 +76,19 @@ const Hero: React.FC = () => {
       {/* Layer 2 — engineering grid, very faint */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,#000_30%,transparent_80%)]"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] [mask-image:radial-gradient(ellipse_at_center,#000_30%,transparent_80%)] dark:opacity-[0.5]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(16,21,36,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(16,21,36,0.045) 1px, transparent 1px)',
+            'linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)',
           backgroundSize: '64px 64px',
+          color: 'rgba(16,21,36,0.045)',
         }}
       />
 
       {/* Layer 3 — paper noise for analog feel */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] mix-blend-multiply"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] mix-blend-multiply dark:opacity-[0.25] dark:mix-blend-screen"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.08 0 0 0 0 0.14 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
@@ -105,10 +106,19 @@ const Hero: React.FC = () => {
       {/* Layer 5 — subtle vignette on the edges */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
+        className="pointer-events-none absolute inset-0 -z-10 dark:hidden"
         style={{
           background:
             'radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(16,21,36,0.06) 100%)',
+        }}
+      />
+      {/* Layer 5b — vignette para dark */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 hidden dark:block"
+        style={{
+          background:
+            'radial-gradient(120% 90% at 50% 50%, transparent 50%, rgba(0,0,0,0.5) 100%)',
         }}
       />
 
@@ -118,18 +128,20 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={80}>
-          <h1 className="mt-8 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance">
+          <h1 className="mt-8 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white">
             <span>{t('hero.titleA')}</span>{' '}
-            <span className="text-brand-blue">{t('hero.titleB')}</span>{' '}
+            <span className="text-brand-blue dark:text-brand-blue-soft">
+              {t('hero.titleB')}
+            </span>{' '}
             <span>{t('hero.titleC')}</span>{' '}
-            <span className="block font-normal text-ink-soft sm:inline">
+            <span className="block font-normal text-ink-soft sm:inline dark:text-white/65">
               {t('hero.titleD')}
             </span>
           </h1>
         </Reveal>
 
         <Reveal delay={160}>
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty sm:text-lg">
+          <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-lg">
             {t('hero.lede')}
           </p>
         </Reveal>
@@ -168,7 +180,7 @@ const Hero: React.FC = () => {
           <button
             type="button"
             onClick={() => goTo('about')}
-            className="inline-flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute transition-colors hover:text-brand-blue"
+            className="inline-flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute transition-colors hover:text-brand-blue dark:text-white/55 dark:hover:text-brand-blue-soft"
           >
             <span>{t('hero.scroll')}</span>
             <ArrowDown className="h-3.5 w-3.5" />

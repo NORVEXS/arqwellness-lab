@@ -12,9 +12,9 @@ interface SectionProps {
 }
 
 const toneClasses: Record<Tone, string> = {
-  default: 'bg-surface text-ink',
-  alt: 'bg-surface-alt text-ink',
-  warm: 'bg-surface-warm text-ink',
+  default: 'bg-surface text-ink dark:bg-surface-dark dark:text-white',
+  alt: 'bg-surface-alt text-ink dark:bg-surface-dark-alt dark:text-white',
+  warm: 'bg-surface-warm text-ink dark:bg-[#171410] dark:text-white',
   dark: 'bg-surface-dark text-white',
 };
 

@@ -32,19 +32,19 @@ const Training: React.FC = () => {
       <div className="mt-10 grid gap-3 sm:grid-cols-3">
         {META.map(({ keyName, Icon }, i) => (
           <Reveal key={keyName} delay={i * 80}>
-            <div className="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-soft">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/[0.08] text-brand-blue">
+            <div className="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/[0.08] text-brand-blue dark:bg-brand-blue-soft/15 dark:text-brand-blue-soft">
                 <Icon className="h-5 w-5" />
               </span>
               <div>
-                <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
+                <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/50">
                   {keyName === 'degree'
                     ? 'Grado'
                     : keyName === 'school'
                       ? 'Centro'
                       : 'Tipo'}
                 </span>
-                <span className="text-sm font-medium text-ink">
+                <span className="text-sm font-medium text-ink dark:text-white">
                   {t(`training.meta.${keyName}`)}
                 </span>
               </div>
@@ -57,10 +57,10 @@ const Training: React.FC = () => {
       <div className="mt-14 grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Reveal>
-            <h3 className="font-display text-2xl font-medium text-ink">
+            <h3 className="font-display text-2xl font-medium text-ink dark:text-white">
               {t('training.blocks.scope.title')}
             </h3>
-            <p className="mt-4 text-ink-soft leading-relaxed">
+            <p className="mt-4 text-ink-soft leading-relaxed dark:text-white/70">
               {t('training.blocks.scope.intro')}
             </p>
           </Reveal>
@@ -71,12 +71,12 @@ const Training: React.FC = () => {
               {scopeItems.map((item, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-4 rounded-xl border border-line bg-white p-5 shadow-soft"
+                  className="flex items-start gap-4 rounded-xl border border-line bg-white p-5 shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none"
                 >
-                  <span className="font-mono text-xs font-semibold text-brand-blue">
+                  <span className="font-mono text-xs font-semibold text-brand-blue dark:text-brand-blue-soft">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-ink-soft text-pretty">{item}</span>
+                  <span className="text-ink-soft text-pretty dark:text-white/75">{item}</span>
                 </li>
               ))}
             </ol>
@@ -85,7 +85,7 @@ const Training: React.FC = () => {
               {subItems.map((s) => (
                 <li
                   key={s}
-                  className="rounded-full border border-brand-blue/20 bg-white px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brand-blue"
+                  className="rounded-full border border-brand-blue/20 bg-white px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brand-blue dark:border-brand-blue-soft/30 dark:bg-white/[0.04] dark:text-brand-blue-soft"
                 >
                   {s}
                 </li>
@@ -99,7 +99,7 @@ const Training: React.FC = () => {
       <div className="mt-20 grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-6">
           <Reveal>
-            <h3 className="font-display text-2xl font-medium text-ink">
+            <h3 className="font-display text-2xl font-medium text-ink dark:text-white">
               {t('training.blocks.design.title')}
             </h3>
             <p className="mt-4 text-ink-soft leading-relaxed text-pretty">
@@ -108,7 +108,7 @@ const Training: React.FC = () => {
           </Reveal>
         </div>
         <Reveal delay={120} className="lg:col-span-6">
-          <figure className="overflow-hidden rounded-2xl border border-line bg-white p-6 shadow-medium">
+          <figure className="overflow-hidden rounded-2xl border border-line bg-white p-6 shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none">
             <img
               src={climatizacion}
               alt={t('training.blocks.design.imageAlt')}
@@ -128,13 +128,13 @@ const Training: React.FC = () => {
       <div className="mt-20 grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Reveal>
-            <h3 className="font-display text-2xl font-medium text-ink">
+            <h3 className="font-display text-2xl font-medium text-ink dark:text-white">
               {t('training.blocks.content.title')}
             </h3>
-            <p className="mt-4 text-ink-soft leading-relaxed">
+            <p className="mt-4 text-ink-soft leading-relaxed dark:text-white/70">
               {t('training.blocks.content.intro')}
             </p>
-            <p className="mt-4 text-ink-soft leading-relaxed">
+            <p className="mt-4 text-ink-soft leading-relaxed dark:text-white/70">
               {t('training.blocks.content.outro')}
             </p>
           </Reveal>
@@ -145,12 +145,12 @@ const Training: React.FC = () => {
               {contentItems.map((item, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 rounded-xl border border-line bg-white p-4 text-sm shadow-soft"
+                  className="flex items-start gap-3 rounded-xl border border-line bg-white p-4 text-sm shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none"
                 >
-                  <span className="font-mono text-[11px] font-semibold text-brand-purple">
+                  <span className="font-mono text-[11px] font-semibold text-brand-purple dark:text-[#B9B2E8]">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-ink-soft text-pretty">{item}</span>
+                  <span className="text-ink-soft text-pretty dark:text-white/75">{item}</span>
                 </li>
               ))}
             </ul>

@@ -41,15 +41,15 @@ const Projects: React.FC = () => {
               aria-pressed={isActive}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
                 isActive
-                  ? 'bg-ink text-white shadow-medium'
-                  : 'border border-line bg-white text-ink-soft hover:border-ink/30 hover:text-ink'
+                  ? 'bg-ink text-white shadow-medium dark:bg-white dark:text-surface-dark'
+                  : 'border border-line bg-white text-ink-soft hover:border-ink/30 hover:text-ink dark:border-white/15 dark:bg-white/[0.04] dark:text-white/70 dark:hover:border-white/30 dark:hover:text-white'
               }`}
             >
               {t(`projects.filters.${f}`)}
             </button>
           );
         })}
-        <span className="ml-auto font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute">
+        <span className="ml-auto font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/50">
           {String(visible.length).padStart(2, '0')} ·{' '}
           {visible.length === 1 ? 'proyecto' : 'proyectos'}
         </span>
@@ -72,22 +72,22 @@ const Projects: React.FC = () => {
                 >
                   {t(`projects.tags.${p.type}`)}
                 </span>
-                <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute">
+                <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/50">
                   <Calendar className="h-3.5 w-3.5" />
                   {p.year}
                 </span>
               </header>
-              <h3 className="mt-5 font-display text-xl font-medium text-ink display-balance">
+              <h3 className="mt-5 font-display text-xl font-medium text-ink display-balance dark:text-white">
                 {t(`${p.i18nKey}.title`)}
               </h3>
-              <p className="mt-3 text-sm text-ink-soft leading-relaxed text-pretty line-clamp-3">
+              <p className="mt-3 text-sm text-ink-soft leading-relaxed text-pretty line-clamp-3 dark:text-white/70">
                 {t(`${p.i18nKey}.description`)}
               </p>
-              <footer className="mt-6 flex items-center justify-between border-t border-line/80 pt-4">
+              <footer className="mt-6 flex items-center justify-between border-t border-line/80 pt-4 dark:border-white/10">
                 <button
                   type="button"
                   onClick={() => setSelected(p)}
-                  className="stretch-link inline-flex items-center gap-1.5 font-medium text-brand-blue transition-colors group-hover:text-brand-purple"
+                  className="stretch-link inline-flex items-center gap-1.5 font-medium text-brand-blue transition-colors group-hover:text-brand-purple dark:text-brand-blue-soft dark:group-hover:text-[#B9B2E8]"
                 >
                   <span>{t('projects.viewDetails')}</span>
                   <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -98,8 +98,8 @@ const Projects: React.FC = () => {
         );})}
       </div>
 
-      <div className="mt-14 border-t border-line/70 pt-6">
-        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty">
+      <div className="mt-14 border-t border-line/70 pt-6 dark:border-white/10">
+        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty dark:text-white/55">
           {t('projects.disclaimer')}
         </p>
       </div>
