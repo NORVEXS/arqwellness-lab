@@ -12,7 +12,9 @@ const STATS = ['years', 'members', 'projects', 'publications'] as const;
 
 const parseStat = (raw: string) => {
   const m = raw.match(/^(\D*?)(\d+)(\D*)$/);
-  return m ? { prefix: m[1], num: Number(m[2]), suffix: m[3] } : { prefix: '', num: null, suffix: raw };
+  return m
+    ? { prefix: m[1], num: Number(m[2]), suffix: m[3] }
+    : { prefix: '', num: null, suffix: raw };
 };
 
 const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
@@ -67,7 +69,7 @@ const Hero: React.FC = () => {
     <section
       id="introduction"
       aria-label={t('hero.eyebrow')}
-      className="relative isolate overflow-hidden bg-surface pt-24 pb-16 dark:bg-surface-dark sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
+      className="relative isolate flex min-h-screen flex-col justify-center overflow-hidden bg-surface pt-24 pb-16 dark:bg-surface-dark sm:block sm:min-h-0 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
     >
       {/* Layer 1 — diffuse colour wash */}
       <div
@@ -177,7 +179,7 @@ const Hero: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:mt-20 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-10">
+        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:mt-20 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-10">
           {STATS.map((key, i) => (
             <HeroStat
               key={key}
