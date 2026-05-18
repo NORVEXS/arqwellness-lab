@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
     <section
       id="introduction"
       aria-label={t('hero.eyebrow')}
-      className="relative isolate flex min-h-[100svh] flex-col justify-start overflow-hidden bg-surface pt-14 pb-10 dark:bg-surface-dark sm:block sm:min-h-0 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
+      className="relative isolate flex min-h-[100svh] flex-col justify-start overflow-hidden bg-surface pt-20 pb-10 dark:bg-surface-dark sm:block sm:min-h-0 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
     >
       {/* Layer 1 — diffuse colour wash */}
       <div
