@@ -98,7 +98,11 @@ const Projects: React.FC = () => {
         );})}
       </div>
 
-      <p className="mt-10 max-w-2xl text-sm text-ink-mute">{t('projects.disclaimer')}</p>
+      <div className="mt-14 border-t border-line/70 pt-6">
+        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty">
+          {t('projects.disclaimer')}
+        </p>
+      </div>
 
       {selected && (
         <Modal

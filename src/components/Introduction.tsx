@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
       {/* Subtle constellation — fades into background */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-40 [mask-image:radial-gradient(ellipse_at_center,#000_0%,transparent_75%)]"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-90 [mask-image:radial-gradient(ellipse_at_center,#000_25%,transparent_85%)]"
       >
         <HeroCanvas />
       </div>

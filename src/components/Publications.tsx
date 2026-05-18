@@ -156,7 +156,11 @@ const Publications: React.FC = () => {
         })}
       </div>
 
-      <p className="mt-8 max-w-2xl text-sm text-ink-mute">{t('publications.disclaimer')}</p>
+      <div className="mt-12 border-t border-line/70 pt-6">
+        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty">
+          {t('publications.disclaimer')}
+        </p>
+      </div>
     </Section>
   );
 };

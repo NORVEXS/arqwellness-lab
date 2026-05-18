@@ -22,10 +22,10 @@ const COLORS = [
   [132, 167, 200], // brand-blue-soft
 ];
 
-const LINK_DISTANCE = 120;
-const LINK_ALPHA = 0.08;
-const DOT_ALPHA_MIN = 0.12;
-const DOT_ALPHA_MAX = 0.28;
+const LINK_DISTANCE = 140;
+const LINK_ALPHA = 0.18;
+const DOT_ALPHA_MIN = 0.3;
+const DOT_ALPHA_MAX = 0.6;
 
 const HeroCanvas: React.FC<HeroCanvasProps> = ({ className = '' }) => {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -58,13 +58,13 @@ const HeroCanvas: React.FC<HeroCanvasProps> = ({ className = '' }) => {
     };
 
     const seed = () => {
-      const target = Math.min(45, Math.floor((width * height) / 28000));
+      const target = Math.min(65, Math.floor((width * height) / 18000));
       particles = new Array(target).fill(0).map(() => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
-        r: 1 + Math.random() * 1.2,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        r: 1.2 + Math.random() * 1.5,
         a: DOT_ALPHA_MIN + Math.random() * (DOT_ALPHA_MAX - DOT_ALPHA_MIN),
         hue: Math.floor(Math.random() * COLORS.length),
       }));
