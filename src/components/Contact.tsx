@@ -87,6 +87,12 @@ const Contact: React.FC = () => {
           title={t('contact.title')}
           lede={t('contact.lede')}
           tone="dark"
+          ledeEmphasize={[
+            'colaboraciones',
+            'contratos de transferencia',
+            'collaborations',
+            'transfer contracts',
+          ]}
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-12">

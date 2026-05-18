@@ -26,6 +26,12 @@ const Training: React.FC = () => {
         eyebrow={t('training.eyebrow')}
         title={t('training.title')}
         lede={t('training.lede')}
+        ledeEmphasize={[
+          'optativa',
+          'elective',
+          'Universidad de Sevilla',
+          'University of Seville',
+        ]}
       />
 
       {/* Meta strip */}

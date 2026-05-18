@@ -37,6 +37,7 @@ const ResearchGroups: React.FC = () => {
         eyebrow={t('groups.eyebrow')}
         title={t('groups.title')}
         lede={t('groups.lede')}
+        ledeEmphasize={['TEP-130', 'TEP-1000', 'IUACC']}
       />
 
       <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-2">

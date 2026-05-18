@@ -23,6 +23,12 @@ const AboutUs: React.FC = () => {
         eyebrow={t('about.eyebrow')}
         title={t('about.title')}
         lede={t('about.lede')}
+        ledeEmphasize={[
+          'TEP-130',
+          'TEP-1000',
+          'ambiente interior',
+          'indoor environment',
+        ]}
       />
 
       <div className="mt-14 grid items-start gap-10 lg:grid-cols-12">

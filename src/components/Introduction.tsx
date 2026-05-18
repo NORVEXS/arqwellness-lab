@@ -4,6 +4,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 import Reveal from './ui/Reveal';
 import HeroCanvas from './ui/HeroCanvas';
 import { scrollToSection } from '../lib/scroll';
+import { emphasize } from '../lib/emphasize';
 import { useCountUp } from '../hooks/useCountUp';
 import { useReveal } from '../hooks/useReveal';
 
@@ -142,7 +143,14 @@ const Hero: React.FC = () => {
 
         <Reveal delay={160}>
           <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-lg">
-            {t('hero.lede')}
+            {emphasize(t('hero.lede'), [
+              'salud',
+              'confort',
+              'eficiencia energética',
+              'health',
+              'comfort',
+              'energy performance',
+            ])}
           </p>
         </Reveal>
 

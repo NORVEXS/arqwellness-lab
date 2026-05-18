@@ -29,6 +29,10 @@ const ResearchLines: React.FC = () => {
         eyebrow={t('research.eyebrow')}
         title={t('research.title')}
         lede={t('research.lede')}
+        ledeEmphasize={[
+          'tres líneas complementarias',
+          'three complementary lines',
+        ]}
       />
 
       <div className="mt-14 grid gap-6 lg:grid-cols-3">

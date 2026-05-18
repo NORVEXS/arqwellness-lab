@@ -1,5 +1,6 @@
 import React from 'react';
 import Reveal from './Reveal';
+import { emphasize } from '../../lib/emphasize';
 
 interface SectionHeaderProps {
   eyebrow?: string;
@@ -8,6 +9,7 @@ interface SectionHeaderProps {
   align?: 'left' | 'center';
   tone?: 'light' | 'dark';
   className?: string;
+  ledeEmphasize?: string[];
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -17,6 +19,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   align = 'left',
   tone = 'light',
   className = '',
+  ledeEmphasize,
 }) => {
   const isDark = tone === 'dark';
   return (
@@ -44,7 +47,9 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
               isDark ? 'text-white/70' : 'text-ink-soft'
             }`}
           >
-            {lede}
+            {ledeEmphasize && ledeEmphasize.length > 0
+              ? emphasize(lede, ledeEmphasize)
+              : lede}
           </p>
         </Reveal>
       )}
