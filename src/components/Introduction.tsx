@@ -12,7 +12,9 @@ const STATS = ['years', 'members', 'projects', 'publications'] as const;
 
 const parseStat = (raw: string) => {
   const m = raw.match(/^(\D*?)(\d+)(\D*)$/);
-  return m ? { prefix: m[1], num: Number(m[2]), suffix: m[3] } : { prefix: '', num: null, suffix: raw };
+  return m
+    ? { prefix: m[1], num: Number(m[2]), suffix: m[3] }
+    : { prefix: '', num: null, suffix: raw };
 };
 
 const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
@@ -22,9 +24,11 @@ const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
 }) => {
   const ref = useReveal<HTMLDivElement>();
   const [active, setActive] = React.useState(false);
+
   React.useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
     const obs = new IntersectionObserver(
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) {
@@ -34,20 +38,23 @@ const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
       },
       { threshold: 0.4 },
     );
+
     obs.observe(node);
     return () => obs.disconnect();
   }, [ref]);
+
   const { num, prefix, suffix } = parseStat(value);
   const counted = useCountUp(num ?? 0, 1400, active && num !== null);
 
   return (
     <div ref={ref} className="reveal" style={{ transitionDelay: `${index * 60}ms` }}>
       <div className="flex items-baseline gap-1.5">
-        <span className="text-3xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
+        <span className="text-2xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
           {num === null ? value : `${prefix}${counted}${suffix}`}
         </span>
       </div>
-      <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute dark:text-white/55">
+
+      <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/55 sm:mt-1.5 sm:text-[10px] sm:tracking-[0.2em]">
         {label}
       </div>
     </div>
@@ -62,7 +69,7 @@ const Hero: React.FC = () => {
     <section
       id="introduction"
       aria-label={t('hero.eyebrow')}
-      className="relative isolate overflow-hidden bg-surface pt-32 pb-24 dark:bg-surface-dark sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-32"
+      className="relative isolate flex min-h-[100svh] flex-col justify-start overflow-hidden bg-surface pt-24 pb-10 dark:bg-surface-dark sm:block sm:min-h-0 sm:pt-32 sm:pb-24 lg:pt-44 lg:pb-32"
     >
       {/* Layer 1 — diffuse colour wash */}
       <div
@@ -113,6 +120,7 @@ const Hero: React.FC = () => {
             'radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(16,21,36,0.06) 100%)',
         }}
       />
+
       {/* Layer 5b — vignette para dark */}
       <div
         aria-hidden="true"
@@ -129,7 +137,7 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={80}>
-          <h1 className="mt-8 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white">
+          <h1 className="mt-6 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white sm:mt-8">
             <span>{t('hero.titleA')}</span>{' '}
             <span className="text-brand-blue dark:text-brand-blue-soft">
               {t('hero.titleB')}
@@ -142,7 +150,7 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={160}>
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:mt-7 sm:text-lg">
             {emphasize(t('hero.lede'), [
               'salud',
               'confort',
@@ -155,11 +163,12 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal delay={240}>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8">
             <button type="button" onClick={() => goTo('about')} className="btn-primary">
               <span>{t('hero.ctaPrimary')}</span>
               <ArrowRight className="h-4 w-4" />
             </button>
+
             <button
               type="button"
               onClick={() => goTo('research-lines')}
@@ -170,7 +179,7 @@ const Hero: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-2 gap-x-8 gap-y-10 sm:mt-24 sm:grid-cols-4">
+        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:mt-20 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-10">
           {STATS.map((key, i) => (
             <HeroStat
               key={key}
