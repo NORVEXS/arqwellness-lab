@@ -39,7 +39,7 @@ const Training: React.FC = () => {
         {META.map(({ keyName, Icon }, i) => (
           <Reveal key={keyName} delay={i * 80}>
             <div className="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/[0.08] text-brand-blue dark:bg-brand-blue-soft/15 dark:text-brand-blue-soft">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-red/[0.08] text-brand-red dark:bg-brand-red-soft/15 dark:text-brand-red-soft">
                 <Icon className="h-5 w-5" />
               </span>
               <div>
@@ -79,7 +79,7 @@ const Training: React.FC = () => {
                   key={i}
                   className="flex items-start gap-4 rounded-xl border border-line bg-white p-5 shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none"
                 >
-                  <span className="font-mono text-xs font-semibold text-brand-blue dark:text-brand-blue-soft">
+                  <span className="font-mono text-xs font-semibold text-brand-red dark:text-brand-red-soft">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <span className="text-ink-soft text-pretty dark:text-white/75">{item}</span>
@@ -91,7 +91,7 @@ const Training: React.FC = () => {
               {subItems.map((s) => (
                 <li
                   key={s}
-                  className="rounded-full border border-brand-blue/20 bg-white px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brand-blue dark:border-brand-blue-soft/30 dark:bg-white/[0.04] dark:text-brand-blue-soft"
+                  className="rounded-full border border-brand-red/25 bg-white/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-brand-red dark:border-brand-red-soft/35 dark:bg-white/[0.04] dark:text-brand-red-soft"
                 >
                   {s}
                 </li>
@@ -153,7 +153,7 @@ const Training: React.FC = () => {
                   key={i}
                   className="flex items-start gap-3 rounded-xl border border-line bg-white p-4 text-sm shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none"
                 >
-                  <span className="font-mono text-[11px] font-semibold text-brand-purple dark:text-[#B9B2E8]">
+                  <span className="font-mono text-[11px] font-semibold text-brand-red dark:text-brand-red-soft">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <span className="text-ink-soft text-pretty dark:text-white/75">{item}</span>
