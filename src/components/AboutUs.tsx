@@ -44,9 +44,12 @@ const AboutUs: React.FC = () => {
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
+
               <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/55">
                 <span>Equipo · ETSA Sevilla</span>
-                <span className="text-ink-subtle dark:text-white/35">TEP-130 · TEP-1000</span>
+                <span className="text-ink-subtle dark:text-white/35">
+                  TEP-130 · TEP-1000
+                </span>
               </figcaption>
             </figure>
           </Reveal>
@@ -55,6 +58,7 @@ const AboutUs: React.FC = () => {
             <Reveal as="p" delay={80}>
               {t('about.longA')}
             </Reveal>
+
             <Reveal as="p" delay={120}>
               {t('about.longB')}
             </Reveal>
@@ -72,10 +76,12 @@ const AboutUs: React.FC = () => {
                   >
                     <Icon className="h-5 w-5" />
                   </span>
+
                   <div className="min-w-0">
                     <h3 className="font-display text-xl font-medium text-ink dark:text-white">
                       {t(`about.pillars.${key}.title`)}
                     </h3>
+
                     <p className="mt-2 text-ink-soft leading-relaxed dark:text-white/70">
                       {t(`about.pillars.${key}.text`)}
                     </p>
@@ -98,16 +104,27 @@ const AboutUs: React.FC = () => {
         {/* Liderazgo */}
         <div className="mt-12">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">{t('team.groups.leadership')}</h3>
+            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">
+              {t('team.groups.leadership')}
+            </h3>
+
             <span className="hidden h-px flex-1 bg-line dark:bg-white/10 sm:block" />
+
             <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle dark:text-white/40">
               02 / 09
             </span>
           </div>
+
           <div className="grid gap-3 sm:grid-cols-2 sm:gap-5">
             {LEADS.map((p, i) => (
-              <Reveal key={p.nameKey} delay={i * 60} className="h-full">
-                <TeamCard person={p} variant="lead" />
+              <Reveal
+                key={p.nameKey}
+                delay={i * 60}
+                className="h-full overflow-hidden rounded-3xl"
+              >
+                <div className="relative isolate h-full overflow-hidden rounded-3xl">
+                  <TeamCard person={p} variant="lead" />
+                </div>
               </Reveal>
             ))}
           </div>
@@ -116,16 +133,22 @@ const AboutUs: React.FC = () => {
         {/* Senior */}
         <div className="mt-14">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">{t('team.groups.senior')}</h3>
+            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">
+              {t('team.groups.senior')}
+            </h3>
+
             <span className="hidden h-px flex-1 bg-line dark:bg-white/10 sm:block" />
+
             <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle dark:text-white/40">
               {String(SENIORS.length).padStart(2, '0')} / 09
             </span>
           </div>
+
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
             {SENIORS.map((p, i) => {
               const isOrphan2col =
                 i === SENIORS.length - 1 && SENIORS.length % 2 === 1;
+
               return (
                 <Reveal
                   key={p.nameKey}
@@ -146,12 +169,17 @@ const AboutUs: React.FC = () => {
         {/* Otros */}
         <div className="mt-14">
           <div className="mb-5 flex items-center justify-between gap-4">
-            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">{t('team.groups.others')}</h3>
+            <h3 className="eyebrow !text-ink-mute dark:!text-white/55">
+              {t('team.groups.others')}
+            </h3>
+
             <span className="hidden h-px flex-1 bg-line dark:bg-white/10 sm:block" />
+
             <span className="whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.22em] text-ink-subtle dark:text-white/40">
               {String(OTHERS.length).padStart(2, '0')} / 09
             </span>
           </div>
+
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {OTHERS.map((p, i) => (
               <Reveal key={p.nameKey} delay={(i % 4) * 50}>
