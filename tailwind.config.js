@@ -36,16 +36,16 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
+        display: ['Inter', ...defaultTheme.fontFamily.sans],
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         body: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
       },
       fontSize: {
-        'display-xl': ['clamp(2.75rem, 6vw + 1rem, 5.5rem)', { lineHeight: '1.02', letterSpacing: '-0.03em' }],
-        'display-lg': ['clamp(2.25rem, 4.5vw + 0.5rem, 4rem)', { lineHeight: '1.04', letterSpacing: '-0.025em' }],
-        'display-md': ['clamp(1.75rem, 3vw + 0.5rem, 2.75rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        eyebrow: ['0.75rem', { lineHeight: '1.2', letterSpacing: '0.22em' }],
+        'display-xl': ['clamp(2.5rem, 5.5vw + 1rem, 4.75rem)', { lineHeight: '1.04', letterSpacing: '-0.035em' }],
+        'display-lg': ['clamp(2rem, 4vw + 0.5rem, 3.5rem)', { lineHeight: '1.06', letterSpacing: '-0.03em' }],
+        'display-md': ['clamp(1.625rem, 2.5vw + 0.5rem, 2.5rem)', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
+        eyebrow: ['0.7rem', { lineHeight: '1.2', letterSpacing: '0.22em' }],
       },
       letterSpacing: {
         eyebrow: '0.22em',
