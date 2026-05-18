@@ -22,9 +22,11 @@ const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
 }) => {
   const ref = useReveal<HTMLDivElement>();
   const [active, setActive] = React.useState(false);
+
   React.useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
     const obs = new IntersectionObserver(
       (entries) => {
         if (entries.some((e) => e.isIntersecting)) {
@@ -34,20 +36,23 @@ const HeroStat: React.FC<{ value: string; label: string; index: number }> = ({
       },
       { threshold: 0.4 },
     );
+
     obs.observe(node);
     return () => obs.disconnect();
   }, [ref]);
+
   const { num, prefix, suffix } = parseStat(value);
   const counted = useCountUp(num ?? 0, 1400, active && num !== null);
 
   return (
     <div ref={ref} className="reveal" style={{ transitionDelay: `${index * 60}ms` }}>
       <div className="flex items-baseline gap-1.5">
-        <span className="text-3xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
+        <span className="text-2xl font-semibold tracking-tight text-ink dark:text-white sm:text-4xl">
           {num === null ? value : `${prefix}${counted}${suffix}`}
         </span>
       </div>
-      <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute dark:text-white/55">
+
+      <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/55 sm:mt-1.5 sm:text-[10px] sm:tracking-[0.2em]">
         {label}
       </div>
     </div>
@@ -113,6 +118,7 @@ const Hero: React.FC = () => {
             'radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(16,21,36,0.06) 100%)',
         }}
       />
+
       {/* Layer 5b — vignette para dark */}
       <div
         aria-hidden="true"
@@ -160,6 +166,7 @@ const Hero: React.FC = () => {
               <span>{t('hero.ctaPrimary')}</span>
               <ArrowRight className="h-4 w-4" />
             </button>
+
             <button
               type="button"
               onClick={() => goTo('research-lines')}
@@ -170,7 +177,7 @@ const Hero: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-7 sm:mt-20 sm:grid-cols-4 sm:gap-y-10">
+        <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:mt-20 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-10">
           {STATS.map((key, i) => (
             <HeroStat
               key={key}
