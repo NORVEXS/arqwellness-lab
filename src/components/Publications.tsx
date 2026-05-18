@@ -32,7 +32,7 @@ const Publications: React.FC = () => {
   );
 
   return (
-    <Section id="publications" tone="default" ariaLabel={t('publications.title')}>
+    <Section id="publications" tone="alt" ariaLabel={t('publications.title')}>
       <SectionHeader
         eyebrow={t('publications.eyebrow')}
         title={t('publications.title')}

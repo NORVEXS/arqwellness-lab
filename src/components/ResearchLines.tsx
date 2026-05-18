@@ -24,7 +24,7 @@ const ResearchLines: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="research-lines" tone="alt" ariaLabel={t('research.title')}>
+    <Section id="research-lines" tone="default" ariaLabel={t('research.title')}>
       <SectionHeader
         eyebrow={t('research.eyebrow')}
         title={t('research.title')}

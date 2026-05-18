@@ -32,7 +32,7 @@ const ResearchGroups: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="research-groups" tone="default" ariaLabel={t('groups.title')}>
+    <Section id="research-groups" tone="alt" ariaLabel={t('groups.title')}>
       <SectionHeader
         eyebrow={t('groups.eyebrow')}
         title={t('groups.title')}

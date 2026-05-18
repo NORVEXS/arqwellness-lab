@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="about" tone="default" ariaLabel={t('about.title')}>
+    <Section id="about" tone="alt" ariaLabel={t('about.title')}>
       <SectionHeader
         eyebrow={t('about.eyebrow')}
         title={t('about.title')}

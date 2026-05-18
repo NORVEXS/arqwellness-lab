@@ -24,8 +24,8 @@ export default {
         },
         surface: {
           DEFAULT: '#FFFFFF',
-          alt: '#F5F6FA',
-          warm: '#FAF7F2',
+          alt: '#EEF1F7',
+          warm: '#F4EEDF',
           dark: '#0B0F1A',
           'dark-alt': '#141A2A',
         },

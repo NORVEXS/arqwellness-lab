@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
   );
 
   return (
-    <Section id="projects" tone="alt" ariaLabel={t('projects.title')}>
+    <Section id="projects" tone="default" ariaLabel={t('projects.title')}>
       <SectionHeader
         eyebrow={t('projects.eyebrow')}
         title={t('projects.title')}
