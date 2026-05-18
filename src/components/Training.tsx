@@ -167,28 +167,21 @@ const Training: React.FC = () => {
         }}
       >
         <div className="grid gap-0 lg:grid-cols-12 lg:items-stretch">
+          {/* Imagen plana, sin marcos: queda como una lámina sobre el card dark */}
           <Reveal className="order-1 lg:order-2 lg:col-span-7">
-            <figure className="relative flex h-full items-center justify-center p-5 sm:p-7 lg:p-9">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-4 rounded-2xl bg-white/[0.03] ring-1 ring-white/10 sm:inset-6 lg:inset-7"
+            <div className="flex h-full items-center justify-center p-8 sm:p-10 lg:px-10 lg:py-12">
+              <img
+                src={simulacion}
+                alt={t('training.blocks.practice.imageAlt')}
+                loading="lazy"
+                decoding="async"
+                className="block h-auto w-full max-w-2xl object-contain"
               />
-              <div className="relative w-full">
-                <img
-                  src={simulacion}
-                  alt={t('training.blocks.practice.imageAlt')}
-                  loading="lazy"
-                  decoding="async"
-                  className="block w-full rounded-xl object-contain shadow-large ring-1 ring-black/40"
-                />
-                <figcaption className="mt-3 flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-white/55">
-                  <span>BIM · ETSA Sevilla</span>
-                  <span>ASE-Zero</span>
-                </figcaption>
-              </div>
-            </figure>
+            </div>
           </Reveal>
-          <div className="relative order-2 p-8 lg:order-1 lg:col-span-5 lg:p-12">
+
+          {/* Texto + caption */}
+          <div className="relative order-2 px-8 pb-10 pt-2 lg:order-1 lg:col-span-5 lg:p-12">
             <Reveal delay={120}>
               <span className="eyebrow text-white/55">{t('training.eyebrow')}</span>
               <h3 className="mt-3 font-display text-3xl font-medium text-white display-balance">
@@ -199,6 +192,10 @@ const Training: React.FC = () => {
               </p>
               <p className="mt-4 text-white/70 leading-relaxed">
                 {t('training.blocks.practice.outro')}
+              </p>
+              <p className="mt-8 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-white/45">
+                <span aria-hidden="true" className="h-px w-6 bg-white/30" />
+                BIM · ETSA Sevilla · ASE-Zero
               </p>
             </Reveal>
           </div>
