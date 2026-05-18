@@ -28,22 +28,19 @@ const AboutUs: React.FC = () => {
       <div className="mt-14 grid items-start gap-10 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <Reveal>
-            <figure className="relative overflow-hidden rounded-2xl bg-surface-alt shadow-large">
-              <img
-                src={membersImg}
-                alt={t('about.imageAlt')}
-                loading="lazy"
-                decoding="async"
-                className="aspect-[4/3] w-full object-cover"
-              />
-              <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent p-5 text-white">
-                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">
-                  ETSA · Sevilla
-                </span>
-                <div className="flex gap-2">
-                  <span className="tag-dark">TEP-130</span>
-                  <span className="tag-dark">TEP-1000</span>
-                </div>
+            <figure>
+              <div className="overflow-hidden rounded-2xl bg-white shadow-medium ring-1 ring-line">
+                <img
+                  src={membersImg}
+                  alt={t('about.imageAlt')}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+              <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute">
+                <span>Equipo · ETSA Sevilla</span>
+                <span className="text-ink-subtle">TEP-130 · TEP-1000</span>
               </figcaption>
             </figure>
           </Reveal>
