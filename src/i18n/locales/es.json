@@ -1,0 +1,414 @@
+{
+  "meta": {
+    "title": "ArqWellness Lab — Iluminación, Energía y Bienestar | Universidad de Sevilla",
+    "description": "Laboratorio de Iluminación, Energía y Bienestar de la Universidad de Sevilla (IUACC). Investigación en confort ambiental, iluminación circadiana, eficiencia energética y arquitectura saludable.",
+    "ogLocale": "es_ES"
+  },
+  "skip": "Saltar al contenido",
+  "nav": {
+    "introduction": "Inicio",
+    "about": "Quiénes somos",
+    "research-lines": "Líneas",
+    "research-groups": "Grupos",
+    "training": "Formación",
+    "projects": "Proyectos",
+    "publications": "Publicaciones",
+    "contact": "Contacto",
+    "ariaPrimary": "Navegación principal",
+    "ariaLang": "Cambiar idioma",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "currentSection": "Sección actual"
+  },
+  "hero": {
+    "eyebrow": "Universidad de Sevilla · ETSA · IUACC",
+    "titleA": "Iluminación,",
+    "titleB": "Energía",
+    "titleC": "y Bienestar",
+    "titleD": "en arquitectura",
+    "lede": "Investigamos cómo los factores ambientales del espacio construido influyen en la salud, el confort y la eficiencia energética. Más de 15 años de docencia, investigación y transferencia desde Sevilla.",
+    "ctaPrimary": "Conoce el laboratorio",
+    "ctaSecondary": "Líneas de investigación",
+    "scroll": "Desliza para explorar",
+    "stats": {
+      "years": { "value": "15+", "label": "Años de investigación" },
+      "members": { "value": "14", "label": "Investigadores activos" },
+      "projects": { "value": "20+", "label": "Proyectos R+D" },
+      "publications": { "value": "60+", "label": "Publicaciones indexadas" }
+    },
+    "imageAlt": "Equipo del ArqWellness Lab"
+  },
+  "about": {
+    "eyebrow": "Quiénes somos",
+    "title": "Un laboratorio para la arquitectura del bienestar",
+    "lede": "El equipo del ArqWellness Lab —integrado por los grupos PAIDI TEP-130 y TEP-1000— reúne a profesores, investigadores y facultativos de Medicina Preventiva y Pediátrica en torno al ambiente interior, la energía y la salud en arquitectura.",
+    "longA": "Desarrollamos nuestra labor enfocados en el control y gestión del ambiente interior de los edificios: evaluación y mejora de las condiciones para el confort, ergonomía y salud de los ocupantes, desde un acercamiento holístico de los factores que constituyen el hábitat construido.",
+    "longB": "Reunimos a especialistas en acondicionamiento ambiental y eficiencia energética: aspectos térmicos, acústicos, lumínicos y de calidad del aire, tanto los pasivos asociados a la construcción como los procesos activos ligados al diseño e integración de instalaciones y sistemas técnicos.",
+    "pillars": {
+      "mission": {
+        "title": "Misión",
+        "text": "Contribuir al bienestar humano a través de entornos arquitectónicos saludables, confortables y sostenibles."
+      },
+      "vision": {
+        "title": "Visión",
+        "text": "Ser un referente internacional en investigación sobre el ambiente interior y su impacto en la salud y la eficiencia energética."
+      },
+      "approach": {
+        "title": "Enfoque",
+        "text": "Integramos conocimiento técnico-científico con simulación, medición y diseño para abordar el acondicionamiento ambiental de forma transversal."
+      }
+    },
+    "imageAlt": "Investigadores del ArqWellness Lab frente al edificio de la ETSA"
+  },
+  "team": {
+    "eyebrow": "Equipo",
+    "title": "Personas detrás del laboratorio",
+    "lede": "Combinamos docentes senior con más de dos décadas de experiencia universitaria con una nueva generación de investigadores formados en arquitectura, física aplicada y medicina preventiva.",
+    "groups": {
+      "leadership": "Dirección",
+      "senior": "Investigadores senior",
+      "others": "Equipo y colaboración"
+    },
+    "roles": {
+      "leadLab": "Responsable del laboratorio · TEP-130",
+      "leadTep1000": "Responsable del grupo TEP-1000",
+      "senior": "Investigadores senior",
+      "junior": "Investigadores junior",
+      "contracted": "Personal contratado",
+      "collaborators": "Colaboradores"
+    },
+    "members": {
+      "ignacio": "Ignacio Javier Acosta García",
+      "jesica": "Jesica Fernández-Agüera Escudero",
+      "pedro": "Pedro Bustamante Rojas",
+      "miguel": "Miguel Ángel Campano Laborda",
+      "samuel": "Samuel Domínguez Amarillo",
+      "jaime": "Jaime Navarro Casas",
+      "juanjose": "Juan José Sendra Salas",
+      "guillermo": "Guillermo García Martín",
+      "maria": "María de la Esperanza de Triana Sánchez Muñoz",
+      "patricia": "Patricia Fernández-Agüera Escudero",
+      "juandiego": "Juan Diego Velarde Rodríguez"
+    },
+    "viewProfile": "Ver perfil"
+  },
+  "research": {
+    "eyebrow": "Líneas de investigación",
+    "title": "Tres ejes para entender el espacio habitado",
+    "lede": "Nuestra investigación se articula en torno a tres líneas complementarias que combinan trabajo empírico, simulación computacional y estudios de campo en edificios reales.",
+    "lines": {
+      "comfort": {
+        "number": "01",
+        "title": "Confort ambiental",
+        "summary": "Optimización del entorno construido para el bienestar humano y la eficiencia energética.",
+        "intro": "Investigamos los factores que determinan el confort en el espacio interior y su interacción con el consumo energético.",
+        "items": [
+          "Confort térmico en distintos contextos climáticos",
+          "Estrategias de reducción del ruido y confort acústico",
+          "Evaluación y mejora de la calidad del aire interior",
+          "Interacción entre parámetros de confort",
+          "Evaluaciones post-ocupacionales y estudios de satisfacción"
+        ],
+        "outro": "Desarrollamos guías y estándares para un diseño arquitectónico orientado al confort."
+      },
+      "lighting": {
+        "number": "02",
+        "title": "Iluminación y salud",
+        "summary": "Cómo la luz afecta al cuerpo humano más allá de la percepción visual.",
+        "intro": "Estudiamos la influencia de la luz natural y artificial sobre la fisiología, la psicología y el comportamiento.",
+        "items": [
+          "Iluminación, ritmos circadianos y calidad del sueño",
+          "Impacto de la luz natural en la salud de los ocupantes",
+          "Calidad espectral de la luz y efectos biológicos",
+          "Aplicaciones de terapia lumínica en arquitectura",
+          "Iluminación biológicamente efectiva en edificios"
+        ],
+        "outro": "Colaboramos con profesionales de la salud, cronobiólogos y fabricantes para llevar los hallazgos al diseño real."
+      },
+      "control": {
+        "number": "03",
+        "title": "Control e integración",
+        "summary": "Sistemas inteligentes para el control ambiental en edificios.",
+        "intro": "Diseñamos sistemas que monitorizan y regulan parámetros ambientales en edificios habitados.",
+        "items": [
+          "Redes de sensores ambientales en tiempo real",
+          "Control inteligente de iluminación y climatización",
+          "Integración con sistemas de gestión de edificios",
+          "Interfaces de usuario para el control ambiental",
+          "Modelos predictivos para optimizar el rendimiento"
+        ],
+        "outro": "Implementamos y validamos estos sistemas en entornos reales."
+      }
+    }
+  },
+  "groups": {
+    "eyebrow": "Grupos PAIDI",
+    "title": "Dos grupos de investigación, un laboratorio",
+    "lede": "El ArqWellness Lab está formado por los grupos PAIDI TEP-130 y TEP-1000, ambos adscritos al IUACC de la Universidad de Sevilla.",
+    "membersTitle": "Miembros",
+    "focusTitle": "Líneas de actividad",
+    "tep130": {
+      "code": "TEP-130",
+      "name": "Arquitectura, Patrimonio y Sostenibilidad",
+      "description": "Acústica, iluminación, óptica y energía. Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla y al ArqWellness Lab. Reúne profesores e investigadores de los departamentos de Construcciones Arquitectónicas I, Física Aplicada I/II/III y Medicina Preventiva y Pediátrica.",
+      "members": [
+        "Juan José Sendra",
+        "Jaime Navarro",
+        "Samuel Domínguez",
+        "Ignacio Acosta"
+      ],
+      "focus": [
+        "Diseño, desarrollo e integración de instalaciones (hidrosanitarias, eléctricas, climatización, comunicaciones, seguridad)",
+        "Acondicionamiento ambiental (higrotérmico, acústico, lumínico, calidad del aire)",
+        "Energía en la edificación: demanda, eficiencia y renovables (solar térmica, fotovoltaica, cogeneración)",
+        "Medicina preventiva y pediátrica aplicada al entorno construido"
+      ]
+    },
+    "tep1000": {
+      "code": "TEP-1000",
+      "name": "Comfort and Energy Use in Buildings",
+      "description": "Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla, radicado en la Escuela Técnica Superior de Arquitectura. Reúne investigadores de Construcciones Arquitectónicas I y Medicina Preventiva y Pediátrica.",
+      "members": [
+        "Carmen Galán",
+        "Rafael Suárez",
+        "Ángel Luis León",
+        "Mónica Martínez"
+      ],
+      "focus": [
+        "Diseño e integración de instalaciones y sistemas de los edificios",
+        "Acondicionamiento ambiental higrotérmico, acústico, lumínico y de calidad del aire",
+        "Energía en la edificación: demanda y eficiencia, energías renovables"
+      ]
+    }
+  },
+  "training": {
+    "eyebrow": "Formación · ASE-Zero",
+    "title": "Arquitectura, Salud y Energía Cero",
+    "lede": "Asignatura optativa del Grado en Fundamentos de Arquitectura de la Universidad de Sevilla que explora el uso de la energía y el control de las prestaciones de confort, calidad y salud en el espacio construido.",
+    "meta": {
+      "degree": "Grado en Fundamentos de Arquitectura",
+      "school": "ETS Arquitectura · Universidad de Sevilla",
+      "type": "Optativa"
+    },
+    "blocks": {
+      "scope": {
+        "title": "Ámbito",
+        "intro": "La asignatura aborda de forma integrada:",
+        "items": [
+          "El uso de la energía en los edificios",
+          "El control de las prestaciones de confort, calidad y salud",
+          "Su repercusión sobre el diseño arquitectónico"
+        ],
+        "subItems": [
+          "Ambiente térmico",
+          "Iluminación",
+          "Aire interior",
+          "Ruido de equipos"
+        ]
+      },
+      "design": {
+        "title": "Diseño energético y saludable",
+        "text": "Se aplican conceptos y métodos de eficiencia energética, integrando un diseño saludable, resiliente, neutro en emisiones de CO₂ y respetuoso con la salud de las personas.",
+        "imageAlt": "Esquema de calidad del ambiente interior (IEQ): confort térmico, aire, acústica y luz"
+      },
+      "content": {
+        "title": "Contenidos y metodología",
+        "intro": "Se abordan temas como:",
+        "items": [
+          "Caracterización de sistemas energéticos del edificio",
+          "Evaluación y optimización de prestaciones energéticas",
+          "Incorporación de energías renovables",
+          "Diseño de ambientes confortables y funcionales",
+          "Gestión y control de sistemas",
+          "Integración de TICs"
+        ],
+        "outro": "Se enfatiza el uso eficiente de la energía y la maximización de las prestaciones para los usuarios."
+      },
+      "practice": {
+        "title": "Simulación y práctica",
+        "intro": "Los estudiantes aplican técnicas mediante herramientas de simulación y análisis. La actividad se organiza por grupos de 3 o 4 alumnos.",
+        "imageAlt": "Modelo de simulación energética de la ETSA de Sevilla en software BIM",
+        "outro": "Incluye actividades interactivas, sesiones de análisis, evaluación continua y examen final basado en la resolución de ejercicios y propuestas de mejora del diseño."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Proyectos",
+    "title": "Investigación aplicada y contratos 68/83",
+    "lede": "Selección representativa de proyectos competitivos R+D y contratos de transferencia desarrollados por los grupos del laboratorio.",
+    "filters": {
+      "all": "Todos",
+      "rd": "R+D",
+      "contract": "Contratos 68/83"
+    },
+    "tags": {
+      "rd": "Proyecto R+D",
+      "contract": "Contrato 68/83"
+    },
+    "viewDetails": "Ver detalles",
+    "outcomesTitle": "Resultados clave",
+    "yearLabel": "Período",
+    "disclaimer": "Selección representativa. Catálogo completo de proyectos disponible en SISIUS — Universidad de Sevilla.",
+    "items": {
+      "project1": {
+        "title": "Eficiencia energética en edificios patrimoniales",
+        "description": "Investigación sobre estrategias compatibles para mejorar la eficiencia energética en edificios patrimoniales preservando su valor histórico.",
+        "outcomes": [
+          "Desarrollo de estrategias de rehabilitación no invasivas",
+          "Metodología de evaluación energética en edificios patrimoniales",
+          "Recomendaciones para administraciones sobre conservación"
+        ]
+      },
+      "project2": {
+        "title": "Iluminación circadiana en entornos sanitarios",
+        "description": "Implementación y monitorización de sistemas de iluminación circadiana en hospitales para mejorar la recuperación de pacientes y el rendimiento del personal.",
+        "outcomes": [
+          "Guías de diseño para iluminación sanitaria",
+          "Algoritmos de control para habitaciones de pacientes",
+          "Estudio comparativo antes/después del rendimiento del personal"
+        ]
+      },
+      "project3": {
+        "title": "Estándares de confort adaptativo en clima mediterráneo",
+        "description": "Desarrollo de estándares de confort específicos para condiciones climáticas mediterráneas aplicables al diseño sostenible.",
+        "outcomes": [
+          "Parámetros de confort específicos para edificios mediterráneos",
+          "Modelo de variación estacional del confort adaptativo",
+          "Recomendaciones de diseño para enfriamiento pasivo"
+        ]
+      },
+      "project4": {
+        "title": "Iluminación para patrimonio cultural",
+        "description": "Evaluación e implementación de sistemas de iluminación para edificios de patrimonio cultural, atendiendo a conservación y experiencia del visitante.",
+        "outcomes": [
+          "Metodología de evaluación lumínica para patrimonio",
+          "Especificaciones de iluminación compatibles con conservación",
+          "Estrategias de mejora de la experiencia del visitante"
+        ]
+      },
+      "project5": {
+        "title": "Monitorización energética en campus universitario",
+        "description": "Diseño e implementación de un sistema integrado de monitorización del consumo energético en edificios del campus.",
+        "outcomes": [
+          "Dashboard de monitorización energética en tiempo real",
+          "Análisis y recomendaciones de consumo",
+          "Implementación de estrategias automatizadas de control"
+        ]
+      }
+    }
+  },
+  "publications": {
+    "eyebrow": "Publicaciones",
+    "title": "Artículos en revistas indexadas",
+    "lede": "Una muestra de la producción científica reciente del laboratorio en revistas JCR de eficiencia energética, iluminación y confort.",
+    "filters": {
+      "all": "Todas",
+      "lighting": "Iluminación",
+      "energy": "Energía",
+      "comfort": "Confort"
+    },
+    "showDetails": "Ver detalles",
+    "showLess": "Ocultar detalles",
+    "doi": "DOI",
+    "abstract": "Resumen",
+    "keywords": "Palabras clave",
+    "openExternal": "Abrir en doi.org",
+    "disclaimer": "Selección representativa. Catálogo completo disponible en SISIUS — Universidad de Sevilla.",
+    "items": {
+      "pub1": {
+        "title": "Daylighting design strategies for energy saving in historic buildings",
+        "abstract": "Investigación sobre estrategias de iluminación natural para mejorar la eficiencia energética en edificios históricos preservando su valor patrimonial. Combina mediciones de campo, simulaciones y estudios de caso.",
+        "keywords": ["Iluminación natural", "Patrimonio", "Eficiencia energética", "Conservación"]
+      },
+      "pub2": {
+        "title": "Circadian lighting effects on hospital staff performance: A field study",
+        "abstract": "Estudio de campo sobre los efectos de la iluminación circadiana en el rendimiento del personal sanitario: alerta, función cognitiva y bienestar subjetivo bajo distintas condiciones.",
+        "keywords": ["Iluminación circadiana", "Sanidad", "Rendimiento", "HCL"]
+      },
+      "pub3": {
+        "title": "Thermal comfort assessment in Mediterranean university buildings",
+        "abstract": "Evaluación integral del confort térmico en edificios universitarios mediterráneos, analizando variaciones estacionales y preferencias de los usuarios.",
+        "keywords": ["Confort térmico", "Clima mediterráneo", "Edificios universitarios", "Confort adaptativo"]
+      },
+      "pub4": {
+        "title": "Energy retrofitting strategies for historical buildings in Seville",
+        "abstract": "Análisis de estrategias de rehabilitación energética en edificios históricos de Sevilla, evaluando la eficacia de distintas intervenciones y la relación coste-beneficio.",
+        "keywords": ["Rehabilitación energética", "Edificios históricos", "Conservación", "Sevilla"]
+      },
+      "pub5": {
+        "title": "Visual comfort and energy efficiency in educational buildings",
+        "abstract": "Examina la relación entre las condiciones de confort visual y el consumo energético en centros educativos mediante medición y simulación.",
+        "keywords": ["Confort visual", "Edificios educativos", "Eficiencia energética", "Diseño lumínico"]
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de tu proyecto",
+    "lede": "Para colaboraciones, contratos de transferencia, prácticas o consultas académicas, el equipo del ArqWellness Lab está disponible en la ETSA de Sevilla.",
+    "channels": {
+      "address": {
+        "label": "Dirección",
+        "value": "Escuela Técnica Superior de Arquitectura\nUniversidad de Sevilla\nAvda. Reina Mercedes, 2\n41012 Sevilla — España",
+        "cta": "Cómo llegar"
+      },
+      "email": {
+        "label": "Correo",
+        "value": "arqwellness@us.es"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "value": "+34 954 55 65 60"
+      },
+      "social": {
+        "label": "Redes",
+        "twitter": "Twitter / X",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "form": {
+      "title": "Escríbenos",
+      "lede": "Cuéntanos en qué podemos ayudarte. Te respondemos en menos de 48 h hábiles.",
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@dominio.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿De qué quieres hablar?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos los detalles…",
+      "consent": "Acepto la política de privacidad y el tratamiento de mis datos.",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "success": "Gracias. Hemos recibido tu mensaje y te responderemos pronto.",
+      "error": "Algo ha ido mal. Inténtalo de nuevo o escribe directamente a arqwellness@us.es.",
+      "required": "Campo obligatorio"
+    }
+  },
+  "footer": {
+    "tagline": "Iluminación, energía y bienestar — Universidad de Sevilla",
+    "explore": "Explorar",
+    "lab": "Contacto",
+    "legal": "Legal · US",
+    "legalNotice": "Aviso legal",
+    "privacy": "Protección de datos",
+    "transparency": "Transparencia",
+    "accessibility": "Accesibilidad",
+    "rights": "Todos los derechos reservados",
+    "institution": "Escuela Técnica Superior de Arquitectura · IUACC · Universidad de Sevilla",
+    "credits": "Diseñado con cuidado en Sevilla."
+  },
+  "common": {
+    "readMore": "Leer más",
+    "readLess": "Leer menos",
+    "viewMore": "Ver más",
+    "viewAll": "Ver todo",
+    "learnMore": "Saber más",
+    "close": "Cerrar",
+    "back": "Volver",
+    "to": "→"
+  },
+  "scrollToTop": "Volver al inicio",
+  "logoAlt": "ArqWellness Lab — Universidad de Sevilla"
+}

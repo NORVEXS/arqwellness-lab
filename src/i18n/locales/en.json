@@ -1,0 +1,414 @@
+{
+  "meta": {
+    "title": "ArqWellness Lab — Lighting, Energy and Wellness | University of Seville",
+    "description": "ArqWellness Lab at the University of Seville (IUACC). Research on indoor environmental comfort, circadian lighting, energy efficiency and healthy architecture.",
+    "ogLocale": "en_US"
+  },
+  "skip": "Skip to content",
+  "nav": {
+    "introduction": "Home",
+    "about": "About",
+    "research-lines": "Research",
+    "research-groups": "Groups",
+    "training": "Training",
+    "projects": "Projects",
+    "publications": "Publications",
+    "contact": "Contact",
+    "ariaPrimary": "Primary navigation",
+    "ariaLang": "Change language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "currentSection": "Current section"
+  },
+  "hero": {
+    "eyebrow": "University of Seville · ETSA · IUACC",
+    "titleA": "Lighting,",
+    "titleB": "Energy",
+    "titleC": "and Wellness",
+    "titleD": "in architecture",
+    "lede": "We study how the built environment shapes human health, comfort and energy performance. Over 15 years of teaching, research and knowledge transfer from Seville.",
+    "ctaPrimary": "Meet the lab",
+    "ctaSecondary": "Research lines",
+    "scroll": "Scroll to explore",
+    "stats": {
+      "years": { "value": "15+", "label": "Years of research" },
+      "members": { "value": "14", "label": "Active researchers" },
+      "projects": { "value": "20+", "label": "R&D projects" },
+      "publications": { "value": "60+", "label": "Indexed papers" }
+    },
+    "imageAlt": "ArqWellness Lab team"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A laboratory for the architecture of wellbeing",
+    "lede": "ArqWellness Lab — formed by the PAIDI groups TEP-130 and TEP-1000 — brings together professors, researchers and clinicians from Preventive Medicine and Pediatrics around the indoor environment, energy and health in architecture.",
+    "longA": "Our work focuses on the control and management of indoor environments: assessing and improving conditions for comfort, ergonomics and occupant health, from a holistic view of the factors that shape the built habitat.",
+    "longB": "We gather specialists in environmental conditioning and energy efficiency — thermal, acoustic, lighting and air-quality aspects — covering both passive design and active building systems.",
+    "pillars": {
+      "mission": {
+        "title": "Mission",
+        "text": "To advance human wellbeing through healthy, comfortable and sustainable architectural environments."
+      },
+      "vision": {
+        "title": "Vision",
+        "text": "To be an international reference in research on the indoor environment and its impact on health and energy performance."
+      },
+      "approach": {
+        "title": "Approach",
+        "text": "We integrate technical and scientific knowledge with simulation, measurement and design tools to tackle environmental conditioning transversally."
+      }
+    },
+    "imageAlt": "ArqWellness Lab researchers in front of the ETSA building"
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "People behind the lab",
+    "lede": "We combine senior faculty with more than two decades of academic experience with a new generation of researchers trained in architecture, applied physics and preventive medicine.",
+    "groups": {
+      "leadership": "Leadership",
+      "senior": "Senior researchers",
+      "others": "Team & collaborators"
+    },
+    "roles": {
+      "leadLab": "Lab director · TEP-130 lead",
+      "leadTep1000": "TEP-1000 lead",
+      "senior": "Senior researchers",
+      "junior": "Junior researchers",
+      "contracted": "Contracted staff",
+      "collaborators": "Collaborators"
+    },
+    "members": {
+      "ignacio": "Ignacio Javier Acosta García",
+      "jesica": "Jesica Fernández-Agüera Escudero",
+      "pedro": "Pedro Bustamante Rojas",
+      "miguel": "Miguel Ángel Campano Laborda",
+      "samuel": "Samuel Domínguez Amarillo",
+      "jaime": "Jaime Navarro Casas",
+      "juanjose": "Juan José Sendra Salas",
+      "guillermo": "Guillermo García Martín",
+      "maria": "María de la Esperanza de Triana Sánchez Muñoz",
+      "patricia": "Patricia Fernández-Agüera Escudero",
+      "juandiego": "Juan Diego Velarde Rodríguez"
+    },
+    "viewProfile": "View profile"
+  },
+  "research": {
+    "eyebrow": "Research lines",
+    "title": "Three lenses on the inhabited space",
+    "lede": "Our research is articulated through three complementary lines that blend empirical work, computational simulation and field studies in real buildings.",
+    "lines": {
+      "comfort": {
+        "number": "01",
+        "title": "Environmental comfort",
+        "summary": "Optimising the built environment for human wellbeing and energy efficiency.",
+        "intro": "We study the parameters that drive comfort indoors and their interaction with energy consumption.",
+        "items": [
+          "Thermal comfort across climate contexts",
+          "Noise reduction and acoustic comfort strategies",
+          "Assessment and improvement of indoor air quality",
+          "Interaction between comfort parameters",
+          "Post-occupancy evaluations and user satisfaction studies"
+        ],
+        "outro": "We develop guidelines and standards for comfort-driven architectural design."
+      },
+      "lighting": {
+        "number": "02",
+        "title": "Lighting & health",
+        "summary": "How light shapes the human body beyond visual perception.",
+        "intro": "We investigate the influence of daylight and artificial light on physiology, psychology and behaviour.",
+        "items": [
+          "Lighting, circadian rhythms and sleep quality",
+          "Impact of daylight on occupant health",
+          "Spectral quality of light and biological effects",
+          "Light therapy applications in architecture",
+          "Biologically effective lighting in real buildings"
+        ],
+        "outro": "We collaborate with health professionals, chronobiologists and manufacturers to bring findings into design."
+      },
+      "control": {
+        "number": "03",
+        "title": "Control & integration",
+        "summary": "Smart systems for environmental control in buildings.",
+        "intro": "We design systems that monitor and regulate environmental parameters in inhabited spaces.",
+        "items": [
+          "Real-time environmental sensor networks",
+          "Smart control of lighting and HVAC",
+          "Integration with building management systems",
+          "User interfaces for environmental control",
+          "Predictive models to optimise performance"
+        ],
+        "outro": "We implement and validate these systems in real-world environments."
+      }
+    }
+  },
+  "groups": {
+    "eyebrow": "PAIDI groups",
+    "title": "Two research groups, one laboratory",
+    "lede": "ArqWellness Lab is composed of the PAIDI groups TEP-130 and TEP-1000, both affiliated with the IUACC at the University of Seville.",
+    "membersTitle": "Members",
+    "focusTitle": "Activity areas",
+    "tep130": {
+      "code": "TEP-130",
+      "name": "Architecture, Heritage and Sustainability",
+      "description": "Acoustics, lighting, optics and energy. A PAIDI group at the IUACC of the University of Seville and the ArqWellness Lab. It brings together faculty and researchers from Architectural Construction I, Applied Physics I/II/III and Preventive Medicine and Pediatrics.",
+      "members": [
+        "Juan José Sendra",
+        "Jaime Navarro",
+        "Samuel Domínguez",
+        "Ignacio Acosta"
+      ],
+      "focus": [
+        "Design and integration of building services (plumbing, electrical, HVAC, communications, safety)",
+        "Indoor environmental conditioning (hygrothermal, acoustic, lighting, IAQ)",
+        "Building energy: demand, efficiency and renewables (solar thermal, PV, cogeneration)",
+        "Preventive medicine and pediatrics applied to the built environment"
+      ]
+    },
+    "tep1000": {
+      "code": "TEP-1000",
+      "name": "Comfort and Energy Use in Buildings",
+      "description": "A PAIDI group at the IUACC of the University of Seville, hosted at the School of Architecture. It gathers researchers from Architectural Construction I and Preventive Medicine and Pediatrics.",
+      "members": [
+        "Carmen Galán",
+        "Rafael Suárez",
+        "Ángel Luis León",
+        "Mónica Martínez"
+      ],
+      "focus": [
+        "Design and integration of building services and systems",
+        "Indoor environmental conditioning: hygrothermal, acoustic, lighting and IAQ",
+        "Building energy: demand and efficiency, renewable energies"
+      ]
+    }
+  },
+  "training": {
+    "eyebrow": "Training · ASE-Zero",
+    "title": "Architecture, Health and Zero Energy",
+    "lede": "Elective course of the Bachelor's Degree in Foundations of Architecture at the University of Seville, exploring energy use and the control of comfort, quality and health performance in the built space.",
+    "meta": {
+      "degree": "Bachelor in Foundations of Architecture",
+      "school": "ETS Arquitectura · University of Seville",
+      "type": "Elective"
+    },
+    "blocks": {
+      "scope": {
+        "title": "Scope",
+        "intro": "The course addresses, in an integrated way:",
+        "items": [
+          "Energy use in buildings",
+          "Control of comfort, quality and health performance",
+          "Their impact on architectural design"
+        ],
+        "subItems": [
+          "Thermal environment",
+          "Lighting",
+          "Indoor air",
+          "Equipment noise"
+        ]
+      },
+      "design": {
+        "title": "Energy & healthy design",
+        "text": "Energy efficiency concepts and methods are applied, integrating a healthy, resilient, CO₂-neutral design that is respectful of human health.",
+        "imageAlt": "Indoor Environmental Quality (IEQ) diagram: thermal comfort, air, acoustics and light"
+      },
+      "content": {
+        "title": "Contents & methodology",
+        "intro": "Topics covered include:",
+        "items": [
+          "Characterisation of building energy systems",
+          "Assessment and optimisation of energy performance",
+          "Integration of renewable energies",
+          "Design of comfortable, functional environments",
+          "Systems management and control",
+          "ICT integration"
+        ],
+        "outro": "The course stresses efficient energy use and maximising performance for occupants."
+      },
+      "practice": {
+        "title": "Simulation & practice",
+        "intro": "Students apply techniques using simulation and analysis tools, organised in teams of 3 or 4.",
+        "imageAlt": "Energy simulation model of the Seville School of Architecture in BIM software",
+        "outro": "Includes interactive activities, analysis sessions, continuous assessment and a final exam based on design-improvement exercises."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Applied research & knowledge transfer",
+    "lede": "Representative selection of competitive R&D projects and transfer contracts developed by the lab's groups.",
+    "filters": {
+      "all": "All",
+      "rd": "R&D",
+      "contract": "68/83 contracts"
+    },
+    "tags": {
+      "rd": "R&D project",
+      "contract": "68/83 contract"
+    },
+    "viewDetails": "View details",
+    "outcomesTitle": "Key outcomes",
+    "yearLabel": "Period",
+    "disclaimer": "Representative selection. Full catalogue available on SISIUS — University of Seville.",
+    "items": {
+      "project1": {
+        "title": "Energy efficiency in heritage buildings",
+        "description": "Research on compatible strategies to improve energy efficiency in heritage buildings while preserving their historical value.",
+        "outcomes": [
+          "Development of non-invasive energy retrofitting strategies",
+          "Energy-assessment methodology for heritage buildings",
+          "Policy recommendations on heritage preservation"
+        ]
+      },
+      "project2": {
+        "title": "Circadian lighting in healthcare facilities",
+        "description": "Implementation and monitoring of circadian lighting systems in healthcare environments to improve patient recovery and staff performance.",
+        "outcomes": [
+          "Design guidelines for healthcare lighting",
+          "Custom lighting control algorithms for patient rooms",
+          "Before/after comparative study of staff performance"
+        ]
+      },
+      "project3": {
+        "title": "Adaptive comfort standards for Mediterranean climate",
+        "description": "Development of climate-specific comfort standards for Mediterranean conditions applicable to sustainable building design.",
+        "outcomes": [
+          "Climate-specific comfort parameters for Mediterranean buildings",
+          "Seasonal variation model for adaptive comfort",
+          "Design recommendations for passive cooling strategies"
+        ]
+      },
+      "project4": {
+        "title": "Lighting assessment for cultural heritage",
+        "description": "Assessment and implementation of lighting systems for cultural heritage buildings, focusing on conservation and visitor experience.",
+        "outcomes": [
+          "Assessment methodology for cultural heritage lighting",
+          "Conservation-friendly lighting specifications",
+          "Visitor experience enhancement strategies"
+        ]
+      },
+      "project5": {
+        "title": "Energy monitoring on a university campus",
+        "description": "Design and implementation of an integrated monitoring system for energy consumption across campus buildings.",
+        "outcomes": [
+          "Real-time energy monitoring dashboard",
+          "Consumption analysis and recommendations",
+          "Implementation of automated control strategies"
+        ]
+      }
+    }
+  },
+  "publications": {
+    "eyebrow": "Publications",
+    "title": "Indexed journal articles",
+    "lede": "A sample of the lab's recent scientific output in JCR journals on energy efficiency, lighting and comfort.",
+    "filters": {
+      "all": "All",
+      "lighting": "Lighting",
+      "energy": "Energy",
+      "comfort": "Comfort"
+    },
+    "showDetails": "Show details",
+    "showLess": "Show less",
+    "doi": "DOI",
+    "abstract": "Abstract",
+    "keywords": "Keywords",
+    "openExternal": "Open at doi.org",
+    "disclaimer": "Representative selection. Full catalogue available on SISIUS — University of Seville.",
+    "items": {
+      "pub1": {
+        "title": "Daylighting design strategies for energy saving in historic buildings",
+        "abstract": "Research on daylighting strategies to improve energy efficiency in heritage buildings while preserving their historic value. Combines field measurements, simulation analyses and case studies.",
+        "keywords": ["Daylighting", "Heritage buildings", "Energy efficiency", "Conservation"]
+      },
+      "pub2": {
+        "title": "Circadian lighting effects on hospital staff performance: A field study",
+        "abstract": "Field study examining the effects of circadian lighting on healthcare staff performance — alertness, cognitive function and subjective wellbeing — under different lighting conditions.",
+        "keywords": ["Circadian lighting", "Healthcare", "Staff performance", "HCL"]
+      },
+      "pub3": {
+        "title": "Thermal comfort assessment in Mediterranean university buildings",
+        "abstract": "Comprehensive thermal comfort assessment in Mediterranean university buildings, analysing seasonal variations and occupant preferences.",
+        "keywords": ["Thermal comfort", "Mediterranean climate", "University buildings", "Adaptive comfort"]
+      },
+      "pub4": {
+        "title": "Energy retrofitting strategies for historical buildings in Seville",
+        "abstract": "Analysis of energy retrofitting strategies for historical buildings in Seville, evaluating intervention effectiveness and cost-benefit ratios.",
+        "keywords": ["Energy retrofitting", "Historical buildings", "Heritage", "Seville"]
+      },
+      "pub5": {
+        "title": "Visual comfort and energy efficiency in educational buildings",
+        "abstract": "Examines the relationship between visual comfort and energy consumption in educational facilities through measurement and simulation.",
+        "keywords": ["Visual comfort", "Educational buildings", "Energy efficiency", "Lighting design"]
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your project",
+    "lede": "For collaborations, transfer contracts, internships or academic queries, the ArqWellness Lab team is based at the School of Architecture in Seville.",
+    "channels": {
+      "address": {
+        "label": "Address",
+        "value": "School of Architecture\nUniversity of Seville\nAvda. Reina Mercedes, 2\n41012 Seville — Spain",
+        "cta": "Get directions"
+      },
+      "email": {
+        "label": "Email",
+        "value": "arqwellness@us.es"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+34 954 55 65 60"
+      },
+      "social": {
+        "label": "Social",
+        "twitter": "Twitter / X",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "form": {
+      "title": "Write to us",
+      "lede": "Tell us how we can help. We typically reply within 48 working hours.",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@domain.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's it about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us the details…",
+      "consent": "I accept the privacy policy and the processing of my data.",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": "Thank you. We've received your message and will reply soon.",
+      "error": "Something went wrong. Please try again or email arqwellness@us.es.",
+      "required": "Required field"
+    }
+  },
+  "footer": {
+    "tagline": "Lighting, energy and wellness — University of Seville",
+    "explore": "Explore",
+    "lab": "Contact",
+    "legal": "Legal · US",
+    "legalNotice": "Legal notice",
+    "privacy": "Data protection",
+    "transparency": "Transparency",
+    "accessibility": "Accessibility",
+    "rights": "All rights reserved",
+    "institution": "School of Architecture · IUACC · University of Seville",
+    "credits": "Crafted with care in Seville."
+  },
+  "common": {
+    "readMore": "Read more",
+    "readLess": "Read less",
+    "viewMore": "View more",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "close": "Close",
+    "back": "Back",
+    "to": "→"
+  },
+  "scrollToTop": "Back to top",
+  "logoAlt": "ArqWellness Lab — University of Seville"
+}

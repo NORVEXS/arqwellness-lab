@@ -1,0 +1,125 @@
+import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import type { TeamPerson } from '../../data/team';
+
+interface TeamCardProps {
+  person: TeamPerson;
+  variant?: 'lead' | 'senior' | 'compact';
+  showRole?: boolean;
+}
+
+const initials = (raw: string) => {
+  const capitalised = raw
+    .split(/\s+/)
+    .filter((w) => /^[A-ZÁÉÍÓÚÑÀÈÌÒÙÄËÏÖÜÂÊÎÔÛÇ]/.test(w));
+  const chars = (capitalised.length >= 2 ? capitalised : raw.split(/\s+/))
+    .map((n) => n[0]?.toUpperCase() ?? '')
+    .filter(Boolean);
+  return (chars[0] ?? '') + (chars[chars.length - 1] ?? '');
+};
+
+const TeamCard: React.FC<TeamCardProps> = ({
+  person,
+  variant = 'senior',
+  showRole = true,
+}) => {
+  const { t } = useTranslation();
+  const name = t(person.nameKey);
+  const role = t(`team.roles.${person.roleKey}`);
+  const Tag: 'a' | 'div' = person.href ? 'a' : 'div';
+  const linkProps = person.href
+    ? { href: person.href, target: '_blank' as const, rel: 'noopener noreferrer' }
+    : {};
+
+  if (variant === 'lead') {
+    return (
+      <Tag
+        {...linkProps}
+        className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-glow sm:p-6 lg:items-start lg:p-7"
+      >
+        <div
+          className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-gradient-to-br from-brand-blue/20 via-brand-purple/15 to-brand-red/10 blur-2xl"
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+          className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-purple font-mono text-sm font-medium text-white shadow-medium sm:h-14 sm:w-14 lg:h-16 lg:w-16 lg:text-base"
+        >
+          {initials(name)}
+        </span>
+        <div className="relative min-w-0 flex-1">
+          {showRole && (
+            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue sm:tracking-[0.22em]">
+              {role}
+            </span>
+          )}
+          <h4 className="mt-1 font-display text-base font-medium leading-snug text-ink sm:text-lg">
+            {name}
+          </h4>
+        </div>
+        {person.href && (
+          <ArrowUpRight className="relative mt-0.5 h-4 w-4 shrink-0 text-ink-mute transition-colors group-hover:text-brand-blue" />
+        )}
+      </Tag>
+    );
+  }
+
+  if (variant === 'compact') {
+    return (
+      <Tag
+        {...linkProps}
+        className="group flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 transition-colors hover:border-brand-blue/30 hover:bg-surface-alt"
+      >
+        <span
+          aria-hidden="true"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-blue to-brand-purple font-mono text-[11px] font-medium text-white"
+        >
+          {initials(name)}
+        </span>
+        <div className="min-w-0 flex-1">
+          <span className="block truncate text-sm font-medium text-ink">{name}</span>
+          {showRole && (
+            <span className="block truncate font-mono text-[10px] uppercase tracking-[0.18em] text-ink-mute">
+              {role}
+            </span>
+          )}
+        </div>
+        {person.href && (
+          <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-ink-subtle transition-colors group-hover:text-brand-blue" />
+        )}
+      </Tag>
+    );
+  }
+
+  // senior — uniform medium card
+  return (
+    <Tag
+      {...linkProps}
+      className="group flex h-full flex-col items-center justify-start rounded-2xl border border-line bg-white p-4 text-center transition-all duration-300 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-medium sm:p-5"
+    >
+      <span
+        aria-hidden="true"
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-brand-blue to-brand-purple font-mono text-xs font-medium text-white sm:h-12 sm:w-12"
+      >
+        {initials(name)}
+      </span>
+      <h4 className="mt-3 font-display text-sm font-medium leading-snug text-ink display-balance">
+        {name}
+      </h4>
+      {showRole && (
+        <span className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-mute">
+          {role}
+        </span>
+      )}
+      {person.href && (
+        <span className="mt-3 inline-flex items-center gap-1 text-[11px] text-brand-blue opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          {t('team.viewProfile')}
+          <ArrowUpRight className="h-3 w-3" />
+        </span>
+      )}
+    </Tag>
+  );
+};
+
+export default TeamCard;

@@ -1,0 +1,13 @@
+{
+  "name": "ArqWellness Lab",
+  "short_name": "ArqWellness",
+  "description": "Laboratorio de Iluminación, Energía y Bienestar en Arquitectura — Universidad de Sevilla",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2D5C88",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
