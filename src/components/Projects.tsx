@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
               href="https://institucional.us.es/arqwellness/investigacion/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col rounded-2xl border border-line bg-white p-5 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-line-strong/70 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-white/20"
+              className="group flex h-full flex-col rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-line-strong/70 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-white/20 sm:p-5"
               aria-label={`${p.name} — ${t(`projects.tags.${p.type}`)}`}
             >
               <header className="flex items-center justify-between gap-3">
@@ -77,22 +77,22 @@ const Projects: React.FC = () => {
               </header>
 
               {p.logo && (
-                <div className="mt-5 flex h-20 items-center justify-start sm:h-24">
+                <div className="mt-3 flex h-14 items-center justify-start sm:mt-5 sm:h-20 lg:h-24">
                   <img
                     src={p.logo}
                     alt={`${p.name} — logo`}
                     loading="lazy"
                     decoding="async"
-                    className="max-h-full max-w-[80%] object-contain dark:[filter:invert(0.92)_hue-rotate(180deg)]"
+                    className="max-h-full max-w-[75%] object-contain dark:[filter:invert(0.92)_hue-rotate(180deg)] sm:max-w-[80%]"
                   />
                 </div>
               )}
 
-              <h3 className="mt-5 font-display text-lg font-semibold text-ink display-balance dark:text-white">
+              <h3 className="mt-3 font-display text-base font-semibold text-ink display-balance dark:text-white sm:mt-5 sm:text-lg">
                 {p.name}
               </h3>
               {p.scope && (
-                <p className="mt-1.5 text-sm text-ink-soft dark:text-white/65">
+                <p className="mt-1 text-xs text-ink-soft dark:text-white/65 sm:mt-1.5 sm:text-sm">
                   {p.scope}
                 </p>
               )}

@@ -125,14 +125,30 @@ const Hero: React.FC = () => {
 
       <div className="container-x">
         <Reveal>
-          <span className="eyebrow">{t('hero.eyebrow')}</span>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="eyebrow">{t('hero.eyebrow')}</span>
+            <span
+              aria-label={t('hero.statusLabel')}
+              className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/[0.06] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-emerald-700 dark:border-emerald-400/30 dark:bg-emerald-400/[0.08] dark:text-emerald-300"
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/60 opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
+              </span>
+              <span>{t('hero.statusLabel')}</span>
+            </span>
+          </div>
         </Reveal>
 
         <Reveal delay={80}>
           <h1 className="mt-5 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white sm:mt-8">
             <span>{t('hero.titleA')}</span>{' '}
-            <span className="text-brand-blue dark:text-brand-blue-soft">
-              {t('hero.titleB')}
+            <span className="relative inline-block text-brand-blue dark:text-brand-blue-soft">
+              <span className="relative z-10">{t('hero.titleB')}</span>
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-1 -z-0 h-[0.18em] rounded-sm bg-gradient-to-r from-brand-blue/0 via-brand-blue/30 to-brand-blue/0 dark:from-brand-blue-soft/0 dark:via-brand-blue-soft/30 dark:to-brand-blue-soft/0"
+              />
             </span>{' '}
             <span>{t('hero.titleC')}</span>{' '}
             <span className="block font-normal text-ink-soft sm:inline dark:text-white/65">

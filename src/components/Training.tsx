@@ -4,8 +4,8 @@ import { GraduationCap, Wind, BookOpen, MonitorSmartphone } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
-import climatizacion from '../assets/images/climatizacion.png';
-import simulacion from '../assets/images/simulacion.jpg';
+import climatizacion from '../assets/images/diagrama-ieq-calidad-ambiente-interior.webp';
+import simulacion from '../assets/images/simulacion-energetica-etsa-bim.webp';
 
 const META: { keyName: string; Icon: any }[] = [
   { keyName: 'degree', Icon: GraduationCap },

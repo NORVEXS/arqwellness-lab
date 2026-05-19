@@ -2,22 +2,44 @@ import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ArrowUpRight,
+  ScrollText,
   BookOpen,
-  FileText,
-  Wrench,
-  Presentation,
+  Shield,
+  Calculator,
+  Filter,
+  Wind,
+  Lightbulb,
+  Sun,
+  HeartPulse,
 } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
-import { RESOURCES, ResourceCategory } from '../data/resources';
+import { RESOURCES, ResourceCategory, ResourceIcon } from '../data/resources';
 
-const CATEGORY_ICON: Record<ResourceCategory, React.ElementType> = {
-  standard: BookOpen,
-  presentation: Presentation,
-  tool: Wrench,
-  video: FileText,
-  workshop: Presentation,
+const ICONS: Record<ResourceIcon, React.ElementType> = {
+  ScrollText,
+  BookOpen,
+  Shield,
+  Calculator,
+  Filter,
+  Wind,
+  Lightbulb,
+  Sun,
+  HeartPulse,
+};
+
+const CATEGORY_TONE: Record<ResourceCategory, string> = {
+  standard:
+    'bg-brand-blue/[0.08] text-brand-blue dark:bg-brand-blue-soft/15 dark:text-brand-blue-soft',
+  presentation:
+    'bg-brand-purple/[0.08] text-brand-purple dark:bg-brand-purple/20 dark:text-[#B9B2E8]',
+  tool:
+    'bg-brand-purple/[0.08] text-brand-purple dark:bg-brand-purple/20 dark:text-[#B9B2E8]',
+  video:
+    'bg-brand-red/[0.08] text-brand-red dark:bg-brand-red/20 dark:text-brand-red-soft',
+  workshop:
+    'bg-brand-red/[0.08] text-brand-red dark:bg-brand-red/20 dark:text-brand-red-soft',
 };
 
 type Filter = 'all' | ResourceCategory;
@@ -70,7 +92,7 @@ const Resources: React.FC = () => {
 
       <div className="mt-8 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((r, i) => {
-          const Icon = CATEGORY_ICON[r.category];
+          const Icon = ICONS[r.icon];
           const total = visible.length;
           const isLastAlone3 =
             i === total - 1 && total % 3 === 1 && total > 1; // 1 huérfano en grid-3
@@ -99,9 +121,9 @@ const Resources: React.FC = () => {
                 <header className="flex items-start justify-between gap-3">
                   <span
                     aria-hidden="true"
-                    className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue/[0.08] text-brand-blue dark:bg-brand-blue-soft/15 dark:text-brand-blue-soft"
+                    className={`flex h-11 w-11 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-105 ${CATEGORY_TONE[r.category]}`}
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </span>
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-mute dark:text-white/50">
                     {t(`resources.categories.${r.category}`)}
