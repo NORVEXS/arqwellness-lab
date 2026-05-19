@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Users, ChevronDown, ArrowUpRight, Star } from 'lucide-react';
+import { Users, ChevronDown, ArrowUpRight, Star, FileText } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
-import { GROUPS, GroupKey, getGroupMembers } from '../data/research';
+import {
+  GROUPS,
+  GroupKey,
+  getGroupMembers,
+  getGroupPublications,
+  getGroupArticlesTotal,
+} from '../data/research';
 
 const MEMBER_PREVIEW = 6;
+const PUB_PREVIEW = 4;
 const DESCRIPTION_CLAMP = 320; // chars
 
 const initials = (raw: string) =>
@@ -56,11 +63,14 @@ const ResearchGroups: React.FC = () => {
           const members = getGroupMembers(g);
           const code = t(`groups.${g}.code`);
           const groupUrl = `https://prisma.us.es/colectivo/grupo/${code}`;
+          const pubsUrl = `${groupUrl}#publicaciones`;
           const description = t(`groups.${g}.description`);
           const isExpanded = expandedMembers[g];
           const visibleMembers = isExpanded ? members : members.slice(0, MEMBER_PREVIEW);
           const hiddenCount = Math.max(0, members.length - MEMBER_PREVIEW);
           const isLong = description.length > DESCRIPTION_CLAMP;
+          const publications = getGroupPublications(g).slice(0, PUB_PREVIEW);
+          const articlesTotal = getGroupArticlesTotal(g);
 
           return (
             <Reveal key={g} delay={idx * 100} className="h-full">
@@ -206,6 +216,71 @@ const ResearchGroups: React.FC = () => {
                     )}
                   </ul>
                 </div>
+
+                {publications.length > 0 && (
+                  <div className="mt-7">
+                    <h4 className="flex items-center justify-between gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/55">
+                      <span className="flex items-center gap-2">
+                        <FileText className="h-3.5 w-3.5" />
+                        <span>
+                          {t('groups.publicationsTitle')} · {articlesTotal}
+                        </span>
+                      </span>
+                      <a
+                        href={pubsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 normal-case tracking-normal text-ink-mute transition-colors hover:text-brand-blue dark:text-white/50 dark:hover:text-brand-blue-soft"
+                      >
+                        <span>PRISMA</span>
+                        <ArrowUpRight className="h-3 w-3" />
+                      </a>
+                    </h4>
+                    <ol className="mt-3 space-y-2.5">
+                      {publications.map((p) => (
+                        <li key={p.id}>
+                          <a
+                            href={p.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/pub flex items-start gap-3 rounded-xl border border-line bg-surface-alt/60 px-3.5 py-3 text-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/40 hover:bg-white hover:shadow-soft dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.06]"
+                          >
+                            <span className="shrink-0 font-mono text-[11px] font-semibold text-ink-mute dark:text-white/55">
+                              {p.year}
+                            </span>
+                            <span className="min-w-0 flex-1">
+                              <span className="block leading-snug text-ink text-pretty dark:text-white/85">
+                                {p.title}
+                              </span>
+                              <span className="mt-1 block truncate text-xs italic text-ink-mute dark:text-white/50">
+                                {p.journal}
+                              </span>
+                            </span>
+                            <ArrowUpRight
+                              aria-hidden="true"
+                              className="mt-0.5 h-3.5 w-3.5 shrink-0 text-ink-mute transition-all duration-300 group-hover/pub:-translate-y-0.5 group-hover/pub:translate-x-0.5 group-hover/pub:text-brand-blue dark:text-white/40 dark:group-hover/pub:text-brand-blue-soft"
+                            />
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                    <div className="mt-4 text-right">
+                      <a
+                        href={pubsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-mono text-eyebrow uppercase tracking-eyebrow text-brand-blue transition-colors hover:text-brand-purple dark:text-brand-blue-soft"
+                      >
+                        <span>
+                          {t('groups.viewAllPublications', {
+                            count: articlesTotal,
+                          })}
+                        </span>
+                        <ArrowUpRight className="h-3 w-3" />
+                      </a>
+                    </div>
+                  </div>
+                )}
 
               </article>
             </Reveal>

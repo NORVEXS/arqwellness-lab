@@ -180,6 +180,8 @@
     "lede": "ArqWellness Lab is composed of the PAIDI groups TEP-130 and TEP-1000, both affiliated with the IUACC at the University of Seville.",
     "membersTitle": "Members",
     "ipLabel": "Principal investigator",
+    "publicationsTitle": "Recent publications",
+    "viewAllPublications": "See all {{count}} publications",
     "showMore": "Show {{count}} more",
     "showLess": "Show less",
     "continueReading": "Continue reading on PRISMA",
