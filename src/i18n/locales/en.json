@@ -143,45 +143,33 @@
     "lines": {
       "comfort": {
         "number": "01",
-        "title": "Hygrothermal comfort, perception and air",
-        "summary": "Hygrothermal comfort, perception of the indoor environment, health and air quality.",
-        "intro": "We study the parameters that drive comfort indoors and their interaction with energy consumption.",
+        "title": "Hygrothermal comfort and air quality",
+        "summary": "How the indoor space feels and breathes.",
         "items": [
-          "Thermal comfort across climate contexts",
-          "Noise reduction and acoustic comfort strategies",
-          "Assessment and improvement of indoor air quality",
-          "Interaction between comfort parameters",
-          "Post-occupancy evaluations and user satisfaction studies"
-        ],
-        "outro": "We develop guidelines and standards for comfort-driven architectural design."
+          "Thermal and acoustic comfort",
+          "Indoor air quality and health",
+          "Environmental perception and user satisfaction"
+        ]
       },
       "lighting": {
         "number": "02",
         "title": "Daylight, electric light and circadian response",
-        "summary": "Daylight, electric lighting and circadian response.",
-        "intro": "We investigate the influence of daylight and artificial light on physiology, psychology and behaviour.",
+        "summary": "How light shapes the body and the space.",
         "items": [
-          "Lighting, circadian rhythms and sleep quality",
-          "Impact of daylight on occupant health",
-          "Spectral quality of light and biological effects",
-          "Light therapy applications in architecture",
-          "Biologically effective lighting in real buildings"
-        ],
-        "outro": "We collaborate with health professionals, chronobiologists and manufacturers to bring findings into design."
+          "Daylight and biologically effective light",
+          "Circadian rhythms and sleep quality",
+          "Lighting in healthcare and heritage spaces"
+        ]
       },
       "control": {
         "number": "03",
         "title": "Environmental variables and advanced control",
-        "summary": "Environmental variables and advanced control of the indoor environment.",
-        "intro": "We design systems that monitor and regulate environmental parameters in inhabited spaces.",
+        "summary": "How to measure and regulate the indoor environment.",
         "items": [
           "Real-time environmental sensor networks",
-          "Smart control of lighting and HVAC",
-          "Integration with building management systems",
-          "User interfaces for environmental control",
-          "Predictive models to optimise performance"
-        ],
-        "outro": "We implement and validate these systems in real-world environments."
+          "Smart control of light and HVAC",
+          "Predictive models of building performance"
+        ]
       }
     }
   },

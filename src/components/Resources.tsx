@@ -81,9 +81,13 @@ const Resources: React.FC = () => {
               key={r.id}
               delay={(i % 6) * 40}
               className={`h-full ${
-                isLastAlone2 ? 'sm:col-span-2 sm:mx-auto sm:max-w-[calc(50%-0.5rem)] sm:w-full' : ''
+                isLastAlone2
+                  ? 'sm:col-span-2 sm:mx-auto sm:max-w-[calc(50%-0.5rem)] sm:w-full lg:col-span-1 lg:mx-0 lg:max-w-none lg:w-auto'
+                  : ''
               } ${
-                isLastAlone3 ? 'lg:col-span-3 lg:mx-auto lg:max-w-[calc(33.333%-0.667rem)] lg:w-full lg:col-start-auto' : ''
+                isLastAlone3
+                  ? 'lg:col-span-3 lg:mx-auto lg:max-w-[calc(33.333%-0.667rem)] lg:w-full'
+                  : ''
               }`}
             >
               <a

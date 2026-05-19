@@ -143,45 +143,33 @@
     "lines": {
       "comfort": {
         "number": "01",
-        "title": "Confort higrotérmico, percepción y aire",
-        "summary": "Confort higrotérmico, percepción del ambiente interior, salud y calidad del aire.",
-        "intro": "Investigamos los factores que determinan el confort en el espacio interior y su interacción con el consumo energético.",
+        "title": "Confort higrotérmico y calidad del aire",
+        "summary": "Cómo se siente y respira el espacio interior.",
         "items": [
-          "Confort térmico en distintos contextos climáticos",
-          "Estrategias de reducción del ruido y confort acústico",
-          "Evaluación y mejora de la calidad del aire interior",
-          "Interacción entre parámetros de confort",
-          "Evaluaciones post-ocupacionales y estudios de satisfacción"
-        ],
-        "outro": "Desarrollamos guías y estándares para un diseño arquitectónico orientado al confort."
+          "Confort térmico y acústico",
+          "Calidad del aire interior y salud",
+          "Percepción ambiental y satisfacción del usuario"
+        ]
       },
       "lighting": {
         "number": "02",
         "title": "Iluminación natural, eléctrica y circadiana",
-        "summary": "Iluminación natural, iluminación eléctrica y respuesta circadiana.",
-        "intro": "Estudiamos la influencia de la luz natural y artificial sobre la fisiología, la psicología y el comportamiento.",
+        "summary": "Cómo la luz afecta al cuerpo y al espacio.",
         "items": [
-          "Iluminación, ritmos circadianos y calidad del sueño",
-          "Impacto de la luz natural en la salud de los ocupantes",
-          "Calidad espectral de la luz y efectos biológicos",
-          "Aplicaciones de terapia lumínica en arquitectura",
-          "Iluminación biológicamente efectiva en edificios"
-        ],
-        "outro": "Colaboramos con profesionales de la salud, cronobiólogos y fabricantes para llevar los hallazgos al diseño real."
+          "Luz natural y luz biológicamente efectiva",
+          "Ritmos circadianos y calidad del sueño",
+          "Iluminación de entornos sanitarios y patrimonio"
+        ]
       },
       "control": {
         "number": "03",
         "title": "Variables ambientales y control avanzado",
-        "summary": "Variables ambientales y control avanzado del ambiente interior.",
-        "intro": "Diseñamos sistemas que monitorizan y regulan parámetros ambientales en edificios habitados.",
+        "summary": "Cómo medir y regular el ambiente interior.",
         "items": [
           "Redes de sensores ambientales en tiempo real",
-          "Control inteligente de iluminación y climatización",
-          "Integración con sistemas de gestión de edificios",
-          "Interfaces de usuario para el control ambiental",
-          "Modelos predictivos para optimizar el rendimiento"
-        ],
-        "outro": "Implementamos y validamos estos sistemas en entornos reales."
+          "Control inteligente de luz y clima",
+          "Modelos predictivos del rendimiento del edificio"
+        ]
       }
     }
   },

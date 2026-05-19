@@ -4,7 +4,8 @@ import { Users, Layers } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
-import { GROUPS, GroupKey } from '../data/research';
+import { GROUPS, GroupKey, MEMBER_URLS } from '../data/research';
+import { ArrowUpRight } from 'lucide-react';
 
 const initials = (raw: string) =>
   raw
@@ -81,20 +82,45 @@ const ResearchGroups: React.FC = () => {
                     <span>{t('groups.membersTitle')}</span>
                   </h4>
                   <ul className="mt-3 flex flex-wrap gap-2">
-                    {members.map((m) => (
-                      <li
-                        key={m}
-                        className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-alt px-3 py-1.5 text-xs dark:border-white/10 dark:bg-white/[0.04]"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className={`flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br ${accent[g].chip} font-mono text-[10px] font-medium text-white`}
-                        >
-                          {initials(m)}
-                        </span>
-                        <span className="text-ink-soft dark:text-white/80">{m}</span>
-                      </li>
-                    ))}
+                    {members.map((m) => {
+                      const href = MEMBER_URLS[m];
+                      const chipClasses =
+                        'group/m inline-flex items-center gap-2 rounded-full border border-line bg-surface-alt px-3 py-1.5 text-xs transition-colors dark:border-white/10 dark:bg-white/[0.04]';
+                      const linkClasses =
+                        'hover:border-brand-blue/40 hover:bg-brand-blue/[0.06] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.08]';
+                      const inner = (
+                        <>
+                          <span
+                            aria-hidden="true"
+                            className={`flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br ${accent[g].chip} font-mono text-[10px] font-medium text-white`}
+                          >
+                            {initials(m)}
+                          </span>
+                          <span className="text-ink-soft transition-colors dark:text-white/80">
+                            {m}
+                          </span>
+                          {href && (
+                            <ArrowUpRight className="h-3 w-3 text-ink-mute transition-colors group-hover/m:text-brand-blue dark:text-white/40 dark:group-hover/m:text-brand-blue-soft" />
+                          )}
+                        </>
+                      );
+                      return (
+                        <li key={m}>
+                          {href ? (
+                            <a
+                              href={href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`${chipClasses} ${linkClasses}`}
+                            >
+                              {inner}
+                            </a>
+                          ) : (
+                            <span className={chipClasses}>{inner}</span>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
 
