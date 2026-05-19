@@ -149,10 +149,18 @@ const Publications: React.FC = () => {
                           href={`https://doi.org/${pub.doi}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-2 inline-flex items-center gap-2 font-mono text-xs text-brand-blue transition-colors hover:text-brand-purple dark:text-brand-blue-soft"
+                          className="group mt-2 flex w-full max-w-full items-center gap-2 rounded-lg border border-line bg-white px-3 py-2 transition-all duration-300 hover:border-brand-blue/40 hover:bg-brand-blue/[0.04] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.07]"
                         >
-                          <span>{pub.doi}</span>
-                          <ArrowUpRight className="h-3 w-3" />
+                          <span className="shrink-0 rounded bg-ink/[0.06] px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink-soft dark:bg-white/10 dark:text-white/70">
+                            DOI
+                          </span>
+                          <span className="min-w-0 flex-1 truncate font-mono text-xs text-ink-soft transition-colors group-hover:text-brand-blue dark:text-white/70 dark:group-hover:text-brand-blue-soft">
+                            {pub.doi}
+                          </span>
+                          <ArrowUpRight
+                            className="h-3.5 w-3.5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft"
+                            aria-hidden="true"
+                          />
                         </a>
                       </div>
                     )}

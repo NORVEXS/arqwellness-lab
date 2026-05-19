@@ -327,9 +327,9 @@
         "keywords": ["Dynamic metrics", "Lighting control", "Daylight Autonomy", "Review"]
       },
       "daoCon": {
-        "title": "Continuous Overcast Daylight Autonomy: a new methodology to evaluate the daylighting performance of buildings",
-        "abstract": "New dynamic metric (DAo.con) to assess the daylighting performance of buildings under continuous overcast sky conditions, integrating temporal behaviour and energy efficiency of the lighting design.",
-        "keywords": ["Daylight Autonomy", "Natural light", "Overcast sky", "Energy efficiency"]
+        "title": "Continuous Overcast Daylight Autonomy (DAo.con): A New Dynamic Metric for Sensor-Less Lighting Smart Controls",
+        "abstract": "New dynamic metric (DAo.con) to estimate daylighting performance under continuous overcast sky conditions, aimed at sensor-less smart lighting control and energy efficiency of the lighting design.",
+        "keywords": ["Daylight Autonomy", "Natural light", "Overcast sky", "Lighting control"]
       }
     }
   },
