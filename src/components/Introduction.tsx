@@ -143,12 +143,8 @@ const Hero: React.FC = () => {
         <Reveal delay={80}>
           <h1 className="mt-5 max-w-5xl font-display text-display-xl font-semibold leading-[1.06] tracking-[-0.035em] text-ink display-balance dark:text-white sm:mt-8">
             <span>{t('hero.titleA')}</span>{' '}
-            <span className="relative inline-block text-brand-blue dark:text-brand-blue-soft">
-              <span className="relative z-10">{t('hero.titleB')}</span>
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-1 -z-0 h-[0.18em] rounded-sm bg-gradient-to-r from-brand-blue/0 via-brand-blue/30 to-brand-blue/0 dark:from-brand-blue-soft/0 dark:via-brand-blue-soft/30 dark:to-brand-blue-soft/0"
-              />
+            <span className="text-brand-blue dark:text-brand-blue-soft">
+              {t('hero.titleB')}
             </span>{' '}
             <span>{t('hero.titleC')}</span>{' '}
             <span className="block font-normal text-ink-soft sm:inline dark:text-white/65">
