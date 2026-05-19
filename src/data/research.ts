@@ -25,10 +25,22 @@ export interface PrismaMember {
   role: 'ip' | 'member';
 }
 
+export interface PrismaPublication {
+  id: string;
+  url: string;
+  type: string;
+  dataType: string;
+  year: string;
+  title: string;
+  journal: string;
+}
+
 interface GeneratedGroup {
   key: string;
   url: string;
   members: PrismaMember[];
+  publications: PrismaPublication[];
+  publicationsTotal: Record<string, number>;
 }
 
 interface GeneratedFile {
@@ -43,4 +55,20 @@ export const MEMBERS_GENERATED_AT = data.generatedAt;
 
 export function getGroupMembers(group: GroupKey): PrismaMember[] {
   return data.groups[group]?.members ?? [];
+}
+
+export function getGroupPublications(group: GroupKey): PrismaPublication[] {
+  return data.groups[group]?.publications ?? [];
+}
+
+export function getGroupPublicationsTotal(group: GroupKey): number {
+  return data.groups[group]?.publicationsTotal?.total ?? 0;
+}
+
+export function getGroupArticlesTotal(group: GroupKey): number {
+  return data.groups[group]?.publicationsTotal?.['Artículo'] ?? 0;
+}
+
+export function getGroupPrismaUrl(group: GroupKey): string {
+  return data.groups[group]?.url ?? '';
 }

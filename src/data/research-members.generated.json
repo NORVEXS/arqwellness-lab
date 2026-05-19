@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T19:13:49.997Z",
+  "generatedAt": "2026-05-19T19:20:33.188Z",
   "source": "https://prisma.us.es/",
   "groups": {
     "tep130": {
@@ -153,7 +153,76 @@
           "shortName": "Juan José Sendra",
           "role": "member"
         }
-      ]
+      ],
+      "publications": [
+        {
+          "id": "276574",
+          "url": "https://prisma.us.es/publicacion/276574",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "3D impulse response analysis and acoustic signature for the sound heritage of the Campo Pequeno bullring in Lisbon, Portugal",
+          "journal": "Buildings"
+        },
+        {
+          "id": "282733",
+          "url": "https://prisma.us.es/publicacion/282733",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "A Data-Driven Framework for Assessing Compound Urban Heat–Energy Vulnerability: Evidence from Two Mediterranean Housing Districts",
+          "journal": "Sustainable Cities and Society"
+        },
+        {
+          "id": "282508",
+          "url": "https://prisma.us.es/publicacion/282508",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "A data-driven workflow for automated life cycle assessment in building refurbishment",
+          "journal": "Energy and Buildings"
+        },
+        {
+          "id": "277323",
+          "url": "https://prisma.us.es/publicacion/277323",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "AI-driven morphological optimization for resilient retrofitting of mediterranean housing stock under compounded urban heat island and heatwave effects",
+          "journal": "Building and Environment"
+        },
+        {
+          "id": "281276",
+          "url": "https://prisma.us.es/publicacion/281276",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "How to conduct an archaeoacoustic study of rock art sites through impulse response measurements",
+          "journal": "Advances in Archaeological Practice"
+        },
+        {
+          "id": "271188",
+          "url": "https://prisma.us.es/publicacion/271188",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2025",
+          "title": "A framework for building sustainability assessment for developing countries using F-Delphi: Moroccan housing case study",
+          "journal": "Sustainability"
+        }
+      ],
+      "publicationsTotal": {
+        "Artículo": 312,
+        "Contribución de congreso": 145,
+        "Corrección": 3,
+        "Capítulo": 62,
+        "Resumen de ponencia": 1,
+        "Libro": 23,
+        "Revisión": 7,
+        "Editorial": 3,
+        "Letter": 2,
+        "Nota": 2,
+        "total": 560
+      }
     },
     "tep1000": {
       "key": "tep1000",
@@ -187,7 +256,73 @@
           "shortName": "David Moreno",
           "role": "member"
         }
-      ]
+      ],
+      "publications": [
+        {
+          "id": "277323",
+          "url": "https://prisma.us.es/publicacion/277323",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "AI-driven morphological optimization for resilient retrofitting of mediterranean housing stock under compounded urban heat island and heatwave effects",
+          "journal": "Building and Environment"
+        },
+        {
+          "id": "270375",
+          "url": "https://prisma.us.es/publicacion/270375",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2026",
+          "title": "Dynamic lighting in a Pediatric ICU: effects on staff visual comfort and circadian biomarkers",
+          "journal": "Building and Environment"
+        },
+        {
+          "id": "253918",
+          "url": "https://prisma.us.es/publicacion/253918",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2025",
+          "title": "Effect of standard versus advanced dimmable lighting systems on the circadian rhythms of hospital personnel",
+          "journal": "LEUKOS - Journal of Illuminating Engineering Society of North America"
+        },
+        {
+          "id": "271030",
+          "url": "https://prisma.us.es/publicacion/271030",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2025",
+          "title": "Efficacy of the CHRONOlight biodynamic lighting system for control of nosocomial Gram-negative pathogens",
+          "journal": "International Journal of Infectious Diseases"
+        },
+        {
+          "id": "259080",
+          "url": "https://prisma.us.es/publicacion/259080",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2025",
+          "title": "Granular mapping of UHI and heatwave effects: Implications for building performance and urban resilience",
+          "journal": "Building and Environment"
+        },
+        {
+          "id": "251084",
+          "url": "https://prisma.us.es/publicacion/251084",
+          "type": "Artículo",
+          "dataType": "Artículo",
+          "year": "2025",
+          "title": "The impact of light adjustment versus tuneable white mode on ICU staff's circadian rhythms",
+          "journal": "Building Research and Information"
+        }
+      ],
+      "publicationsTotal": {
+        "Artículo": 94,
+        "Corrección": 2,
+        "Capítulo": 36,
+        "Revisión": 3,
+        "Contribución de congreso": 38,
+        "Ponencia": 1,
+        "Libro": 8,
+        "total": 182
+      }
     }
   }
 }

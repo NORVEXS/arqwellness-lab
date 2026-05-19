@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Users, Layers, ChevronDown, ArrowUpRight, Star } from 'lucide-react';
+import { Users, ChevronDown, ArrowUpRight, Star } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
@@ -54,7 +54,6 @@ const ResearchGroups: React.FC = () => {
       <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-2">
         {GROUPS.map((g, idx) => {
           const members = getGroupMembers(g);
-          const focus = t(`groups.${g}.focus`, { returnObjects: true }) as string[];
           const code = t(`groups.${g}.code`);
           const groupUrl = `https://prisma.us.es/colectivo/grupo/${code}`;
           const description = t(`groups.${g}.description`);
@@ -208,23 +207,6 @@ const ResearchGroups: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="mt-7">
-                  <h4 className="flex items-center gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/55">
-                    <Layers className="h-3.5 w-3.5" />
-                    <span>{t('groups.focusTitle')}</span>
-                  </h4>
-                  <ul className="mt-3 space-y-2 text-sm text-ink-soft dark:text-white/70">
-                    {focus.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5">
-                        <span
-                          aria-hidden="true"
-                          className="mt-2 h-1 w-1.5 shrink-0 rounded-full bg-ink-mute"
-                        />
-                        <span className="text-pretty">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </article>
             </Reveal>
           );

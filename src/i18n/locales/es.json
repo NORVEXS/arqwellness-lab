@@ -180,30 +180,18 @@
     "lede": "El ArqWellness Lab está formado por los grupos PAIDI TEP-130 y TEP-1000, ambos adscritos al IUACC de la Universidad de Sevilla.",
     "membersTitle": "Miembros",
     "ipLabel": "Investigador/a principal",
-    "focusTitle": "Líneas de actividad",
     "showMore": "Ver {{count}} más",
     "showLess": "Ver menos",
     "continueReading": "Seguir leyendo en PRISMA",
     "tep130": {
       "code": "TEP-130",
       "name": "Arquitectura, Patrimonio y Sostenibilidad",
-      "description": "Acústica, iluminación, óptica y energía. Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla y al ArqWellness Lab. Reúne profesores e investigadores de los departamentos de Construcciones Arquitectónicas I, Física Aplicada I/II/III y Medicina Preventiva y Pediátrica.",
-      "focus": [
-        "Diseño, desarrollo e integración de instalaciones (hidrosanitarias, eléctricas, climatización, comunicaciones, seguridad)",
-        "Acondicionamiento ambiental (higrotérmico, acústico, lumínico, calidad del aire)",
-        "Energía en la edificación: demanda, eficiencia y renovables (solar térmica, fotovoltaica, cogeneración)",
-        "Medicina preventiva y pediátrica aplicada al entorno construido"
-      ]
+      "description": "Acústica, iluminación, óptica y energía. Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla y al ArqWellness Lab. Reúne profesores e investigadores de los departamentos de Construcciones Arquitectónicas I, Física Aplicada I/II/III y Medicina Preventiva y Pediátrica."
     },
     "tep1000": {
       "code": "TEP-1000",
       "name": "Confort y eficiencia energética en edificios",
-      "description": "Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla, radicado en la Escuela Técnica Superior de Arquitectura. Reúne investigadores de Construcciones Arquitectónicas I y Medicina Preventiva y Pediátrica.",
-      "focus": [
-        "Diseño e integración de instalaciones y sistemas de los edificios",
-        "Acondicionamiento ambiental higrotérmico, acústico, lumínico y de calidad del aire",
-        "Energía en la edificación: demanda y eficiencia, energías renovables"
-      ]
+      "description": "Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla, radicado en la Escuela Técnica Superior de Arquitectura. Reúne investigadores de Construcciones Arquitectónicas I y Medicina Preventiva y Pediátrica."
     }
   },
   "training": {
@@ -282,56 +270,24 @@
   },
   "publications": {
     "eyebrow": "Publicaciones",
-    "title": "Artículos en revistas indexadas",
-    "lede": "Una muestra de la producción científica reciente del laboratorio en revistas JCR de eficiencia energética, iluminación y confort.",
+    "title": "Producción científica reciente",
+    "lede": "Selección de los artículos más recientes del laboratorio publicados en revistas indexadas. Datos sincronizados en cada despliegue desde PRISMA — TEP-130 y TEP-1000.",
     "filters": {
       "all": "Todas",
-      "lighting": "Iluminación",
-      "energy": "Energía",
-      "comfort": "Confort"
+      "tep130": "TEP-130",
+      "tep1000": "TEP-1000"
     },
-    "showDetails": "Ver detalles",
-    "showLess": "Ocultar detalles",
-    "doi": "DOI",
-    "abstract": "Resumen",
-    "keywords": "Palabras clave",
-    "openExternal": "Abrir en doi.org",
-    "disclaimer": "Selección representativa. Producción científica completa en PRISMA — Universidad de Sevilla.",
-    "viewAllTep130": "Publicaciones TEP-130",
-    "viewAllTep1000": "Publicaciones TEP-1000",
-    "openInstitutional": "Ver referencia",
-    "items": {
-      "chronolightHospital": {
-        "title": "Effect of standard versus advanced dimmable lighting systems on the circadian rhythms of hospital personnel",
-        "abstract": "Estudio sobre el impacto de sistemas avanzados de iluminación regulable frente a sistemas estándar en los ritmos circadianos del personal hospitalario en entornos asistenciales reales.",
-        "keywords": ["Iluminación circadiana", "Hospital", "Dimming", "HCL"]
-      },
-      "chronolightPathogens": {
-        "title": "Efficacy of the CHRONOlight biodynamic lighting system for control of nosocomial Gram-negative pathogens",
-        "abstract": "Eficacia del sistema CHRONOlight de iluminación biodinámica en el control de patógenos nosocomiales Gram-negativos en entornos sanitarios.",
-        "keywords": ["CHRONOlight", "Biodinámica", "Infecciones nosocomiales", "Sanidad"]
-      },
-      "hemodialysisIaq": {
-        "title": "Integral analysis of indoor environmental quality in a hemodialysis unit",
-        "abstract": "Análisis integral de la calidad del ambiente interior en una unidad de hemodiálisis: calidad del aire interior y riesgo relativo de enfermedades transmitidas por el aire.",
-        "keywords": ["IAQ", "Hemodiálisis", "Riesgo aéreo", "Salud"]
-      },
-      "vulnerableOccupants": {
-        "title": "Healthier indoor environments for vulnerable occupants: light, air quality, and airborne disease risk",
-        "abstract": "Análisis de luz, calidad del aire y riesgo de transmisión aérea en entornos interiores ocupados por personas vulnerables.",
-        "keywords": ["Vulnerabilidad", "IAQ", "Iluminación", "Salud pública"]
-      },
-      "dynamicLightingReview": {
-        "title": "New approaches in dynamic metrics for lighting control systems: a critical review",
-        "abstract": "Revisión crítica de nuevas métricas dinámicas aplicadas a sistemas de control lumínico, analizando precisión, comportamiento temporal y aplicaciones reales.",
-        "keywords": ["Métricas dinámicas", "Control lumínico", "Daylight Autonomy", "Revisión"]
-      },
-      "daoCon": {
-        "title": "Continuous Overcast Daylight Autonomy (DAo.con): A New Dynamic Metric for Sensor-Less Lighting Smart Controls",
-        "abstract": "Nueva métrica dinámica (DAo.con) que estima el aprovechamiento de la luz natural en edificios bajo cielo cubierto continuo, pensada para el control inteligente de la iluminación sin sensores y para la eficiencia energética del proyecto lumínico.",
-        "keywords": ["Daylight Autonomy", "Luz natural", "Cielo cubierto", "Control lumínico"]
-      }
-    }
+    "tags": {
+      "tep130": "TEP-130",
+      "tep1000": "TEP-1000"
+    },
+    "unit": {
+      "one": "publicación",
+      "many": "publicaciones"
+    },
+    "disclaimer": "Catálogo completo y actualizado en PRISMA — Universidad de Sevilla.",
+    "viewAllTep130": "Ver todo TEP-130",
+    "viewAllTep1000": "Ver todo TEP-1000"
   },
   "infrastructure": {
     "eyebrow": "Infraestructuras",

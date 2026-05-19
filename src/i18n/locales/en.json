@@ -180,30 +180,18 @@
     "lede": "ArqWellness Lab is composed of the PAIDI groups TEP-130 and TEP-1000, both affiliated with the IUACC at the University of Seville.",
     "membersTitle": "Members",
     "ipLabel": "Principal investigator",
-    "focusTitle": "Activity areas",
     "showMore": "Show {{count}} more",
     "showLess": "Show less",
     "continueReading": "Continue reading on PRISMA",
     "tep130": {
       "code": "TEP-130",
       "name": "Architecture, Heritage and Sustainability",
-      "description": "Acoustics, lighting, optics and energy. A PAIDI group at the IUACC of the University of Seville and the ArqWellness Lab. It brings together faculty and researchers from Architectural Construction I, Applied Physics I/II/III and Preventive Medicine and Pediatrics.",
-      "focus": [
-        "Design and integration of building services (plumbing, electrical, HVAC, communications, safety)",
-        "Indoor environmental conditioning (hygrothermal, acoustic, lighting, IAQ)",
-        "Building energy: demand, efficiency and renewables (solar thermal, PV, cogeneration)",
-        "Preventive medicine and pediatrics applied to the built environment"
-      ]
+      "description": "Acoustics, lighting, optics and energy. A PAIDI group at the IUACC of the University of Seville and the ArqWellness Lab. It brings together faculty and researchers from Architectural Construction I, Applied Physics I/II/III and Preventive Medicine and Pediatrics."
     },
     "tep1000": {
       "code": "TEP-1000",
       "name": "Comfort and Energy Use in Buildings",
-      "description": "A PAIDI group at the IUACC of the University of Seville, hosted at the School of Architecture. It gathers researchers from Architectural Construction I and Preventive Medicine and Pediatrics.",
-      "focus": [
-        "Design and integration of building services and systems",
-        "Indoor environmental conditioning: hygrothermal, acoustic, lighting and IAQ",
-        "Building energy: demand and efficiency, renewable energies"
-      ]
+      "description": "A PAIDI group at the IUACC of the University of Seville, hosted at the School of Architecture. It gathers researchers from Architectural Construction I and Preventive Medicine and Pediatrics."
     }
   },
   "training": {
@@ -282,56 +270,24 @@
   },
   "publications": {
     "eyebrow": "Publications",
-    "title": "Indexed journal articles",
-    "lede": "A sample of the lab's recent scientific output in JCR journals on energy efficiency, lighting and comfort.",
+    "title": "Recent scientific output",
+    "lede": "A selection of the lab's most recent articles in indexed journals. Data is synchronised on every deployment from PRISMA — TEP-130 and TEP-1000.",
     "filters": {
       "all": "All",
-      "lighting": "Lighting",
-      "energy": "Energy",
-      "comfort": "Comfort"
+      "tep130": "TEP-130",
+      "tep1000": "TEP-1000"
     },
-    "showDetails": "Show details",
-    "showLess": "Show less",
-    "doi": "DOI",
-    "abstract": "Abstract",
-    "keywords": "Keywords",
-    "openExternal": "Open at doi.org",
-    "disclaimer": "Representative selection. Full scientific output on PRISMA — University of Seville.",
-    "viewAllTep130": "TEP-130 publications",
-    "viewAllTep1000": "TEP-1000 publications",
-    "openInstitutional": "View reference",
-    "items": {
-      "chronolightHospital": {
-        "title": "Effect of standard versus advanced dimmable lighting systems on the circadian rhythms of hospital personnel",
-        "abstract": "Impact of advanced dimmable lighting systems versus standard systems on the circadian rhythms of hospital personnel.",
-        "keywords": ["Circadian lighting", "Hospital", "Dimming", "HCL"]
-      },
-      "chronolightPathogens": {
-        "title": "Efficacy of the CHRONOlight biodynamic lighting system for control of nosocomial Gram-negative pathogens",
-        "abstract": "Efficacy of the CHRONOlight biodynamic lighting system in controlling nosocomial Gram-negative pathogens in healthcare environments.",
-        "keywords": ["CHRONOlight", "Biodynamic", "Nosocomial infections", "Healthcare"]
-      },
-      "hemodialysisIaq": {
-        "title": "Integral analysis of indoor environmental quality in a hemodialysis unit",
-        "abstract": "Integral indoor environmental quality analysis in a haemodialysis unit: indoor air quality and relative airborne disease risk.",
-        "keywords": ["IAQ", "Haemodialysis", "Airborne risk", "Health"]
-      },
-      "vulnerableOccupants": {
-        "title": "Healthier indoor environments for vulnerable occupants: light, air quality, and airborne disease risk",
-        "abstract": "Analysis of light, air quality and airborne transmission risk in indoor environments occupied by vulnerable individuals.",
-        "keywords": ["Vulnerability", "IAQ", "Lighting", "Public health"]
-      },
-      "dynamicLightingReview": {
-        "title": "New approaches in dynamic metrics for lighting control systems: a critical review",
-        "abstract": "Critical review of new dynamic metrics applied to lighting control systems, addressing accuracy, temporal behaviour and real-world applications.",
-        "keywords": ["Dynamic metrics", "Lighting control", "Daylight Autonomy", "Review"]
-      },
-      "daoCon": {
-        "title": "Continuous Overcast Daylight Autonomy (DAo.con): A New Dynamic Metric for Sensor-Less Lighting Smart Controls",
-        "abstract": "New dynamic metric (DAo.con) to estimate daylighting performance under continuous overcast sky conditions, aimed at sensor-less smart lighting control and energy efficiency of the lighting design.",
-        "keywords": ["Daylight Autonomy", "Natural light", "Overcast sky", "Lighting control"]
-      }
-    }
+    "tags": {
+      "tep130": "TEP-130",
+      "tep1000": "TEP-1000"
+    },
+    "unit": {
+      "one": "publication",
+      "many": "publications"
+    },
+    "disclaimer": "Full, up-to-date catalogue on PRISMA — University of Seville.",
+    "viewAllTep130": "See all TEP-130",
+    "viewAllTep1000": "See all TEP-1000"
   },
   "infrastructure": {
     "eyebrow": "Infrastructure",

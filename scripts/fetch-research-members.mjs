@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Fetches the current list of members of the PAIDI research groups
+ * Fetches members AND recent publications of the PAIDI research groups
  * TEP-130 and TEP-1000 directly from PRISMA (USE) and writes a JSON
  * file that the React app consumes.
  *
@@ -25,6 +25,34 @@ const GROUPS = [
 
 const MEMBER_RE =
   /<a\s+href=['"]https:\/\/prisma\.us\.es\/investigador\/(\d+)['"][^>]*>\s*([^<]+?)\s*<\/a>\s*<\/td>\s*<td>([^<]+)<\/td>/g;
+
+const PUB_RE =
+  /<tr\s+class=['"]rowHide['"]\s+data-type=([^\s>]+)\s*>\s*<td>([^<]+)<\/td>\s*<td>(\d{4})<\/td>\s*<td>\s*<a\s+href=['"]https:\/\/prisma\.us\.es\/publicacion\/(\d+)['"][^>]*>([\s\S]*?)<\/a>\s*<\/td>\s*<td>([^<]*)<\/td>\s*<\/tr>/g;
+
+/** Max number of recent publications kept per group (Article type only) */
+const PUBS_PER_GROUP = 6;
+
+/** Title-case a journal name that PRISMA stores in ALL CAPS */
+const STOPWORDS = new Set([
+  'and', 'or', 'of', 'the', 'in', 'on', 'for', 'a', 'an', 'to', 'at', 'by', 'with',
+]);
+const KEEP_UPPER = new Set(['AI', 'IAQ', 'UV', 'CE', 'ASHRAE', 'IEEE', 'USA', 'UK', 'EU']);
+function prettyJournal(raw) {
+  if (!raw) return '';
+  // If it's already mixed case, leave it
+  if (raw !== raw.toUpperCase()) return raw;
+  const words = raw.toLowerCase().split(/(\s+|-)/);
+  return words
+    .map((w, i) => {
+      if (/^\s+$|^-$/.test(w) || !w) return w;
+      const up = w.toUpperCase();
+      if (KEEP_UPPER.has(up)) return up;
+      // Keep stopwords lowercase unless they're the first word
+      if (i > 0 && STOPWORDS.has(w)) return w;
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    })
+    .join('');
+}
 
 /** "Sendra Salas, Juan José" → "Juan José Sendra Salas" */
 function toDisplayName(raw) {
@@ -81,7 +109,31 @@ async function fetchGroup({ key, url }) {
     if (a.role !== b.role) return a.role === 'ip' ? -1 : 1;
     return 0;
   });
-  return { key, url, members };
+
+  // --- Publications ---
+  const allPubs = [];
+  PUB_RE.lastIndex = 0;
+  let p;
+  while ((p = PUB_RE.exec(html))) {
+    const [, dataType, typeLabel, year, id, title, source] = p;
+    allPubs.push({
+      id,
+      url: `https://prisma.us.es/publicacion/${id}`,
+      type: typeLabel.trim(),
+      dataType: dataType.trim(),
+      year,
+      title: title.replace(/\s+/g, ' ').trim(),
+      journal: prettyJournal(source.trim()),
+    });
+  }
+  // Keep only Articles (JCR-indexed) and the most recent N
+  const articles = allPubs.filter((x) => x.type === 'Artículo').slice(0, PUBS_PER_GROUP);
+  // Totals by type for the "stats" line
+  const totals = {};
+  for (const x of allPubs) totals[x.type] = (totals[x.type] || 0) + 1;
+  totals.total = allPubs.length;
+
+  return { key, url, members, publications: articles, publicationsTotal: totals };
 }
 
 async function main() {

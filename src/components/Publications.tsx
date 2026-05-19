@@ -1,35 +1,64 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
-import { PUBLICATIONS, PubTopic } from '../data/publications';
+import {
+  GROUPS,
+  GroupKey,
+  getGroupPublications,
+  getGroupArticlesTotal,
+  getGroupPrismaUrl,
+  PrismaPublication,
+} from '../data/research';
 
-type Filter = 'all' | PubTopic;
-const FILTERS: Filter[] = ['all', 'lighting', 'energy', 'comfort'];
+type Filter = 'all' | GroupKey;
+const FILTERS: Filter[] = ['all', 'tep130', 'tep1000'];
 
-const topicDot: Record<PubTopic, string> = {
-  lighting: 'bg-brand-red',
-  energy: 'bg-brand-purple',
-  comfort: 'bg-brand-blue',
+const groupAccent: Record<GroupKey, string> = {
+  tep130:
+    'border-brand-blue/30 bg-brand-blue/[0.06] text-brand-blue dark:border-brand-blue-soft/30 dark:bg-brand-blue-soft/[0.08] dark:text-brand-blue-soft',
+  tep1000:
+    'border-brand-red/30 bg-brand-red/[0.06] text-brand-red dark:border-brand-red-soft/30 dark:bg-brand-red-soft/[0.08] dark:text-brand-red-soft',
 };
 
-const topicLabel: Record<PubTopic, string> = {
-  lighting: 'publications.filters.lighting',
-  energy: 'publications.filters.energy',
-  comfort: 'publications.filters.comfort',
-};
+interface RowData extends PrismaPublication {
+  group: GroupKey;
+}
 
 const Publications: React.FC = () => {
   const { t } = useTranslation();
   const [filter, setFilter] = useState<Filter>('all');
-  const [expanded, setExpanded] = useState<string | null>(null);
+
+  /** Merge publications from both groups, dedupe by id (some are shared),
+   *  sort by year desc + title. */
+  const allRows: RowData[] = useMemo(() => {
+    const seen = new Set<string>();
+    const rows: RowData[] = [];
+    for (const g of GROUPS) {
+      for (const p of getGroupPublications(g)) {
+        if (seen.has(p.id)) continue;
+        seen.add(p.id);
+        rows.push({ ...p, group: g });
+      }
+    }
+    rows.sort((a, b) => {
+      if (a.year !== b.year) return Number(b.year) - Number(a.year);
+      return a.title.localeCompare(b.title);
+    });
+    return rows;
+  }, []);
 
   const visible = useMemo(
-    () => PUBLICATIONS.filter((p) => filter === 'all' || p.topic === filter),
-    [filter],
+    () => (filter === 'all' ? allRows : allRows.filter((r) => r.group === filter)),
+    [allRows, filter],
   );
+
+  const totals: Record<GroupKey, number> = {
+    tep130: getGroupArticlesTotal('tep130'),
+    tep1000: getGroupArticlesTotal('tep1000'),
+  };
 
   return (
     <Section id="publications" tone="alt" ariaLabel={t('publications.title')}>
@@ -37,6 +66,11 @@ const Publications: React.FC = () => {
         eyebrow={t('publications.eyebrow')}
         title={t('publications.title')}
         lede={t('publications.lede')}
+        ledeEmphasize={['PRISMA', 'TEP-130', 'TEP-1000']}
+        ledeLinks={{
+          'TEP-130': 'https://prisma.us.es/colectivo/grupo/TEP-130#publicaciones',
+          'TEP-1000': 'https://prisma.us.es/colectivo/grupo/TEP-1000#publicaciones',
+        }}
       />
 
       <div className="mt-10 flex flex-wrap items-center gap-2">
@@ -46,10 +80,7 @@ const Publications: React.FC = () => {
             <button
               key={f}
               type="button"
-              onClick={() => {
-                setFilter(f);
-                setExpanded(null);
-              }}
+              onClick={() => setFilter(f)}
               aria-pressed={isActive}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
                 isActive
@@ -61,129 +92,46 @@ const Publications: React.FC = () => {
             </button>
           );
         })}
+        <span className="ml-auto font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/50">
+          {String(visible.length).padStart(2, '0')} ·{' '}
+          {visible.length === 1 ? t('publications.unit.one') : t('publications.unit.many')}
+        </span>
       </div>
 
       <div className="mt-8 overflow-hidden rounded-2xl border border-line bg-white shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none">
-        {visible.map((pub, i) => {
-          const isOpen = expanded === pub.id;
-          const keywords = t(`${pub.i18nKey}.keywords`, { returnObjects: true }) as string[];
-          return (
-            <Reveal key={pub.id} delay={(i % 4) * 50}>
-              <article
-                className={`group border-b border-line last:border-0 dark:border-white/10 ${
-                  isOpen ? 'bg-surface-alt/40 dark:bg-white/[0.03]' : ''
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setExpanded(isOpen ? null : pub.id)}
-                  aria-expanded={isOpen}
-                  aria-controls={`pub-${pub.id}`}
-                  className="flex w-full flex-col items-start gap-4 px-6 py-6 text-left transition-colors hover:bg-surface-alt dark:hover:bg-white/[0.04] md:flex-row md:items-start"
+        {visible.map((pub, i) => (
+          <Reveal key={pub.id} delay={(i % 4) * 40}>
+            <a
+              href={pub.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex w-full items-start gap-4 border-b border-line px-5 py-5 transition-colors last:border-0 hover:bg-surface-alt dark:border-white/10 dark:hover:bg-white/[0.04] sm:px-6 sm:py-6 md:items-center"
+            >
+              <div className="flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-1.5 md:w-44 md:flex-col md:items-start md:gap-1.5">
+                <span className="font-mono text-sm font-medium text-ink dark:text-white">
+                  {pub.year}
+                </span>
+                <span
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.16em] ${groupAccent[pub.group]}`}
                 >
-                  <div className="flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-1.5 md:w-48 md:flex-col md:items-start md:gap-1.5">
-                    <span className="font-mono text-sm font-medium text-ink dark:text-white">
-                      {pub.year}
-                    </span>
-                    <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/55">
-                      <span
-                        aria-hidden="true"
-                        className={`h-1.5 w-1.5 rounded-full ${topicDot[pub.topic]}`}
-                      />
-                      {t(topicLabel[pub.topic])}
-                    </span>
-                    <span className="block w-full truncate text-xs italic text-ink-mute dark:text-white/50 md:text-[13px]">
-                      {pub.journal}
-                    </span>
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-lg font-medium leading-snug text-ink transition-colors display-balance group-hover:text-brand-blue dark:text-white dark:group-hover:text-brand-blue-soft">
-                      {t(`${pub.i18nKey}.title`)}
-                    </h3>
-                    <p className="mt-2 text-sm text-ink-soft dark:text-white/65">{pub.authors}</p>
-                  </div>
-                  <ChevronDown
-                    aria-hidden="true"
-                    className={`hidden h-5 w-5 shrink-0 text-ink-mute transition-transform duration-300 dark:text-white/45 md:block ${
-                      isOpen ? 'rotate-180 text-brand-blue dark:text-brand-blue-soft' : ''
-                    }`}
-                  />
-                </button>
-
-                {isOpen && (
-                <div
-                  id={`pub-${pub.id}`}
-                  className="grid animate-fade-in gap-8 px-6 pb-7 pt-1 md:grid-cols-[44%_1fr] md:pl-[calc(1.5rem+12rem+1rem)]"
-                >
-                  <div>
-                    <h4 className="eyebrow">{t('publications.abstract')}</h4>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-soft text-pretty dark:text-white/70">
-                      {t(`${pub.i18nKey}.abstract`)}
-                    </p>
-                  </div>
-                  <div className="space-y-5">
-                    <div>
-                      <h4 className="eyebrow">{t('publications.openInstitutional')}</h4>
-                      <a
-                        href={pub.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group mt-2 flex w-full max-w-full items-center gap-2 rounded-lg border border-line bg-white px-3 py-2 transition-all duration-300 hover:border-brand-blue/40 hover:bg-brand-blue/[0.04] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.07]"
-                      >
-                        <span className="shrink-0 rounded bg-ink/[0.06] px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink-soft dark:bg-white/10 dark:text-white/70">
-                          PUB
-                        </span>
-                        <span className="min-w-0 flex-1 truncate text-sm text-ink-soft transition-colors group-hover:text-brand-blue dark:text-white/70 dark:group-hover:text-brand-blue-soft">
-                          {pub.journal} · {pub.year}
-                        </span>
-                        <ArrowUpRight
-                          className="h-3.5 w-3.5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft"
-                          aria-hidden="true"
-                        />
-                      </a>
-                    </div>
-                    {pub.doi && (
-                      <div>
-                        <h4 className="eyebrow">{t('publications.doi')}</h4>
-                        <a
-                          href={`https://doi.org/${pub.doi}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group mt-2 flex w-full max-w-full items-center gap-2 rounded-lg border border-line bg-white px-3 py-2 transition-all duration-300 hover:border-brand-blue/40 hover:bg-brand-blue/[0.04] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.07]"
-                        >
-                          <span className="shrink-0 rounded bg-ink/[0.06] px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink-soft dark:bg-white/10 dark:text-white/70">
-                            DOI
-                          </span>
-                          <span className="min-w-0 flex-1 truncate font-mono text-xs text-ink-soft transition-colors group-hover:text-brand-blue dark:text-white/70 dark:group-hover:text-brand-blue-soft">
-                            {pub.doi}
-                          </span>
-                          <ArrowUpRight
-                            className="h-3.5 w-3.5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft"
-                            aria-hidden="true"
-                          />
-                        </a>
-                      </div>
-                    )}
-                    <div>
-                      <h4 className="eyebrow">{t('publications.keywords')}</h4>
-                      <div className="mt-3 flex flex-wrap gap-1.5">
-                        {keywords.map((k) => (
-                          <span
-                            key={k}
-                            className="rounded-md bg-ink/[0.04] px-2.5 py-1 text-xs text-ink-soft dark:bg-white/[0.06] dark:text-white/70"
-                          >
-                            {k}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                )}
-              </article>
-            </Reveal>
-          );
-        })}
+                  {t(`publications.tags.${pub.group}`)}
+                </span>
+                <span className="block w-full truncate text-xs italic text-ink-mute dark:text-white/50 md:text-[13px]">
+                  {pub.journal}
+                </span>
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="font-display text-base font-medium leading-snug text-ink transition-colors display-balance group-hover:text-brand-blue dark:text-white dark:group-hover:text-brand-blue-soft sm:text-lg">
+                  {pub.title}
+                </h3>
+              </div>
+              <ArrowUpRight
+                aria-hidden="true"
+                className="mt-0.5 hidden h-5 w-5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft md:block"
+              />
+            </a>
+          </Reveal>
+        ))}
       </div>
 
       <div className="mt-12 border-t border-line/70 pt-8 dark:border-white/10">
@@ -192,21 +140,25 @@ const Publications: React.FC = () => {
         </p>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="https://prisma.us.es/colectivo/grupo/TEP-130"
+            href={`${getGroupPrismaUrl('tep130')}#publicaciones`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"
           >
-            <span>{t('publications.viewAllTep130')}</span>
+            <span>
+              {t('publications.viewAllTep130')} · {totals.tep130}
+            </span>
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
-            href="https://prisma.us.es/colectivo/grupo/TEP-1000"
+            href={`${getGroupPrismaUrl('tep1000')}#publicaciones`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"
           >
-            <span>{t('publications.viewAllTep1000')}</span>
+            <span>
+              {t('publications.viewAllTep1000')} · {totals.tep1000}
+            </span>
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
