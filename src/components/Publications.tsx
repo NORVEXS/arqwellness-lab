@@ -105,9 +105,9 @@ const Publications: React.FC = () => {
               href={pub.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex w-full items-start gap-4 border-b border-line px-5 py-5 transition-colors last:border-0 hover:bg-surface-alt dark:border-white/10 dark:hover:bg-white/[0.04] sm:px-6 sm:py-6 md:items-center"
+              className="group flex w-full flex-col gap-3 border-b border-line px-4 py-4 transition-colors last:border-0 hover:bg-surface-alt dark:border-white/10 dark:hover:bg-white/[0.04] sm:px-6 sm:py-5 md:flex-row md:items-center md:gap-4 md:py-6"
             >
-              <div className="flex w-full shrink-0 flex-wrap items-center gap-x-3 gap-y-1.5 md:w-44 md:flex-col md:items-start md:gap-1.5">
+              <div className="flex w-full shrink-0 flex-wrap items-center gap-x-2.5 gap-y-1.5 md:w-44 md:flex-col md:items-start md:gap-1.5">
                 <span className="font-mono text-sm font-medium text-ink dark:text-white">
                   {pub.year}
                 </span>
@@ -116,12 +116,12 @@ const Publications: React.FC = () => {
                 >
                   {t(`publications.tags.${pub.group}`)}
                 </span>
-                <span className="block w-full truncate text-xs italic text-ink-mute dark:text-white/50 md:text-[13px]">
+                <span className="block w-full break-words text-[11px] italic text-ink-mute dark:text-white/50 md:truncate md:text-[13px]">
                   {pub.journal}
                 </span>
               </div>
               <div className="min-w-0 flex-1">
-                <h3 className="font-display text-base font-medium leading-snug text-ink transition-colors display-balance group-hover:text-brand-blue dark:text-white dark:group-hover:text-brand-blue-soft sm:text-lg">
+                <h3 className="break-words font-display text-[15px] font-medium leading-snug text-ink transition-colors display-balance group-hover:text-brand-blue dark:text-white dark:group-hover:text-brand-blue-soft sm:text-base md:text-lg">
                   {pub.title}
                 </h3>
               </div>

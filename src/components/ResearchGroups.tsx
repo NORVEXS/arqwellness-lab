@@ -75,7 +75,7 @@ const ResearchGroups: React.FC = () => {
           return (
             <Reveal key={g} delay={idx * 100} className="h-full">
               <article
-                className={`relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-soft transition-all duration-500 ease-out-quart dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none ${accent[g].glow}`}
+                className={`relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-5 shadow-soft transition-all duration-500 ease-out-quart dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none sm:p-6 lg:p-8 ${accent[g].glow}`}
               >
                 <div
                   className={`pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full opacity-[0.07] bg-gradient-to-br ${accent[g].chip}`}
@@ -93,7 +93,7 @@ const ResearchGroups: React.FC = () => {
                       <span>{code}</span>
                       <ArrowUpRight className="h-3 w-3 opacity-60 transition-all duration-300 group-hover/code:opacity-100 group-hover/code:-translate-y-0.5 group-hover/code:translate-x-0.5" />
                     </a>
-                    <h3 className="mt-2 font-display text-2xl font-medium leading-snug display-balance">
+                    <h3 className="mt-2 font-display text-xl font-medium leading-snug display-balance sm:text-2xl">
                       <a
                         href={groupUrl}
                         target="_blank"
@@ -112,7 +112,7 @@ const ResearchGroups: React.FC = () => {
                   </span>
                 </header>
 
-                <p className="mt-5 text-ink-soft leading-relaxed text-pretty dark:text-white/70">
+                <p className="mt-4 text-sm leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:mt-5 sm:text-base">
                   {isLong ? (
                     <>
                       {description.slice(0, DESCRIPTION_CLAMP).replace(/\s+\S*$/, '')}…{' '}
@@ -130,7 +130,7 @@ const ResearchGroups: React.FC = () => {
                   )}
                 </p>
 
-                <div className="mt-7">
+                <div className="mt-6 sm:mt-7">
                   <h4 className="flex items-center justify-between gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/55">
                     <span className="flex items-center gap-2">
                       <Users className="h-3.5 w-3.5" />
@@ -218,7 +218,7 @@ const ResearchGroups: React.FC = () => {
                 </div>
 
                 {publications.length > 0 && (
-                  <div className="mt-7">
+                  <div className="mt-6 sm:mt-7">
                     <h4 className="flex items-center justify-between gap-2 font-mono text-eyebrow uppercase tracking-eyebrow text-ink-mute dark:text-white/55">
                       <span className="flex items-center gap-2">
                         <FileText className="h-3.5 w-3.5" />
@@ -236,23 +236,23 @@ const ResearchGroups: React.FC = () => {
                         <ArrowUpRight className="h-3 w-3" />
                       </a>
                     </h4>
-                    <ol className="mt-3 space-y-2.5">
+                    <ol className="mt-3 space-y-2">
                       {publications.map((p) => (
                         <li key={p.id}>
                           <a
                             href={p.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/pub flex items-start gap-3 rounded-xl border border-line bg-surface-alt/60 px-3.5 py-3 text-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/40 hover:bg-white hover:shadow-soft dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.06]"
+                            className="group/pub flex items-start gap-2.5 rounded-xl border border-line bg-surface-alt/60 px-3 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/40 hover:bg-white hover:shadow-soft dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.06] sm:gap-3 sm:px-3.5 sm:py-3"
                           >
-                            <span className="shrink-0 font-mono text-[11px] font-semibold text-ink-mute dark:text-white/55">
+                            <span className="shrink-0 font-mono text-[10px] font-semibold text-ink-mute dark:text-white/55 sm:text-[11px]">
                               {p.year}
                             </span>
                             <span className="min-w-0 flex-1">
-                              <span className="block leading-snug text-ink text-pretty dark:text-white/85">
+                              <span className="block break-words text-[13px] leading-snug text-ink text-pretty dark:text-white/85 sm:text-sm">
                                 {p.title}
                               </span>
-                              <span className="mt-1 block truncate text-xs italic text-ink-mute dark:text-white/50">
+                              <span className="mt-1 block break-words text-[11px] italic text-ink-mute dark:text-white/50 sm:text-xs">
                                 {p.journal}
                               </span>
                             </span>
