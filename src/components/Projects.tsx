@@ -1,20 +1,17 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Calendar, ChevronRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
-import Modal from './ui/Modal';
-import { PROJECTS, ProjectType, Project } from '../data/projects';
+import { PROJECTS, ProjectType } from '../data/projects';
 
 type Filter = 'all' | ProjectType;
-
 const FILTERS: Filter[] = ['all', 'rd', 'contract'];
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
   const [filter, setFilter] = useState<Filter>('all');
-  const [selected, setSelected] = useState<Project | null>(null);
 
   const visible = useMemo(
     () => PROJECTS.filter((p) => filter === 'all' || p.type === filter),
@@ -51,96 +48,93 @@ const Projects: React.FC = () => {
         })}
         <span className="ml-auto font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute dark:text-white/50">
           {String(visible.length).padStart(2, '0')} ·{' '}
-          {visible.length === 1 ? 'proyecto' : 'proyectos'}
+          {visible.length === 1 ? t('projects.unit.one') : t('projects.unit.many')}
         </span>
       </div>
 
       {/* Grid */}
-      <div className="mt-8 grid items-stretch gap-5 sm:grid-cols-2">
-        {visible.map((p, i) => {
-          const isOrphan = i === visible.length - 1 && visible.length % 2 === 1;
-          return (
-          <Reveal
-            key={p.id}
-            delay={(i % 4) * 60}
-            className={`h-full ${isOrphan ? 'sm:col-span-2 sm:justify-self-center sm:w-full sm:max-w-[calc(50%-0.625rem)]' : ''}`}
-          >
-            <article className="card card-hover group flex h-full flex-col p-6">
+      <div className="mt-8 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {visible.map((p, i) => (
+          <Reveal key={p.id} delay={(i % 6) * 50} className="h-full">
+            <a
+              href="https://institucional.us.es/arqwellness/investigacion/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-2xl border border-line bg-white p-5 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-line-strong/70 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-white/20"
+              aria-label={`${p.name} — ${t(`projects.tags.${p.type}`)}`}
+            >
               <header className="flex items-center justify-between gap-3">
                 <span
-                  className={p.type === 'rd' ? 'tag-blue' : 'tag-red'}
+                  className={
+                    p.type === 'rd'
+                      ? 'tag-blue !text-[10px]'
+                      : 'tag-red !text-[10px]'
+                  }
                 >
                   {t(`projects.tags.${p.type}`)}
                 </span>
-                <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-mute dark:text-white/50">
-                  <Calendar className="h-3.5 w-3.5" />
-                  {p.year}
-                </span>
+                <ArrowUpRight className="h-4 w-4 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft" />
               </header>
-              <h3 className="mt-5 font-display text-xl font-medium text-ink display-balance dark:text-white">
-                {t(`${p.i18nKey}.title`)}
+
+              {p.logo && (
+                <div className="mt-5 flex h-20 items-center justify-start sm:h-24">
+                  <img
+                    src={p.logo}
+                    alt={`${p.name} — logo`}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-h-full max-w-[80%] object-contain dark:[filter:invert(0.92)_hue-rotate(180deg)]"
+                  />
+                </div>
+              )}
+
+              <h3 className="mt-5 font-display text-lg font-semibold text-ink display-balance dark:text-white">
+                {p.name}
               </h3>
-              <p className="mt-3 text-sm text-ink-soft leading-relaxed text-pretty line-clamp-3 dark:text-white/70">
-                {t(`${p.i18nKey}.description`)}
-              </p>
-              <footer className="mt-6 flex items-center justify-between border-t border-line/80 pt-4 dark:border-white/10">
-                <button
-                  type="button"
-                  onClick={() => setSelected(p)}
-                  className="stretch-link inline-flex items-center gap-1.5 font-medium text-brand-blue transition-colors group-hover:text-brand-purple dark:text-brand-blue-soft dark:group-hover:text-[#B9B2E8]"
-                >
-                  <span>{t('projects.viewDetails')}</span>
-                  <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
-              </footer>
-            </article>
+              {p.scope && (
+                <p className="mt-1.5 text-sm text-ink-soft dark:text-white/65">
+                  {p.scope}
+                </p>
+              )}
+            </a>
           </Reveal>
-        );})}
+        ))}
       </div>
 
-      <div className="mt-14 border-t border-line/70 pt-6 dark:border-white/10">
+      <div className="mt-14 border-t border-line/70 pt-8 dark:border-white/10">
         <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty dark:text-white/55">
           {t('projects.disclaimer')}
         </p>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="https://institucional.us.es/arqwellness/investigacion/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            <span>{t('projects.viewAllInstitutional')}</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          <a
+            href="https://prisma.us.es/colectivo/grupo/TEP-130"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            <span>{t('projects.viewAllTep130')}</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          <a
+            href="https://prisma.us.es/colectivo/grupo/TEP-1000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            <span>{t('projects.viewAllTep1000')}</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
-
-      {selected && (
-        <Modal
-          eyebrow={t(`projects.tags.${selected.type}`)}
-          title={t(`${selected.i18nKey}.title`)}
-          onClose={() => setSelected(null)}
-        >
-          <div className="space-y-5">
-            <div className="flex flex-wrap items-center gap-3 text-sm text-ink-mute">
-              <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em]">
-                <Calendar className="h-3.5 w-3.5" />
-                {t('projects.yearLabel')}: {selected.year}
-              </span>
-            </div>
-            <p className="text-ink-soft leading-relaxed">
-              {t(`${selected.i18nKey}.description`)}
-            </p>
-            <div>
-              <h4 className="font-display text-lg font-medium text-ink">
-                {t('projects.outcomesTitle')}
-              </h4>
-              <ul className="mt-3 space-y-2 text-ink-soft">
-                {(
-                  t(`${selected.i18nKey}.outcomes`, { returnObjects: true }) as string[]
-                ).map((o) => (
-                  <li key={o} className="flex items-start gap-2.5">
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-1 w-2 shrink-0 rounded-full bg-brand-blue"
-                    />
-                    <span className="text-pretty">{o}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Modal>
-      )}
     </Section>
   );
 };

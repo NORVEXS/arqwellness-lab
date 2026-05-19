@@ -3,9 +3,12 @@ export const NAV_IDS = [
   'about',
   'research-lines',
   'research-groups',
+  'infrastructure',
   'training',
   'projects',
   'publications',
+  'resources',
+  'outreach',
   'contact',
 ] as const;
 

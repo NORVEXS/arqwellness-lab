@@ -5,9 +5,12 @@ import Hero from './components/Introduction';
 import AboutUs from './components/AboutUs';
 import ResearchLines from './components/ResearchLines';
 import ResearchGroups from './components/ResearchGroups';
+import Infrastructure from './components/Infrastructure';
 import Training from './components/Training';
 import Projects from './components/Projects';
 import Publications from './components/Publications';
+import Resources from './components/Resources';
+import Outreach from './components/Outreach';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ui/ScrollToTop';
@@ -31,9 +34,12 @@ function App() {
         <AboutUs />
         <ResearchLines />
         <ResearchGroups />
+        <Infrastructure />
         <Training />
         <Projects />
         <Publications />
+        <Resources />
+        <Outreach />
         <Contact />
       </main>
       <Footer />

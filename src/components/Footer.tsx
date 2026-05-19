@@ -77,10 +77,10 @@ const Footer: React.FC = () => {
                 <li className="flex items-center gap-2.5">
                   <Mail className="h-4 w-4 shrink-0 text-brand-blue-soft" />
                   <a
-                    href="mailto:arqwellness@us.es"
+                    href="mailto:tep130@us.es"
                     className="transition-colors hover:text-white"
                   >
-                    arqwellness@us.es
+                    tep130@us.es
                   </a>
                 </li>
                 <li className="flex items-center gap-2.5">
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
               <ul className="mt-5 space-y-2.5 text-sm text-white/75">
                 <li>
                   <a
-                    href="https://www.us.es/aviso-legal"
+                    href="https://institucional.us.es/arqwellness/aviso-legal/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 transition-colors hover:text-white"
@@ -110,12 +110,22 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.us.es/proteccion-datos"
+                    href="https://institucional.us.es/arqwellness/politica-de-privacidad/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 transition-colors hover:text-white"
                   >
                     {t('footer.privacy')} <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://institucional.us.es/arqwellness/politica-de-cookies/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 transition-colors hover:text-white"
+                  >
+                    {t('footer.cookies')} <ArrowUpRight className="h-3 w-3" />
                   </a>
                 </li>
                 <li>
@@ -126,16 +136,6 @@ const Footer: React.FC = () => {
                     className="inline-flex items-center gap-1 transition-colors hover:text-white"
                   >
                     {t('footer.accessibility')} <ArrowUpRight className="h-3 w-3" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.us.es/transparencia"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 transition-colors hover:text-white"
-                  >
-                    {t('footer.transparency')} <ArrowUpRight className="h-3 w-3" />
                   </a>
                 </li>
               </ul>

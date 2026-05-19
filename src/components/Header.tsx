@@ -54,14 +54,15 @@ const Header: React.FC = () => {
           className="flex items-center gap-3"
           aria-label={t('logoAlt')}
         >
-          <span className="block dark:rounded-lg dark:bg-white dark:px-2 dark:py-1.5 dark:shadow-sog">
+          <span className="block dark:rounded-md dark:bg-white dark:px-2 dark:py-1 dark:shadow-soft">
             <img
               src={logo}
               alt={t('logoAlt')}
               className="h-7 w-auto sm:h-8"
-              width={420}
-              height={70}
+              width={1920}
+              height={300}
               decoding="async"
+              fetchPriority="high"
             />
           </span>
         </a>
@@ -183,7 +184,7 @@ const Header: React.FC = () => {
                   >
                     <span>{t(`nav.${id}`)}</span>
                     <span className="font-mono text-[11px] text-ink-mute dark:text-white/45">
-                      0{NAV_IDS.indexOf(id) + 1}
+                      {String(NAV_IDS.indexOf(id) + 1).padStart(2, '0')}
                     </span>
                   </button>
                 </li>

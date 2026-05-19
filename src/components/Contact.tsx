@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
       const subject = data.get('subject') ?? 'Contacto desde ArqWellness Lab';
       const message = data.get('message') ?? '';
       const body = encodeURIComponent(`${message}\n\n— ${name}`);
-      window.location.href = `mailto:arqwellness@us.es?subject=${encodeURIComponent(
+      window.location.href = `mailto:tep130@us.es?subject=${encodeURIComponent(
         String(subject),
       )}&body=${body}`;
       setStatus('success');
@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
 
             <Reveal delay={60}>
               <a
-                href="mailto:arqwellness@us.es"
+                href="mailto:tep130@us.es"
                 className="card-dark group flex items-center gap-4 p-5 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/[0.08] text-brand-blue-soft">

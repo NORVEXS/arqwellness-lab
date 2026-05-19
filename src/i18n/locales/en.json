@@ -10,9 +10,12 @@
     "about": "About",
     "research-lines": "Research",
     "research-groups": "Groups",
+    "infrastructure": "Infrastructure",
     "training": "Training",
     "projects": "Projects",
     "publications": "Publications",
+    "resources": "Resources",
+    "outreach": "Outreach",
     "contact": "Contact",
     "ariaPrimary": "Primary navigation",
     "ariaLang": "Change language",
@@ -73,9 +76,7 @@
       "leadLab": "Lab director · TEP-130 lead",
       "leadTep1000": "TEP-1000 lead",
       "senior": "Senior researchers",
-      "junior": "Junior researchers",
-      "contracted": "Contracted staff",
-      "collaborators": "Collaborators"
+      "junior": "Junior researchers"
     },
     "members": {
       "ignacio": "Ignacio Javier Acosta García",
@@ -86,9 +87,7 @@
       "jaime": "Jaime Navarro Casas",
       "juanjose": "Juan José Sendra Salas",
       "guillermo": "Guillermo García Martín",
-      "maria": "María de la Esperanza de Triana Sánchez Muñoz",
-      "patricia": "Patricia Fernández-Agüera Escudero",
-      "juandiego": "Juan Diego Velarde Rodríguez"
+      "maria": "María de la Esperanza de Triana Sánchez Muñoz"
     },
     "viewProfile": "View profile"
   },
@@ -245,57 +244,14 @@
       "rd": "R&D project",
       "contract": "68/83 contract"
     },
-    "viewDetails": "View details",
-    "outcomesTitle": "Key outcomes",
-    "yearLabel": "Period",
-    "disclaimer": "Representative selection. Full catalogue available on SISIUS — University of Seville.",
-    "items": {
-      "project1": {
-        "title": "Energy efficiency in heritage buildings",
-        "description": "Research on compatible strategies to improve energy efficiency in heritage buildings while preserving their historical value.",
-        "outcomes": [
-          "Development of non-invasive energy retrofitting strategies",
-          "Energy-assessment methodology for heritage buildings",
-          "Policy recommendations on heritage preservation"
-        ]
-      },
-      "project2": {
-        "title": "Circadian lighting in healthcare facilities",
-        "description": "Implementation and monitoring of circadian lighting systems in healthcare environments to improve patient recovery and staff performance.",
-        "outcomes": [
-          "Design guidelines for healthcare lighting",
-          "Custom lighting control algorithms for patient rooms",
-          "Before/after comparative study of staff performance"
-        ]
-      },
-      "project3": {
-        "title": "Adaptive comfort standards for Mediterranean climate",
-        "description": "Development of climate-specific comfort standards for Mediterranean conditions applicable to sustainable building design.",
-        "outcomes": [
-          "Climate-specific comfort parameters for Mediterranean buildings",
-          "Seasonal variation model for adaptive comfort",
-          "Design recommendations for passive cooling strategies"
-        ]
-      },
-      "project4": {
-        "title": "Lighting assessment for cultural heritage",
-        "description": "Assessment and implementation of lighting systems for cultural heritage buildings, focusing on conservation and visitor experience.",
-        "outcomes": [
-          "Assessment methodology for cultural heritage lighting",
-          "Conservation-friendly lighting specifications",
-          "Visitor experience enhancement strategies"
-        ]
-      },
-      "project5": {
-        "title": "Energy monitoring on a university campus",
-        "description": "Design and implementation of an integrated monitoring system for energy consumption across campus buildings.",
-        "outcomes": [
-          "Real-time energy monitoring dashboard",
-          "Consumption analysis and recommendations",
-          "Implementation of automated control strategies"
-        ]
-      }
-    }
+    "unit": {
+      "one": "project",
+      "many": "projects"
+    },
+    "disclaimer": "Selection of R&D projects and 68/83 contracts with competitive or industrial funding. Extended catalogue on the institutional site and PRISMA.",
+    "viewAllInstitutional": "Research · institutional site",
+    "viewAllTep130": "PRISMA · TEP-130",
+    "viewAllTep1000": "PRISMA · TEP-1000"
   },
   "publications": {
     "eyebrow": "Publications",
@@ -313,7 +269,9 @@
     "abstract": "Abstract",
     "keywords": "Keywords",
     "openExternal": "Open at doi.org",
-    "disclaimer": "Representative selection. Full catalogue available on SISIUS — University of Seville.",
+    "disclaimer": "Representative selection. Full scientific output on PRISMA — University of Seville.",
+    "viewAllTep130": "TEP-130 publications",
+    "viewAllTep1000": "TEP-1000 publications",
     "items": {
       "pub1": {
         "title": "Daylighting design strategies for energy saving in historic buildings",
@@ -342,6 +300,136 @@
       }
     }
   },
+  "infrastructure": {
+    "eyebrow": "Infrastructure",
+    "title": "Lab facilities and instrumentation",
+    "lede": "We operate test chambers, mobile modules and specialised instrumentation to assess thermal, acoustic, lighting and indoor-air-quality performance of the built environment. A reference toolkit for collaborations and transfer contracts.",
+    "viewAll": "Full infrastructure catalogue",
+    "disclaimer": "Representative listing. Full catalogue on the institutional site.",
+    "items": {
+      "blowerDoor": {
+        "title": "Blower Door",
+        "description": "The Blower Door system evaluates the airtightness of indoor spaces and energy efficiency of buildings through controlled pressure differences, identifying critical points of the envelope.",
+        "badge": "Airtightness & efficiency"
+      },
+      "lightCabin": {
+        "title": "Lighting Cabin",
+        "description": "Experimental space to study the effects of light on human wellbeing and performance. Allows control of intensity, colour temperature and spatial distribution to simulate natural and artificial conditions.",
+        "badge": "Lighting & wellbeing"
+      },
+      "testCells": {
+        "title": "Test Cells",
+        "description": "Experimental modules reproducing real-world conditions to assess thermal, lighting and environmental behaviour of materials and systems. Each cell integrates precision instruments: temperature, humidity, airflow and solar radiation.",
+        "badge": "Thermal-lighting tests"
+      },
+      "lightlab": {
+        "title": "LightLab — mobile module",
+        "description": "Repurposed container as on-site laboratory, deployable for lighting, energy and comfort tests under real conditions outside the main building.",
+        "badge": "Mobile module"
+      }
+    }
+  },
+  "outreach": {
+    "eyebrow": "Outreach & impact",
+    "title": "The lab in the media and society",
+    "lede": "We share the lab's results through workshops, conferences and specialised press. Architecture as a tool to improve health and wellbeing.",
+    "stats": {
+      "collaborations": {
+        "value": "200+",
+        "label": "Institutional collaborations"
+      },
+      "papers": {
+        "value": "550+",
+        "label": "Scientific publications"
+      },
+      "media": {
+        "value": "70+",
+        "label": "Media appearances"
+      }
+    },
+    "outlets": {
+      "title": "Media coverage",
+      "description": "Appearances in El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press and other national and international outlets."
+    },
+    "media": {
+      "title": "Outreach · workshops and events",
+      "description": "Workshops, scientific conferences and student activities that bring research into the public space.",
+      "cta": "View outreach activity"
+    },
+    "references": {
+      "title": "Full references",
+      "description": "Complete catalogue of projects, 68/83 contracts and publications from TEP-130 and TEP-1000 in PRISMA — University of Seville.",
+      "ctaTep130": "PRISMA · TEP-130",
+      "ctaTep1000": "PRISMA · TEP-1000"
+    }
+  },
+  "resources": {
+    "eyebrow": "Open resources",
+    "title": "Standards, tools and workshops",
+    "lede": "Materials published by the lab for the academic and professional community: technical standards, open tools, workshops and didactic videos.",
+    "filters": {
+      "all": "All",
+      "standard": "Standards",
+      "tool": "Tools",
+      "workshop": "Workshops"
+    },
+    "categories": {
+      "standard": "Standard · book",
+      "presentation": "Presentation",
+      "tool": "Tool",
+      "video": "Video",
+      "workshop": "Workshop"
+    },
+    "open": "Open resource",
+    "disclaimer": "Selection of open resources. Full catalogue on the institutional site.",
+    "viewAll": "All resources",
+    "items": {
+      "une171380": {
+        "title": "UNE 171380:2024 — continuous indoor CO₂ measurement",
+        "meta": "Spanish technical standard defining continuous measurement and CO₂ concentration logging in indoor spaces."
+      },
+      "bookIaq": {
+        "title": "Indoor air quality in buildings for wellbeing",
+        "meta": "Open-access book by Octaedro — practical strategies for IAQ in the built habitat."
+      },
+      "covidAirborne": {
+        "title": "Covid Airborne Risk — online calculator",
+        "meta": "Wells-Riley web tool to estimate airborne transmission risk in various scenarios."
+      },
+      "co2Ventilation": {
+        "title": "CO₂-drop ventilation calculation v1.3",
+        "meta": "Spreadsheet to estimate ventilation flow from the CO₂ decay kinetics."
+      },
+      "dao": {
+        "title": "DAo 3.5.3 plus — from DF to DA",
+        "meta": "Daylighting tool: from daylight factor to daylight autonomy."
+      },
+      "hepa": {
+        "title": "HEPA air purifier comparison (2021)",
+        "meta": "PDF + Google sheet with selection criteria by cost, CADR and noise level."
+      },
+      "smartbuilding": {
+        "title": "Smartbuilding — intelligent building (2019)",
+        "meta": "VR application showcasing the AURA Solar Decathlon 2015 building controls."
+      },
+      "ediaqi": {
+        "title": "EDIAQI — presentation (.pptx)",
+        "meta": "IIWS session on indoor air quality assessment and exposure."
+      },
+      "carelight": {
+        "title": "CARELIGHT — presentation (.pptx)",
+        "meta": "Lighting of care environments: project technical presentation."
+      },
+      "naturalLight": {
+        "title": "Natural light in architecture workshop (.pptx)",
+        "meta": "Materials from the natural light workshop delivered at IIWS."
+      },
+      "airHealth": {
+        "title": "Air quality and health prevention (.pptx)",
+        "meta": "Outreach session on IAQ and its impact on public health (Nov 2025)."
+      }
+    }
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's talk about your project",
@@ -354,7 +442,7 @@
       },
       "email": {
         "label": "Email",
-        "value": "arqwellness@us.es"
+        "value": "tep130@us.es"
       },
       "phone": {
         "label": "Phone",
@@ -382,7 +470,7 @@
       "submit": "Send message",
       "submitting": "Sending…",
       "success": "Thank you. We've received your message and will reply soon.",
-      "error": "Something went wrong. Please try again or email arqwellness@us.es.",
+      "error": "Something went wrong. Please try again or email tep130@us.es.",
       "required": "Required field"
     }
   },
@@ -390,10 +478,10 @@
     "tagline": "Lighting, energy and wellness — University of Seville",
     "explore": "Explore",
     "lab": "Contact",
-    "legal": "Legal · US",
+    "legal": "Legal",
     "legalNotice": "Legal notice",
-    "privacy": "Data protection",
-    "transparency": "Transparency",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
     "accessibility": "Accessibility",
     "rights": "All rights reserved",
     "institution": "School of Architecture · IUACC · University of Seville",

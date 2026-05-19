@@ -164,10 +164,30 @@ const Publications: React.FC = () => {
         })}
       </div>
 
-      <div className="mt-12 border-t border-line/70 pt-6 dark:border-white/10">
+      <div className="mt-12 border-t border-line/70 pt-8 dark:border-white/10">
         <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty dark:text-white/55">
           {t('publications.disclaimer')}
         </p>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="https://prisma.us.es/colectivo/grupo/TEP-130"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            <span>{t('publications.viewAllTep130')}</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          <a
+            href="https://prisma.us.es/colectivo/grupo/TEP-1000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            <span>{t('publications.viewAllTep1000')}</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </Section>
   );

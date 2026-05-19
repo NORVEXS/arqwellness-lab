@@ -10,9 +10,12 @@
     "about": "Quiénes somos",
     "research-lines": "Líneas",
     "research-groups": "Grupos",
+    "infrastructure": "Infraestructuras",
     "training": "Formación",
     "projects": "Proyectos",
     "publications": "Publicaciones",
+    "resources": "Recursos",
+    "outreach": "Divulgación",
     "contact": "Contacto",
     "ariaPrimary": "Navegación principal",
     "ariaLang": "Cambiar idioma",
@@ -73,9 +76,7 @@
       "leadLab": "Responsable del laboratorio · TEP-130",
       "leadTep1000": "Responsable del grupo TEP-1000",
       "senior": "Investigadores senior",
-      "junior": "Investigadores junior",
-      "contracted": "Personal contratado",
-      "collaborators": "Colaboradores"
+      "junior": "Investigadores junior"
     },
     "members": {
       "ignacio": "Ignacio Javier Acosta García",
@@ -86,9 +87,7 @@
       "jaime": "Jaime Navarro Casas",
       "juanjose": "Juan José Sendra Salas",
       "guillermo": "Guillermo García Martín",
-      "maria": "María de la Esperanza de Triana Sánchez Muñoz",
-      "patricia": "Patricia Fernández-Agüera Escudero",
-      "juandiego": "Juan Diego Velarde Rodríguez"
+      "maria": "María de la Esperanza de Triana Sánchez Muñoz"
     },
     "viewProfile": "Ver perfil"
   },
@@ -245,57 +244,14 @@
       "rd": "Proyecto R+D",
       "contract": "Contrato 68/83"
     },
-    "viewDetails": "Ver detalles",
-    "outcomesTitle": "Resultados clave",
-    "yearLabel": "Período",
-    "disclaimer": "Selección representativa. Catálogo completo de proyectos disponible en SISIUS — Universidad de Sevilla.",
-    "items": {
-      "project1": {
-        "title": "Eficiencia energética en edificios patrimoniales",
-        "description": "Investigación sobre estrategias compatibles para mejorar la eficiencia energética en edificios patrimoniales preservando su valor histórico.",
-        "outcomes": [
-          "Desarrollo de estrategias de rehabilitación no invasivas",
-          "Metodología de evaluación energética en edificios patrimoniales",
-          "Recomendaciones para administraciones sobre conservación"
-        ]
-      },
-      "project2": {
-        "title": "Iluminación circadiana en entornos sanitarios",
-        "description": "Implementación y monitorización de sistemas de iluminación circadiana en hospitales para mejorar la recuperación de pacientes y el rendimiento del personal.",
-        "outcomes": [
-          "Guías de diseño para iluminación sanitaria",
-          "Algoritmos de control para habitaciones de pacientes",
-          "Estudio comparativo antes/después del rendimiento del personal"
-        ]
-      },
-      "project3": {
-        "title": "Estándares de confort adaptativo en clima mediterráneo",
-        "description": "Desarrollo de estándares de confort específicos para condiciones climáticas mediterráneas aplicables al diseño sostenible.",
-        "outcomes": [
-          "Parámetros de confort específicos para edificios mediterráneos",
-          "Modelo de variación estacional del confort adaptativo",
-          "Recomendaciones de diseño para enfriamiento pasivo"
-        ]
-      },
-      "project4": {
-        "title": "Iluminación para patrimonio cultural",
-        "description": "Evaluación e implementación de sistemas de iluminación para edificios de patrimonio cultural, atendiendo a conservación y experiencia del visitante.",
-        "outcomes": [
-          "Metodología de evaluación lumínica para patrimonio",
-          "Especificaciones de iluminación compatibles con conservación",
-          "Estrategias de mejora de la experiencia del visitante"
-        ]
-      },
-      "project5": {
-        "title": "Monitorización energética en campus universitario",
-        "description": "Diseño e implementación de un sistema integrado de monitorización del consumo energético en edificios del campus.",
-        "outcomes": [
-          "Dashboard de monitorización energética en tiempo real",
-          "Análisis y recomendaciones de consumo",
-          "Implementación de estrategias automatizadas de control"
-        ]
-      }
-    }
+    "unit": {
+      "one": "proyecto",
+      "many": "proyectos"
+    },
+    "disclaimer": "Selección de proyectos R+D y contratos 68/83 con financiación competitiva o industrial. Catálogo extendido en la web institucional y PRISMA.",
+    "viewAllInstitutional": "Investigación · Web institucional",
+    "viewAllTep130": "PRISMA · TEP-130",
+    "viewAllTep1000": "PRISMA · TEP-1000"
   },
   "publications": {
     "eyebrow": "Publicaciones",
@@ -313,7 +269,9 @@
     "abstract": "Resumen",
     "keywords": "Palabras clave",
     "openExternal": "Abrir en doi.org",
-    "disclaimer": "Selección representativa. Catálogo completo disponible en SISIUS — Universidad de Sevilla.",
+    "disclaimer": "Selección representativa. Producción científica completa en PRISMA — Universidad de Sevilla.",
+    "viewAllTep130": "Publicaciones TEP-130",
+    "viewAllTep1000": "Publicaciones TEP-1000",
     "items": {
       "pub1": {
         "title": "Daylighting design strategies for energy saving in historic buildings",
@@ -342,6 +300,136 @@
       }
     }
   },
+  "infrastructure": {
+    "eyebrow": "Infraestructuras",
+    "title": "Equipamiento e instalaciones del laboratorio",
+    "lede": "Disponemos de cámaras de ensayos, módulos móviles e instrumental especializado para evaluar el comportamiento térmico, acústico, lumínico y de calidad del aire del espacio construido. Equipamiento de referencia para colaboraciones y contratos de transferencia.",
+    "viewAll": "Catálogo completo de infraestructuras",
+    "disclaimer": "Listado representativo. Catálogo completo en la web institucional.",
+    "items": {
+      "blowerDoor": {
+        "title": "Blower Door",
+        "description": "El sistema Blower Door permite evaluar la hermeticidad de los espacios interiores y la eficiencia energética de los edificios mediante diferencias de presión controladas, identificando puntos críticos de la envolvente.",
+        "badge": "Hermeticidad y eficiencia"
+      },
+      "lightCabin": {
+        "title": "Cabina de Iluminación",
+        "description": "Espacio experimental para estudiar los efectos de la luz sobre el bienestar y el rendimiento humano. Permite controlar intensidad, temperatura de color y distribución espacial para simular condiciones lumínicas naturales y artificiales.",
+        "badge": "Iluminación y bienestar"
+      },
+      "testCells": {
+        "title": "Celdas de Ensayo",
+        "description": "Módulos experimentales que reproducen condiciones reales de uso para analizar el comportamiento térmico, lumínico y ambiental de materiales y sistemas. Cada celda integra instrumentación de precisión: temperatura, humedad, flujo de aire y radiación solar.",
+        "badge": "Ensayos térmico-lumínicos"
+      },
+      "lightlab": {
+        "title": "LightLab — módulo móvil",
+        "description": "Contenedor reacondicionado como laboratorio in situ, desplegable para ensayos lumínicos, energéticos y de confort en condiciones reales fuera del edificio principal.",
+        "badge": "Módulo móvil"
+      }
+    }
+  },
+  "outreach": {
+    "eyebrow": "Divulgación e impacto",
+    "title": "El laboratorio en los medios y la sociedad",
+    "lede": "Compartimos los resultados del laboratorio mediante workshops, conferencias y prensa especializada. La arquitectura como herramienta para mejorar la salud y el bienestar.",
+    "stats": {
+      "collaborations": {
+        "value": "200+",
+        "label": "Colaboraciones institucionales"
+      },
+      "papers": {
+        "value": "550+",
+        "label": "Publicaciones científicas"
+      },
+      "media": {
+        "value": "70+",
+        "label": "Apariciones en medios"
+      }
+    },
+    "outlets": {
+      "title": "Cobertura en medios",
+      "description": "Apariciones en El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press y otros medios nacionales e internacionales."
+    },
+    "media": {
+      "title": "Divulgación · workshops y eventos",
+      "description": "Talleres, congresos científicos y actividades con estudiantes que llevan la investigación al espacio público.",
+      "cta": "Ver actividad de divulgación"
+    },
+    "references": {
+      "title": "Referencias completas",
+      "description": "Catálogo íntegro de proyectos, contratos 68/83 y publicaciones de los grupos TEP-130 y TEP-1000 en PRISMA — Universidad de Sevilla.",
+      "ctaTep130": "PRISMA · TEP-130",
+      "ctaTep1000": "PRISMA · TEP-1000"
+    }
+  },
+  "resources": {
+    "eyebrow": "Recursos abiertos",
+    "title": "Normas técnicas, herramientas y workshops",
+    "lede": "Materiales publicados por el laboratorio para la comunidad académica y profesional: normas técnicas, herramientas abiertas, workshops y vídeos didácticos.",
+    "filters": {
+      "all": "Todos",
+      "standard": "Normas",
+      "tool": "Herramientas",
+      "workshop": "Workshops"
+    },
+    "categories": {
+      "standard": "Norma · libro",
+      "presentation": "Presentación",
+      "tool": "Herramienta",
+      "video": "Vídeo",
+      "workshop": "Workshop"
+    },
+    "open": "Abrir recurso",
+    "disclaimer": "Selección de recursos abiertos. Catálogo completo en la web institucional.",
+    "viewAll": "Todos los recursos",
+    "items": {
+      "une171380": {
+        "title": "UNE 171380:2024 — Medición continua de CO₂ en interiores",
+        "meta": "Norma técnica española que define el sistema de medición continua y registro de la concentración de CO₂ en espacios interiores."
+      },
+      "bookIaq": {
+        "title": "Calidad del aire interior en los edificios para el bienestar",
+        "meta": "Libro de acceso abierto editado por Octaedro — estrategias prácticas para la aplicación de criterios de IAQ en el hábitat construido."
+      },
+      "covidAirborne": {
+        "title": "Covid Airborne Risk — calculadora online",
+        "meta": "Herramienta web Wells-Riley para estimar el riesgo de transmisión aérea en distintos escenarios."
+      },
+      "co2Ventilation": {
+        "title": "Cálculo de ventilación por descenso de CO₂ v1.3",
+        "meta": "Hoja de cálculo para estimar el caudal de ventilación a partir de la cinética del descenso de CO₂."
+      },
+      "dao": {
+        "title": "DAo 3.5.3 plus — de DF a DA",
+        "meta": "Herramienta de iluminación natural: paso de factor de luz diurna a autonomía de luz natural (Daylight Autonomy)."
+      },
+      "hepa": {
+        "title": "Comparativa de purificadores HEPA (2021)",
+        "meta": "PDF + hoja Google con criterios de selección por coste, caudal (CADR) y nivel sonoro."
+      },
+      "smartbuilding": {
+        "title": "Smartbuilding — edificio inteligente (2019)",
+        "meta": "Aplicación de realidad virtual sobre los controles del edificio AURA del Solar Decathlon 2015."
+      },
+      "ediaqi": {
+        "title": "EDIAQI — presentación (.pptx)",
+        "meta": "Sesión del IIWS sobre evaluación de la calidad del aire interior y exposición."
+      },
+      "carelight": {
+        "title": "CARELIGHT — presentación (.pptx)",
+        "meta": "Iluminación de entornos asistenciales: presentación técnica del proyecto."
+      },
+      "naturalLight": {
+        "title": "Taller de luz natural en arquitectura (.pptx)",
+        "meta": "Materiales del workshop de luz natural impartido en el IIWS."
+      },
+      "airHealth": {
+        "title": "Calidad del aire y prevención en salud (.pptx)",
+        "meta": "Sesión de divulgación sobre IAQ y su impacto en la salud pública (nov 2025)."
+      }
+    }
+  },
   "contact": {
     "eyebrow": "Contacto",
     "title": "Hablemos de tu proyecto",
@@ -354,7 +442,7 @@
       },
       "email": {
         "label": "Correo",
-        "value": "arqwellness@us.es"
+        "value": "tep130@us.es"
       },
       "phone": {
         "label": "Teléfono",
@@ -382,7 +470,7 @@
       "submit": "Enviar mensaje",
       "submitting": "Enviando…",
       "success": "Gracias. Hemos recibido tu mensaje y te responderemos pronto.",
-      "error": "Algo ha ido mal. Inténtalo de nuevo o escribe directamente a arqwellness@us.es.",
+      "error": "Algo ha ido mal. Inténtalo de nuevo o escribe directamente a tep130@us.es.",
       "required": "Campo obligatorio"
     }
   },
@@ -390,10 +478,10 @@
     "tagline": "Iluminación, energía y bienestar — Universidad de Sevilla",
     "explore": "Explorar",
     "lab": "Contacto",
-    "legal": "Legal · US",
+    "legal": "Legal",
     "legalNotice": "Aviso legal",
-    "privacy": "Protección de datos",
-    "transparency": "Transparencia",
+    "privacy": "Política de privacidad",
+    "cookies": "Política de cookies",
     "accessibility": "Accesibilidad",
     "rights": "Todos los derechos reservados",
     "institution": "Escuela Técnica Superior de Arquitectura · IUACC · Universidad de Sevilla",
