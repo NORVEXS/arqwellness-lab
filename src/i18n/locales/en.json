@@ -179,17 +179,15 @@
     "title": "Two research groups, one laboratory",
     "lede": "ArqWellness Lab is composed of the PAIDI groups TEP-130 and TEP-1000, both affiliated with the IUACC at the University of Seville.",
     "membersTitle": "Members",
+    "ipLabel": "Principal investigator",
     "focusTitle": "Activity areas",
+    "showMore": "Show {{count}} more",
+    "showLess": "Show less",
+    "continueReading": "Continue reading on PRISMA",
     "tep130": {
       "code": "TEP-130",
       "name": "Architecture, Heritage and Sustainability",
       "description": "Acoustics, lighting, optics and energy. A PAIDI group at the IUACC of the University of Seville and the ArqWellness Lab. It brings together faculty and researchers from Architectural Construction I, Applied Physics I/II/III and Preventive Medicine and Pediatrics.",
-      "members": [
-        "Juan José Sendra",
-        "Jaime Navarro",
-        "Samuel Domínguez",
-        "Ignacio Acosta"
-      ],
       "focus": [
         "Design and integration of building services (plumbing, electrical, HVAC, communications, safety)",
         "Indoor environmental conditioning (hygrothermal, acoustic, lighting, IAQ)",
@@ -201,12 +199,6 @@
       "code": "TEP-1000",
       "name": "Comfort and Energy Use in Buildings",
       "description": "A PAIDI group at the IUACC of the University of Seville, hosted at the School of Architecture. It gathers researchers from Architectural Construction I and Preventive Medicine and Pediatrics.",
-      "members": [
-        "Carmen Galán",
-        "Rafael Suárez",
-        "Ángel Luis León",
-        "Mónica Martínez"
-      ],
       "focus": [
         "Design and integration of building services and systems",
         "Indoor environmental conditioning: hygrothermal, acoustic, lighting and IAQ",

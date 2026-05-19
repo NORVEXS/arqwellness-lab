@@ -10,6 +10,7 @@ interface SectionHeaderProps {
   tone?: 'light' | 'dark';
   className?: string;
   ledeEmphasize?: string[];
+  ledeLinks?: Record<string, string>;
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -20,6 +21,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   tone = 'light',
   className = '',
   ledeEmphasize,
+  ledeLinks,
 }) => {
   const isDark = tone === 'dark';
   return (
@@ -48,7 +50,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
             }`}
           >
             {ledeEmphasize && ledeEmphasize.length > 0
-              ? emphasize(lede, ledeEmphasize)
+              ? emphasize(lede, ledeEmphasize, ledeLinks)
               : lede}
           </p>
         </Reveal>

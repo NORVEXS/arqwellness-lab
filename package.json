@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fetch:members": "node scripts/fetch-research-members.mjs",
+    "prebuild": "node scripts/fetch-research-members.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

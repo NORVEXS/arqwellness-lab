@@ -32,6 +32,10 @@ const Training: React.FC = () => {
           'Universidad de Sevilla',
           'University of Seville',
         ]}
+        ledeLinks={{
+          'Universidad de Sevilla': 'https://institucional.us.es/asezero/',
+          'University of Seville': 'https://institucional.us.es/asezero/',
+        }}
       />
 
       {/* Meta strip */}

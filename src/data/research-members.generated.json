@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-05-19T19:07:27.932Z",
+  "source": "https://prisma.us.es/",
+  "groups": {
+    "tep130": {
+      "key": "tep130",
+      "url": "https://prisma.us.es/colectivo/grupo/TEP-130",
+      "members": [
+        {
+          "id": "18",
+          "url": "https://prisma.us.es/investigador/18",
+          "fullName": "Ignacio Javier Acosta García",
+          "shortName": "Ignacio Javier Acosta",
+          "role": "ip"
+        },
+        {
+          "id": "10371",
+          "url": "https://prisma.us.es/investigador/10371",
+          "fullName": "Carmen Lidia Álvarez Morales",
+          "shortName": "Carmen Lidia Álvarez",
+          "role": "member"
+        },
+        {
+          "id": "301",
+          "url": "https://prisma.us.es/investigador/301",
+          "fullName": "Juan Emilio Ballesteros Zaldivar",
+          "shortName": "Juan Emilio Ballesteros",
+          "role": "member"
+        },
+        {
+          "id": "386",
+          "url": "https://prisma.us.es/investigador/386",
+          "fullName": "Consuelo Bellver Cebreros",
+          "shortName": "Consuelo Bellver",
+          "role": "member"
+        },
+        {
+          "id": "514",
+          "url": "https://prisma.us.es/investigador/514",
+          "fullName": "Pedro Bustamante Rojas",
+          "shortName": "Pedro Bustamante",
+          "role": "member"
+        },
+        {
+          "id": "589",
+          "url": "https://prisma.us.es/investigador/589",
+          "fullName": "Miguel Ángel Campano Laborda",
+          "shortName": "Miguel Ángel Campano",
+          "role": "member"
+        },
+        {
+          "id": "8946",
+          "url": "https://prisma.us.es/investigador/8946",
+          "fullName": "Patricia Fernández-Agüera Escudero",
+          "shortName": "Patricia Fernández-Agüera",
+          "role": "member"
+        },
+        {
+          "id": "1414",
+          "url": "https://prisma.us.es/investigador/1414",
+          "fullName": "Miguel Galindo del Pozo",
+          "shortName": "Miguel Galindo",
+          "role": "member"
+        },
+        {
+          "id": "1531",
+          "url": "https://prisma.us.es/investigador/1531",
+          "fullName": "Javier García López",
+          "shortName": "Javier García",
+          "role": "member"
+        },
+        {
+          "id": "10093",
+          "url": "https://prisma.us.es/investigador/10093",
+          "fullName": "Guillermo Garcia Martin",
+          "shortName": "Guillermo Garcia",
+          "role": "member"
+        },
+        {
+          "id": "1539",
+          "url": "https://prisma.us.es/investigador/1539",
+          "fullName": "Antonio García Martínez",
+          "shortName": "Antonio García",
+          "role": "member"
+        },
+        {
+          "id": "1656",
+          "url": "https://prisma.us.es/investigador/1656",
+          "fullName": "Sara Girón Borrero",
+          "shortName": "Sara Girón",
+          "role": "member"
+        },
+        {
+          "id": "1672",
+          "url": "https://prisma.us.es/investigador/1672",
+          "fullName": "Juan Carlos Gómez de Cozar",
+          "shortName": "Juan Carlos Gómez",
+          "role": "member"
+        },
+        {
+          "id": "2955",
+          "url": "https://prisma.us.es/investigador/2955",
+          "fullName": "Jaime Navarro Casas",
+          "shortName": "Jaime Navarro",
+          "role": "member"
+        },
+        {
+          "id": "2987",
+          "url": "https://prisma.us.es/investigador/2987",
+          "fullName": "Francisco Nieves Pavón",
+          "shortName": "Francisco Nieves",
+          "role": "member"
+        },
+        {
+          "id": "3061",
+          "url": "https://prisma.us.es/investigador/3061",
+          "fullName": "Manuel Arturo Ordóñez Martín",
+          "shortName": "Manuel Arturo Ordóñez",
+          "role": "member"
+        },
+        {
+          "id": "3155",
+          "url": "https://prisma.us.es/investigador/3155",
+          "fullName": "Carlos Paneque Macías",
+          "shortName": "Carlos Paneque",
+          "role": "member"
+        },
+        {
+          "id": "3410",
+          "url": "https://prisma.us.es/investigador/3410",
+          "fullName": "Ana Prieto Thomas",
+          "shortName": "Ana Prieto",
+          "role": "member"
+        },
+        {
+          "id": "7681",
+          "url": "https://prisma.us.es/investigador/7681",
+          "fullName": "Celia Salamanca Rivera",
+          "shortName": "Celia Salamanca",
+          "role": "member"
+        },
+        {
+          "id": "8449",
+          "url": "https://prisma.us.es/investigador/8449",
+          "fullName": "Maria De La Esperanza Sanchez Muñoz",
+          "shortName": "Maria De La Esperanza Sanchez",
+          "role": "member"
+        },
+        {
+          "id": "4018",
+          "url": "https://prisma.us.es/investigador/4018",
+          "fullName": "Juan José Sendra Salas",
+          "shortName": "Juan José Sendra",
+          "role": "member"
+        }
+      ]
+    },
+    "tep1000": {
+      "key": "tep1000",
+      "url": "https://prisma.us.es/colectivo/grupo/TEP-1000",
+      "members": [
+        {
+          "id": "5706",
+          "url": "https://prisma.us.es/investigador/5706",
+          "fullName": "Jessica Fernández-Agüera Escudero",
+          "shortName": "Jessica Fernández-Agüera",
+          "role": "ip"
+        },
+        {
+          "id": "1091",
+          "url": "https://prisma.us.es/investigador/1091",
+          "fullName": "Samuel Domínguez Amarillo",
+          "shortName": "Samuel Domínguez",
+          "role": "member"
+        },
+        {
+          "id": "1115",
+          "url": "https://prisma.us.es/investigador/1115",
+          "fullName": "Victoria Domínguez Ruiz",
+          "shortName": "Victoria Domínguez",
+          "role": "member"
+        },
+        {
+          "id": "2841",
+          "url": "https://prisma.us.es/investigador/2841",
+          "fullName": "David Moreno Rangel",
+          "shortName": "David Moreno",
+          "role": "member"
+        }
+      ]
+    }
+  }
+}

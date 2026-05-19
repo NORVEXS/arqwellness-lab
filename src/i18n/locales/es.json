@@ -179,17 +179,15 @@
     "title": "Dos grupos de investigación, un laboratorio",
     "lede": "El ArqWellness Lab está formado por los grupos PAIDI TEP-130 y TEP-1000, ambos adscritos al IUACC de la Universidad de Sevilla.",
     "membersTitle": "Miembros",
+    "ipLabel": "Investigador/a principal",
     "focusTitle": "Líneas de actividad",
+    "showMore": "Ver {{count}} más",
+    "showLess": "Ver menos",
+    "continueReading": "Seguir leyendo en PRISMA",
     "tep130": {
       "code": "TEP-130",
       "name": "Arquitectura, Patrimonio y Sostenibilidad",
       "description": "Acústica, iluminación, óptica y energía. Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla y al ArqWellness Lab. Reúne profesores e investigadores de los departamentos de Construcciones Arquitectónicas I, Física Aplicada I/II/III y Medicina Preventiva y Pediátrica.",
-      "members": [
-        "Juan José Sendra",
-        "Jaime Navarro",
-        "Samuel Domínguez",
-        "Ignacio Acosta"
-      ],
       "focus": [
         "Diseño, desarrollo e integración de instalaciones (hidrosanitarias, eléctricas, climatización, comunicaciones, seguridad)",
         "Acondicionamiento ambiental (higrotérmico, acústico, lumínico, calidad del aire)",
@@ -201,12 +199,6 @@
       "code": "TEP-1000",
       "name": "Confort y eficiencia energética en edificios",
       "description": "Grupo del PAIDI adscrito al IUACC de la Universidad de Sevilla, radicado en la Escuela Técnica Superior de Arquitectura. Reúne investigadores de Construcciones Arquitectónicas I y Medicina Preventiva y Pediátrica.",
-      "members": [
-        "Carmen Galán",
-        "Rafael Suárez",
-        "Ángel Luis León",
-        "Mónica Martínez"
-      ],
       "focus": [
         "Diseño e integración de instalaciones y sistemas de los edificios",
         "Acondicionamiento ambiental higrotérmico, acústico, lumínico y de calidad del aire",

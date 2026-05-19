@@ -1,3 +1,5 @@
+import generated from './research-members.generated.json';
+
 export type ResearchLineKey = 'comfort' | 'lighting' | 'control';
 
 export interface ResearchLine {
@@ -15,16 +17,30 @@ export const RESEARCH_LINES: ResearchLine[] = [
 export const GROUPS = ['tep130', 'tep1000'] as const;
 export type GroupKey = (typeof GROUPS)[number];
 
-/** Maps a member's display name (as stored in i18n) to their PRISMA profile URL.
- *  When a name is not in this map, the chip stays as a plain span (no link). */
-export const MEMBER_URLS: Record<string, string> = {
-  'Juan José Sendra': 'https://prisma.us.es/investigador/4018',
-  'Jaime Navarro': 'https://prisma.us.es/investigador/2955',
-  'Samuel Domínguez': 'https://prisma.us.es/investigador/1091',
-  'Ignacio Acosta': 'https://prisma.us.es/investigador/18',
-  // TEP-1000 — sin URL individual conocida, enlazan al grupo
-  'Carmen Galán': 'https://prisma.us.es/colectivo/grupo/TEP-1000',
-  'Rafael Suárez': 'https://prisma.us.es/colectivo/grupo/TEP-1000',
-  'Ángel Luis León': 'https://prisma.us.es/colectivo/grupo/TEP-1000',
-  'Mónica Martínez': 'https://prisma.us.es/colectivo/grupo/TEP-1000',
-};
+export interface PrismaMember {
+  id: string;
+  url: string;
+  fullName: string;
+  shortName: string;
+  role: 'ip' | 'member';
+}
+
+interface GeneratedGroup {
+  key: string;
+  url: string;
+  members: PrismaMember[];
+}
+
+interface GeneratedFile {
+  generatedAt: string;
+  source: string;
+  groups: Record<GroupKey, GeneratedGroup | null>;
+}
+
+const data = generated as GeneratedFile;
+
+export const MEMBERS_GENERATED_AT = data.generatedAt;
+
+export function getGroupMembers(group: GroupKey): PrismaMember[] {
+  return data.groups[group]?.members ?? [];
+}
