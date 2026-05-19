@@ -54,15 +54,14 @@ const Header: React.FC = () => {
           className="flex items-center gap-3"
           aria-label={t('logoAlt')}
         >
-          <span className="block dark:rounded-md dark:bg-white dark:px-2 dark:py-1 dark:shadow-soft">
+          <span className="inline-flex shrink-0 items-center dark:rounded-md dark:bg-white dark:px-2 dark:py-1 dark:shadow-soft">
             <img
               src={logo}
               alt={t('logoAlt')}
-              className="h-7 w-auto sm:h-8"
               width={1920}
-              height={300}
+              height={251}
               decoding="async"
-              fetchPriority="high"
+              className="block h-7 w-auto sm:h-8"
             />
           </span>
         </a>
