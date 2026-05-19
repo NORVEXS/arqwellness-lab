@@ -36,30 +36,26 @@ const TeamCard: React.FC<TeamCardProps> = ({
     return (
       <Tag
         {...linkProps}
-        className="group relative flex h-full items-center gap-4 overflow-hidden rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-glow dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-brand-blue-soft/40 dark:hover:shadow-none sm:p-6 lg:items-start lg:p-7"
+        className="group flex h-full items-center gap-4 rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-brand-blue-soft/40 sm:p-6 lg:items-start lg:p-7"
       >
-        <div
-          className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-gradient-to-br from-brand-blue/20 via-brand-purple/15 to-brand-red/10 blur-2xl"
-          aria-hidden="true"
-        />
         <span
           aria-hidden="true"
-          className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-purple font-mono text-sm font-medium text-white shadow-medium sm:h-14 sm:w-14 lg:h-16 lg:w-16 lg:text-base"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-blue to-brand-purple font-mono text-sm font-medium text-white shadow-medium sm:h-14 sm:w-14 lg:h-16 lg:w-16 lg:text-base"
         >
           {initials(name)}
         </span>
-        <div className="relative min-w-0 flex-1">
+        <div className="min-w-0 flex-1">
           {showRole && (
-            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue sm:tracking-[0.22em]">
+            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-brand-blue dark:text-brand-blue-soft sm:tracking-[0.22em]">
               {role}
             </span>
           )}
-          <h4 className="mt-1 font-display text-base font-medium leading-snug text-ink sm:text-lg">
+          <h4 className="mt-1 font-display text-base font-medium leading-snug text-ink dark:text-white sm:text-lg">
             {name}
           </h4>
         </div>
         {person.href && (
-          <ArrowUpRight className="relative mt-0.5 h-4 w-4 shrink-0 text-ink-mute transition-colors group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft" />
+          <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-ink-mute transition-colors group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft" />
         )}
       </Tag>
     );
