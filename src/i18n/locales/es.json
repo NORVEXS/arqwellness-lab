@@ -13,7 +13,6 @@
     "infrastructure": "Infraestructuras",
     "training": "Formación",
     "projects": "Proyectos",
-    "publications": "Publicaciones",
     "resources": "Recursos",
     "outreach": "Divulgación",
     "contact": "Contacto",
@@ -269,27 +268,6 @@
     "viewAllInstitutional": "Investigación · Web institucional",
     "viewAllTep130": "PRISMA · TEP-130",
     "viewAllTep1000": "PRISMA · TEP-1000"
-  },
-  "publications": {
-    "eyebrow": "Publicaciones",
-    "title": "Producción científica reciente",
-    "lede": "Selección de los artículos más recientes del laboratorio publicados en revistas indexadas. Datos sincronizados en cada despliegue desde PRISMA — TEP-130 y TEP-1000.",
-    "filters": {
-      "all": "Todas",
-      "tep130": "TEP-130",
-      "tep1000": "TEP-1000"
-    },
-    "tags": {
-      "tep130": "TEP-130",
-      "tep1000": "TEP-1000"
-    },
-    "unit": {
-      "one": "publicación",
-      "many": "publicaciones"
-    },
-    "disclaimer": "Catálogo completo y actualizado en PRISMA — Universidad de Sevilla.",
-    "viewAllTep130": "Ver todo TEP-130",
-    "viewAllTep1000": "Ver todo TEP-1000"
   },
   "infrastructure": {
     "eyebrow": "Infraestructuras",

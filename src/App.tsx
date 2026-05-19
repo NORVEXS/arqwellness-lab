@@ -8,7 +8,6 @@ import ResearchGroups from './components/ResearchGroups';
 import Infrastructure from './components/Infrastructure';
 import Training from './components/Training';
 import Projects from './components/Projects';
-import Publications from './components/Publications';
 import Resources from './components/Resources';
 import Outreach from './components/Outreach';
 import Contact from './components/Contact';
@@ -53,7 +52,6 @@ function App() {
             <Infrastructure />
             <Training />
             <Projects />
-            <Publications />
             <Resources />
             <Outreach />
             <Contact />

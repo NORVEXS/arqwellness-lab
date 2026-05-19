@@ -13,7 +13,6 @@
     "infrastructure": "Infrastructure",
     "training": "Training",
     "projects": "Projects",
-    "publications": "Publications",
     "resources": "Resources",
     "outreach": "Outreach",
     "contact": "Contact",
@@ -269,27 +268,6 @@
     "viewAllInstitutional": "Research · institutional site",
     "viewAllTep130": "PRISMA · TEP-130",
     "viewAllTep1000": "PRISMA · TEP-1000"
-  },
-  "publications": {
-    "eyebrow": "Publications",
-    "title": "Recent scientific output",
-    "lede": "A selection of the lab's most recent articles in indexed journals. Data is synchronised on every deployment from PRISMA — TEP-130 and TEP-1000.",
-    "filters": {
-      "all": "All",
-      "tep130": "TEP-130",
-      "tep1000": "TEP-1000"
-    },
-    "tags": {
-      "tep130": "TEP-130",
-      "tep1000": "TEP-1000"
-    },
-    "unit": {
-      "one": "publication",
-      "many": "publications"
-    },
-    "disclaimer": "Full, up-to-date catalogue on PRISMA — University of Seville.",
-    "viewAllTep130": "See all TEP-130",
-    "viewAllTep1000": "See all TEP-1000"
   },
   "infrastructure": {
     "eyebrow": "Infrastructure",

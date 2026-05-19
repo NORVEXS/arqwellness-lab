@@ -6,7 +6,6 @@ export const NAV_IDS = [
   'infrastructure',
   'training',
   'projects',
-  'publications',
   'resources',
   'outreach',
   'contact',
