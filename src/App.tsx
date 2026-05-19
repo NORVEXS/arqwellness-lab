@@ -14,9 +14,18 @@ import Outreach from './components/Outreach';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ui/ScrollToTop';
+import LegalPage, { LegalSlug } from './components/LegalPage';
+import { useRoute } from './hooks/useRoute';
+
+const LEGAL_SLUGS: LegalSlug[] = [
+  'aviso-legal',
+  'politica-de-privacidad',
+  'politica-de-cookies',
+];
 
 function App() {
   const { t, i18n } = useTranslation();
+  const path = useRoute();
 
   useEffect(() => {
     document.title = t('meta.title');
@@ -26,21 +35,30 @@ function App() {
     ogLocale?.setAttribute('content', t('meta.ogLocale'));
   }, [t, i18n.language]);
 
+  const cleanPath = path.replace(/^\/+|\/+$/g, '');
+  const legalMatch = LEGAL_SLUGS.find((s) => cleanPath === s);
+
   return (
     <div className="min-h-screen bg-surface font-body text-ink">
       <Header />
       <main id="main" tabIndex={-1}>
-        <Hero />
-        <AboutUs />
-        <ResearchLines />
-        <ResearchGroups />
-        <Infrastructure />
-        <Training />
-        <Projects />
-        <Publications />
-        <Resources />
-        <Outreach />
-        <Contact />
+        {legalMatch ? (
+          <LegalPage slug={legalMatch} />
+        ) : (
+          <>
+            <Hero />
+            <AboutUs />
+            <ResearchLines />
+            <ResearchGroups />
+            <Infrastructure />
+            <Training />
+            <Projects />
+            <Publications />
+            <Resources />
+            <Outreach />
+            <Contact />
+          </>
+        )}
       </main>
       <Footer />
       <ScrollToTop />

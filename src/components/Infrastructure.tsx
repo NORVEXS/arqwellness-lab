@@ -58,22 +58,6 @@ const Infrastructure: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-12 border-t border-line/70 pt-8 dark:border-white/10">
-        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty dark:text-white/55">
-          {t('infrastructure.disclaimer')}
-        </p>
-        <div className="mt-5 flex justify-center">
-          <a
-            href="https://institucional.us.es/arqwellness/infraestructuras/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            <span>{t('infrastructure.viewAll')}</span>
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-        </div>
-      </div>
     </Section>
   );
 };

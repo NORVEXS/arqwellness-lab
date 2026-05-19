@@ -261,7 +261,8 @@
         "title": "Simulation & practice",
         "intro": "Students apply techniques using simulation and analysis tools, organised in teams of 3 or 4.",
         "imageAlt": "Energy simulation model of the Seville School of Architecture in BIM software",
-        "outro": "Includes interactive activities, analysis sessions, continuous assessment and a final exam based on design-improvement exercises."
+        "outro": "Includes interactive activities, analysis sessions, continuous assessment and a final exam based on design-improvement exercises.",
+        "cta": "Discover ASE-Zero on the institutional site"
       }
     }
   },
@@ -333,10 +334,10 @@
         "abstract": "Critical review of new dynamic metrics applied to lighting control systems, addressing accuracy, temporal behaviour and real-world applications.",
         "keywords": ["Dynamic metrics", "Lighting control", "Daylight Autonomy", "Review"]
       },
-      "mediterraneanSchools": {
-        "title": "Comparative study of Mediterranean school ventilation systems based on a predictive model",
-        "abstract": "Predictive model for the integrated assessment of energy use, thermal comfort and indoor air quality in ventilation systems of Mediterranean schools.",
-        "keywords": ["Ventilation", "Schools", "Mediterranean climate", "Energy"]
+      "daoCon": {
+        "title": "Continuous Overcast Daylight Autonomy: a new methodology to evaluate the daylighting performance of buildings",
+        "abstract": "New dynamic metric (DAo.con) to assess the daylighting performance of buildings under continuous overcast sky conditions, integrating temporal behaviour and energy efficiency of the lighting design.",
+        "keywords": ["Daylight Autonomy", "Natural light", "Overcast sky", "Energy efficiency"]
       }
     }
   },
@@ -344,8 +345,6 @@
     "eyebrow": "Infrastructure",
     "title": "Lab facilities and instrumentation",
     "lede": "We operate test chambers, mobile modules and specialised instrumentation to assess thermal, acoustic, lighting and indoor-air-quality performance of the built environment. A reference toolkit for collaborations and transfer contracts.",
-    "viewAll": "Full infrastructure catalogue",
-    "disclaimer": "Representative listing. Full catalogue on the institutional site.",
     "items": {
       "blowerDoor": {
         "title": "Blower Door",
@@ -414,15 +413,14 @@
       "workshop": "Workshops"
     },
     "categories": {
-      "standard": "Standard · book",
+      "standard": "Technical standard",
+      "manual": "Manual · book",
       "presentation": "Presentation",
       "tool": "Tool",
       "video": "Video",
       "workshop": "Workshop"
     },
     "open": "Open resource",
-    "disclaimer": "Selection of open resources. Full catalogue on the institutional site.",
-    "viewAll": "All resources",
     "items": {
       "une171380": {
         "title": "UNE 171380:2024 — continuous indoor CO₂ measurement",
@@ -534,5 +532,113 @@
   "theme": {
     "toDark": "Switch to dark mode",
     "toLight": "Switch to light mode"
+  },
+  "legal": {
+    "back": "Back to home",
+    "updated": "Last updated",
+    "avisoLegal": {
+      "eyebrow": "Legal information",
+      "title": "Legal notice",
+      "intro": "General information about the ArqWellness Lab website at the University of Seville and the applicable terms of use.",
+      "updated": "May 2026",
+      "blocks": [
+        {
+          "heading": "1. Site ownership",
+          "body": "This website is linked to the ArqWellness Lab research group, part of the Higher Technical School of Architecture (ETSA), University of Seville, registered office at Avda. Reina Mercedes, 2, 41012 Seville (Spain). The University of Seville is a public-law entity with its own legal personality (Tax ID Q-4118001-I).\n\nContact: tep130@us.es · Phone: +34 954 55 65 60."
+        },
+        {
+          "heading": "2. Purpose",
+          "body": "The site aims to disseminate the lab's academic and scientific activity: research lines, projects, publications, infrastructure, training and open resources for the university and professional community."
+        },
+        {
+          "heading": "3. Terms of use",
+          "body": "Access to the site is free and open. Users undertake to use it in accordance with current legislation, good faith and public order, refraining from any conduct that may damage the operation of the site or the rights of third parties."
+        },
+        {
+          "heading": "4. Intellectual and industrial property",
+          "body": "The contents of the site (texts, images, video, graphics, logos, source code and design) are protected by intellectual and industrial property regulations. Their ownership belongs to ArqWellness Lab, the University of Seville or, where applicable, third parties who have authorised their use.\n\nReproduction, distribution, public communication or transformation of the contents without express authorisation is prohibited, except for uses permitted by law or for academic or research purposes citing the source."
+        },
+        {
+          "heading": "5. Third-party links",
+          "body": "The site may contain links to external resources (publications, institutional repositories, tools and standards). The lab is not responsible for the content, availability or privacy policies of the external sites linked."
+        },
+        {
+          "heading": "6. Liability",
+          "body": "Reasonable efforts are made to ensure the information published is accurate and up-to-date. However, the accuracy or validity of all content is not guaranteed, nor is any liability assumed for damages arising from the use of the published information."
+        },
+        {
+          "heading": "7. Applicable law",
+          "body": "This legal notice is governed by Spanish law. For any dispute relating to the site, the parties submit to the Courts of Seville, without prejudice to the legally applicable jurisdiction."
+        }
+      ]
+    },
+    "politicaDePrivacidad": {
+      "eyebrow": "Privacy",
+      "title": "Privacy policy",
+      "intro": "Information on the processing of personal data on the ArqWellness Lab website under Regulation (EU) 2016/679 (GDPR) and Spanish Organic Law 3/2018 (LOPDGDD).",
+      "updated": "May 2026",
+      "blocks": [
+        {
+          "heading": "1. Data controller",
+          "body": "Controller: University of Seville — ArqWellness Lab (ETSA).\nAddress: Avda. Reina Mercedes, 2 · 41012 Seville (Spain).\nContact: tep130@us.es.\nUniversity of Seville Data Protection Officer: dpd@us.es."
+        },
+        {
+          "heading": "2. Purposes of processing",
+          "body": "We process the personal data you provide through the contact form or other channels for the following purposes:\n\n— To respond to enquiries, collaboration requests or academic information.\n— To manage the relationship with persons interested in research or transfer projects.\n— To comply with applicable legal obligations."
+        },
+        {
+          "heading": "3. Legal basis",
+          "body": "The legal basis for processing is the consent you give when submitting the form or contacting us by email (Art. 6.1.a GDPR), as well as the lab's legitimate interest in managing the communications received (Art. 6.1.f GDPR)."
+        },
+        {
+          "heading": "4. Data processed",
+          "body": "The data collected are strictly necessary to respond to the request: name, email address, organisation and the content of the message. No special categories of data are collected."
+        },
+        {
+          "heading": "5. Retention period",
+          "body": "Data will be kept as long as necessary to manage the enquiry and, afterwards, for the period required by applicable law. When no longer necessary, they will be deleted using appropriate security measures."
+        },
+        {
+          "heading": "6. Recipients",
+          "body": "No transfer of data to third parties is foreseen unless required by law. For the delivery of contact forms, the Web3Forms service may be used as a technical provider, subject to applicable data protection safeguards."
+        },
+        {
+          "heading": "7. Rights of data subjects",
+          "body": "You may exercise the rights of access, rectification, erasure, objection, restriction of processing and portability by writing to tep130@us.es or to the Data Protection Officer at dpd@us.es. You may also lodge a complaint with the Spanish Data Protection Agency (www.aepd.es) if you consider that your rights have not been duly addressed."
+        },
+        {
+          "heading": "8. Security measures",
+          "body": "Reasonable technical and organisational measures are applied to preserve the confidentiality, integrity and availability of the data processed, in accordance with data protection legislation."
+        }
+      ]
+    },
+    "politicaDeCookies": {
+      "eyebrow": "Cookies",
+      "title": "Cookies policy",
+      "intro": "Information about the use of cookies and similar technologies on the ArqWellness Lab website.",
+      "updated": "May 2026",
+      "blocks": [
+        {
+          "heading": "1. What are cookies?",
+          "body": "Cookies are small text files that websites store in your browser to remember information about your visit (preferred language, session, display preferences, etc.) and to obtain anonymous usage statistics."
+        },
+        {
+          "heading": "2. Cookies used on this site",
+          "body": "This website is an academic project and minimises the use of cookies as much as possible. It only uses:\n\n— Local storage (localStorage) to remember your language preference (ES/EN) and display mode (light/dark). This storage is strictly technical, does not identify the user and is not shared with third parties.\n\nNo analytics, advertising or third-party tracking cookies are used."
+        },
+        {
+          "heading": "3. Management and deactivation",
+          "body": "You can clear local storage from your browser settings at any time. If you delete this data, your language and theme preferences will reset to their default values on your next visit.\n\nMost browsers allow you to configure blocking or notifications when cookies and similar technologies are used in their privacy options."
+        },
+        {
+          "heading": "4. Third-party cookies",
+          "body": "Some linked content (videos, institutional repositories or external tools) may, once visited, install cookies from the destination site. The lab does not control such cookies; please refer to each provider's specific policy."
+        },
+        {
+          "heading": "5. Changes to this policy",
+          "body": "This policy may be updated to adapt to regulatory or technical changes. We recommend reviewing it periodically. The date of the last update is shown at the start of the document."
+        }
+      ]
+    }
   }
 }

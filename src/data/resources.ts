@@ -1,5 +1,6 @@
 export type ResourceCategory =
   | 'standard'
+  | 'manual'
   | 'presentation'
   | 'tool'
   | 'video'
@@ -36,7 +37,7 @@ export const RESOURCES: Resource[] = [
   },
   {
     id: 'book-iaq',
-    category: 'standard',
+    category: 'manual',
     icon: 'BookOpen',
     titleKey: 'resources.items.bookIaq.title',
     metaKey: 'resources.items.bookIaq.meta',

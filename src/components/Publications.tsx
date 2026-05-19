@@ -142,6 +142,20 @@ const Publications: React.FC = () => {
                         />
                       </a>
                     </div>
+                    {pub.doi && (
+                      <div>
+                        <h4 className="eyebrow">{t('publications.doi')}</h4>
+                        <a
+                          href={`https://doi.org/${pub.doi}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-flex items-center gap-2 font-mono text-xs text-brand-blue transition-colors hover:text-brand-purple dark:text-brand-blue-soft"
+                        >
+                          <span>{pub.doi}</span>
+                          <ArrowUpRight className="h-3 w-3" />
+                        </a>
+                      </div>
+                    )}
                     <div>
                       <h4 className="eyebrow">{t('publications.keywords')}</h4>
                       <div className="mt-3 flex flex-wrap gap-1.5">

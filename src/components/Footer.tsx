@@ -4,12 +4,20 @@ import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 import logo from '../assets/images/logo.png';
 import { NAV_IDS } from '../data/navigation';
 import { scrollToSection } from '../lib/scroll';
+import { navigate } from '../hooks/useRoute';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
 
-  const goTo = (id: string) => scrollToSection(id);
+  const goTo = (id: string) => {
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToSection(id), 50);
+    } else {
+      scrollToSection(id);
+    }
+  };
 
   return (
     <footer
@@ -100,32 +108,38 @@ const Footer: React.FC = () => {
               <ul className="mt-5 space-y-2.5 text-sm text-white/75">
                 <li>
                   <a
-                    href="https://institucional.us.es/arqwellness/aviso-legal/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/aviso-legal"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate('/aviso-legal');
+                    }}
                     className="inline-flex items-center gap-1 transition-colors hover:text-white"
                   >
-                    {t('footer.legalNotice')} <ArrowUpRight className="h-3 w-3" />
+                    {t('footer.legalNotice')}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://institucional.us.es/arqwellness/politica-de-privacidad/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/politica-de-privacidad"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate('/politica-de-privacidad');
+                    }}
                     className="inline-flex items-center gap-1 transition-colors hover:text-white"
                   >
-                    {t('footer.privacy')} <ArrowUpRight className="h-3 w-3" />
+                    {t('footer.privacy')}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://institucional.us.es/arqwellness/politica-de-cookies/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/politica-de-cookies"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate('/politica-de-cookies');
+                    }}
                     className="inline-flex items-center gap-1 transition-colors hover:text-white"
                   >
-                    {t('footer.cookies')} <ArrowUpRight className="h-3 w-3" />
+                    {t('footer.cookies')}
                   </a>
                 </li>
                 <li>

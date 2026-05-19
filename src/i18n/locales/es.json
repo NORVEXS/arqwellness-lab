@@ -261,7 +261,8 @@
         "title": "Simulación y práctica",
         "intro": "Los estudiantes aplican técnicas mediante herramientas de simulación y análisis. La actividad se organiza por grupos de 3 o 4 alumnos.",
         "imageAlt": "Modelo de simulación energética de la ETSA de Sevilla en software BIM",
-        "outro": "Incluye actividades interactivas, sesiones de análisis, evaluación continua y examen final basado en la resolución de ejercicios y propuestas de mejora del diseño."
+        "outro": "Incluye actividades interactivas, sesiones de análisis, evaluación continua y examen final basado en la resolución de ejercicios y propuestas de mejora del diseño.",
+        "cta": "Conoce ASE-Zero en la web institucional"
       }
     }
   },
@@ -310,7 +311,7 @@
     "items": {
       "chronolightHospital": {
         "title": "Effect of standard versus advanced dimmable lighting systems on the circadian rhythms of hospital personnel",
-        "abstract": "Estudio sobre el impacto de sistemas avanzados de iluminación regulable frente a sistemas estándar en los ritmos circadianos del personal hospitalario.",
+        "abstract": "Estudio sobre el impacto de sistemas avanzados de iluminación regulable frente a sistemas estándar en los ritmos circadianos del personal hospitalario en entornos asistenciales reales.",
         "keywords": ["Iluminación circadiana", "Hospital", "Dimming", "HCL"]
       },
       "chronolightPathogens": {
@@ -333,10 +334,10 @@
         "abstract": "Revisión crítica de nuevas métricas dinámicas aplicadas a sistemas de control lumínico, analizando precisión, comportamiento temporal y aplicaciones reales.",
         "keywords": ["Métricas dinámicas", "Control lumínico", "Daylight Autonomy", "Revisión"]
       },
-      "mediterraneanSchools": {
-        "title": "Comparative study of Mediterranean school ventilation systems based on a predictive model",
-        "abstract": "Modelo predictivo para la evaluación integrada de consumo energético, confort térmico y calidad del aire interior en sistemas de ventilación de escuelas mediterráneas.",
-        "keywords": ["Ventilación", "Escuelas", "Clima mediterráneo", "Energía"]
+      "daoCon": {
+        "title": "Continuous Overcast Daylight Autonomy: a new methodology to evaluate the daylighting performance of buildings",
+        "abstract": "Nueva métrica dinámica (DAo.con) para evaluar el aprovechamiento de la luz natural en edificios bajo condiciones de cielo cubierto continuo, integrando comportamiento temporal y eficiencia energética del proyecto lumínico.",
+        "keywords": ["Daylight Autonomy", "Luz natural", "Cielo cubierto", "Eficiencia energética"]
       }
     }
   },
@@ -344,8 +345,6 @@
     "eyebrow": "Infraestructuras",
     "title": "Equipamiento e instalaciones del laboratorio",
     "lede": "Disponemos de cámaras de ensayos, módulos móviles e instrumental especializado para evaluar el comportamiento térmico, acústico, lumínico y de calidad del aire del espacio construido. Equipamiento de referencia para colaboraciones y contratos de transferencia.",
-    "viewAll": "Catálogo completo de infraestructuras",
-    "disclaimer": "Listado representativo. Catálogo completo en la web institucional.",
     "items": {
       "blowerDoor": {
         "title": "Blower Door",
@@ -414,15 +413,14 @@
       "workshop": "Workshops"
     },
     "categories": {
-      "standard": "Norma · libro",
+      "standard": "Norma técnica",
+      "manual": "Manual · libro",
       "presentation": "Presentación",
       "tool": "Herramienta",
       "video": "Vídeo",
       "workshop": "Workshop"
     },
     "open": "Abrir recurso",
-    "disclaimer": "Selección de recursos abiertos. Catálogo completo en la web institucional.",
-    "viewAll": "Todos los recursos",
     "items": {
       "une171380": {
         "title": "UNE 171380:2024 — Medición continua de CO₂ en interiores",
@@ -534,5 +532,113 @@
   "theme": {
     "toDark": "Cambiar a modo oscuro",
     "toLight": "Cambiar a modo claro"
+  },
+  "legal": {
+    "back": "Volver al inicio",
+    "updated": "Última actualización",
+    "avisoLegal": {
+      "eyebrow": "Información legal",
+      "title": "Aviso legal",
+      "intro": "Información general sobre el sitio web del laboratorio ArqWellness Lab de la Universidad de Sevilla y las condiciones de uso aplicables.",
+      "updated": "Mayo de 2026",
+      "blocks": [
+        {
+          "heading": "1. Titularidad del sitio web",
+          "body": "El presente sitio web está vinculado al laboratorio de investigación ArqWellness Lab, perteneciente a la Escuela Técnica Superior de Arquitectura (ETSA) de la Universidad de Sevilla, con domicilio en Avda. Reina Mercedes, 2, 41012 Sevilla (España). La Universidad de Sevilla es una entidad de derecho público con personalidad jurídica propia (CIF Q-4118001-I).\n\nContacto: tep130@us.es · Teléfono: +34 954 55 65 60."
+        },
+        {
+          "heading": "2. Objeto",
+          "body": "El sitio tiene como finalidad la difusión académica y científica de las actividades del laboratorio: líneas de investigación, proyectos, publicaciones, infraestructuras, formación y recursos abiertos para la comunidad universitaria y profesional."
+        },
+        {
+          "heading": "3. Condiciones de uso",
+          "body": "El acceso al sitio es libre y gratuito. La persona usuaria se compromete a hacer un uso conforme a la legislación vigente, a la buena fe y al orden público, absteniéndose de cualquier conducta que pueda dañar el funcionamiento del sitio o los derechos de terceros."
+        },
+        {
+          "heading": "4. Propiedad intelectual e industrial",
+          "body": "Los contenidos del sitio (textos, imágenes, vídeos, gráficos, logotipos, código fuente y diseño) están protegidos por la normativa de propiedad intelectual e industrial. Su titularidad corresponde al ArqWellness Lab, a la Universidad de Sevilla o, en su caso, a terceros que han autorizado su uso.\n\nQueda prohibida la reproducción, distribución, comunicación pública o transformación de los contenidos sin autorización expresa, salvo los usos permitidos por la ley o citando expresamente la fuente con fines académicos o de investigación."
+        },
+        {
+          "heading": "5. Enlaces a terceros",
+          "body": "El sitio puede contener enlaces a recursos externos (publicaciones, repositorios institucionales, herramientas y normativa). El laboratorio no se responsabiliza del contenido, disponibilidad o políticas de privacidad de los sitios externos enlazados."
+        },
+        {
+          "heading": "6. Responsabilidad",
+          "body": "Se realizan esfuerzos razonables para que la información publicada sea correcta y esté actualizada. No obstante, no se garantiza la exactitud o vigencia de todos los contenidos, ni se asume responsabilidad por los daños derivados del uso de la información publicada."
+        },
+        {
+          "heading": "7. Legislación aplicable",
+          "body": "El presente aviso legal se rige por la legislación española. Para cualquier controversia relacionada con el sitio, las partes se someten a los Juzgados y Tribunales de Sevilla, sin perjuicio del fuero que legalmente corresponda."
+        }
+      ]
+    },
+    "politicaDePrivacidad": {
+      "eyebrow": "Privacidad",
+      "title": "Política de privacidad",
+      "intro": "Información sobre el tratamiento de datos personales en el sitio web del ArqWellness Lab conforme al Reglamento (UE) 2016/679 (RGPD) y la LOPDGDD 3/2018.",
+      "updated": "Mayo de 2026",
+      "blocks": [
+        {
+          "heading": "1. Responsable del tratamiento",
+          "body": "Responsable: Universidad de Sevilla — ArqWellness Lab (ETSA).\nDirección: Avda. Reina Mercedes, 2 · 41012 Sevilla (España).\nContacto: tep130@us.es.\nDelegado de Protección de Datos de la Universidad de Sevilla: dpd@us.es."
+        },
+        {
+          "heading": "2. Finalidades del tratamiento",
+          "body": "Tratamos los datos personales que nos facilita a través del formulario de contacto u otros canales con las siguientes finalidades:\n\n— Atender consultas, solicitudes de colaboración o información académica.\n— Gestionar la relación con personas interesadas en proyectos de investigación o transferencia.\n— Cumplir obligaciones legales aplicables."
+        },
+        {
+          "heading": "3. Base jurídica",
+          "body": "La base legal del tratamiento es el consentimiento que usted otorga al remitir el formulario o al contactar por correo electrónico (art. 6.1.a RGPD), así como el interés legítimo del laboratorio en gestionar las comunicaciones recibidas (art. 6.1.f RGPD)."
+        },
+        {
+          "heading": "4. Datos tratados",
+          "body": "Los datos que se recogen son los estrictamente necesarios para atender la solicitud: nombre, correo electrónico, organización y el contenido del mensaje. No se recopilan categorías especiales de datos."
+        },
+        {
+          "heading": "5. Plazo de conservación",
+          "body": "Los datos se conservarán mientras sea necesario para gestionar la consulta y, posteriormente, durante el plazo que resulte exigible por la legislación aplicable. Cuando dejen de ser necesarios, serán suprimidos con las medidas de seguridad adecuadas."
+        },
+        {
+          "heading": "6. Destinatarios",
+          "body": "No se prevén cesiones de datos a terceros salvo obligación legal. Para la entrega de formularios de contacto se puede utilizar el servicio Web3Forms como proveedor técnico, sometido a las garantías de protección de datos aplicables."
+        },
+        {
+          "heading": "7. Derechos de las personas interesadas",
+          "body": "Puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, dirigiéndose por escrito a tep130@us.es o al Delegado de Protección de Datos en dpd@us.es. Asimismo, puede presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es) si considera que sus derechos no han sido debidamente atendidos."
+        },
+        {
+          "heading": "8. Medidas de seguridad",
+          "body": "Se aplican medidas técnicas y organizativas razonables para preservar la confidencialidad, integridad y disponibilidad de los datos tratados, de acuerdo con la normativa de protección de datos."
+        }
+      ]
+    },
+    "politicaDeCookies": {
+      "eyebrow": "Cookies",
+      "title": "Política de cookies",
+      "intro": "Información sobre el uso de cookies y tecnologías similares en el sitio web del ArqWellness Lab.",
+      "updated": "Mayo de 2026",
+      "blocks": [
+        {
+          "heading": "1. ¿Qué son las cookies?",
+          "body": "Las cookies son pequeños archivos de texto que los sitios web almacenan en su navegador para recordar información sobre su visita (idioma preferido, sesión, preferencias de visualización, etc.) y para obtener estadísticas anónimas de uso."
+        },
+        {
+          "heading": "2. Cookies utilizadas en este sitio",
+          "body": "Este sitio web es un proyecto académico y minimiza el uso de cookies al máximo. Solo utiliza:\n\n— Almacenamiento local (localStorage) para recordar su preferencia de idioma (ES/EN) y modo de visualización (claro/oscuro). Este almacenamiento es estrictamente técnico, no identifica al usuario y no se comparte con terceros.\n\nNo se utilizan cookies analíticas, publicitarias o de seguimiento de terceros."
+        },
+        {
+          "heading": "3. Gestión y desactivación",
+          "body": "Puede borrar el almacenamiento local desde la configuración de su navegador en cualquier momento. Si elimina estos datos, sus preferencias de idioma y tema se restablecerán a los valores por defecto en la próxima visita.\n\nLa mayoría de los navegadores permiten configurar el bloqueo o aviso ante el uso de cookies y tecnologías similares en sus opciones de privacidad."
+        },
+        {
+          "heading": "4. Cookies de terceros",
+          "body": "Algunos contenidos enlazados (vídeos, repositorios institucionales o herramientas externas) pueden, una vez visitados, instalar cookies propias del sitio destino. El laboratorio no controla dichas cookies; consulte la política específica de cada proveedor."
+        },
+        {
+          "heading": "5. Cambios en la política",
+          "body": "Esta política puede actualizarse para adaptarse a cambios normativos o técnicos. Se recomienda revisarla periódicamente. La fecha de la última actualización figura al inicio del documento."
+        }
+      ]
+    }
   }
 }

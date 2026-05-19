@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { GraduationCap, Wind, BookOpen, MonitorSmartphone } from 'lucide-react';
+import { GraduationCap, Wind, BookOpen, MonitorSmartphone, ArrowUpRight } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
@@ -203,6 +203,17 @@ const Training: React.FC = () => {
                 <span aria-hidden="true" className="h-px w-6 bg-white/30" />
                 BIM · ETSA Sevilla · ASE-Zero
               </p>
+              <div className="mt-6">
+                <a
+                  href="https://institucional.us.es/asezero/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/40 hover:bg-white/[0.12]"
+                >
+                  <span>{t('training.blocks.practice.cta')}</span>
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
             </Reveal>
           </div>
         </div>

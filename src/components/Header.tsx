@@ -5,6 +5,7 @@ import { NAV_IDS } from '../data/navigation';
 import { useScrollPosition } from '../hooks/useScrollPosition';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import { scrollToSection } from '../lib/scroll';
+import { navigate } from '../hooks/useRoute';
 import ThemeToggle from './ui/ThemeToggle';
 import logo from '../assets/images/logo.png';
 
@@ -29,7 +30,12 @@ const Header: React.FC = () => {
 
   const goTo = (id: string) => {
     setMobileOpen(false);
-    scrollToSection(id);
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToSection(id), 50);
+    } else {
+      scrollToSection(id);
+    }
   };
 
   const changeLang = (code: string) => {

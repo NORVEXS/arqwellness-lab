@@ -7,21 +7,34 @@ export interface Publication {
   year: string;
   topic: PubTopic;
   i18nKey: string;
+  /** DOI completo (sin prefijo URL) */
+  doi?: string;
   /** URL completa al artículo o a la página institucional con la referencia */
   href: string;
 }
 
-const INSTITUTIONAL_PUBS = 'https://institucional.us.es/arqwellness/investigacion/publicaciones/';
-
 export const PUBLICATIONS: Publication[] = [
   {
+    id: 'hemodialysis-iaq',
+    authors:
+      'Rodríguez, D.; Jiménez, E.; Quiles-Zafra, R.; Acosta, I.; Bustamante, P.; Campano, M. Á.',
+    journal: 'Building and Environment',
+    year: '2025',
+    topic: 'comfort',
+    i18nKey: 'publications.items.hemodialysisIaq',
+    doi: '10.1016/j.buildenv.2025.113753',
+    href: 'https://prisma.us.es/publicacion/269142',
+  },
+  {
     id: 'chronolight-hospital',
-    authors: 'Acosta, I.; Campano, M. Á.; Domínguez-Amarillo, S. et al.',
+    authors:
+      'Aguilar-Carrasco, M. T.; Domínguez-Amarillo, S.; Álvarez-López, A. I.; Carrillo-Vico, A.; Acosta, I.',
     journal: 'LEUKOS — Journal of the Illuminating Engineering Society',
     year: '2025',
     topic: 'lighting',
     i18nKey: 'publications.items.chronolightHospital',
-    href: INSTITUTIONAL_PUBS,
+    doi: '10.1080/15502724.2024.2424958',
+    href: 'https://prisma.us.es/publicacion/253918',
   },
   {
     id: 'chronolight-pathogens',
@@ -30,16 +43,7 @@ export const PUBLICATIONS: Publication[] = [
     year: '2025',
     topic: 'lighting',
     i18nKey: 'publications.items.chronolightPathogens',
-    href: INSTITUTIONAL_PUBS,
-  },
-  {
-    id: 'hemodialysis-iaq',
-    authors: 'Fernández-Agüera, J.; Domínguez-Amarillo, S.; Campano, M. Á. et al.',
-    journal: 'Building and Environment',
-    year: '2025',
-    topic: 'comfort',
-    i18nKey: 'publications.items.hemodialysisIaq',
-    href: INSTITUTIONAL_PUBS,
+    href: 'https://institucional.us.es/arqwellness/investigacion/publicaciones/',
   },
   {
     id: 'vulnerable-occupants',
@@ -48,7 +52,7 @@ export const PUBLICATIONS: Publication[] = [
     year: '2025',
     topic: 'comfort',
     i18nKey: 'publications.items.vulnerableOccupants',
-    href: INSTITUTIONAL_PUBS,
+    href: 'https://institucional.us.es/arqwellness/investigacion/publicaciones/',
   },
   {
     id: 'dynamic-lighting-review',
@@ -57,15 +61,16 @@ export const PUBLICATIONS: Publication[] = [
     year: '2025',
     topic: 'lighting',
     i18nKey: 'publications.items.dynamicLightingReview',
-    href: INSTITUTIONAL_PUBS,
+    href: 'https://institucional.us.es/arqwellness/investigacion/publicaciones/',
   },
   {
-    id: 'mediterranean-schools',
-    authors: 'León, Á. L.; Suárez, R.; Galán, C. et al.',
-    journal: 'Indoor Air',
-    year: '2025',
+    id: 'dao-con',
+    authors: 'Acosta, I.; Campano, M. Á.; Domínguez-Amarillo, S.; Navarro-Casas, J.',
+    journal: 'LEUKOS — Journal of the Illuminating Engineering Society',
+    year: '2023',
     topic: 'energy',
-    i18nKey: 'publications.items.mediterraneanSchools',
-    href: INSTITUTIONAL_PUBS,
+    i18nKey: 'publications.items.daoCon',
+    doi: '10.1080/15502724.2022.2135528',
+    href: 'https://prisma.us.es/publicacion/216968',
   },
 ];
