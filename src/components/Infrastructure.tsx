@@ -27,9 +27,9 @@ const Infrastructure: React.FC = () => {
         ]}
       />
 
-      <div className="mt-14 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {INFRASTRUCTURE.map((item, i) => (
-          <Reveal key={item.id} delay={(i % 3) * 80} className="h-full">
+          <Reveal key={item.id} delay={(i % 4) * 70} className="h-full">
             <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-line-strong/70 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-white/20">
               <div className="relative aspect-[16/10] overflow-hidden bg-surface-alt dark:bg-surface-dark">
                 <img
@@ -58,19 +58,21 @@ const Infrastructure: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-line/70 pt-6 sm:flex-row sm:items-center dark:border-white/10">
-        <p className="max-w-2xl text-sm text-ink-mute text-pretty dark:text-white/55">
+      <div className="mt-12 border-t border-line/70 pt-8 dark:border-white/10">
+        <p className="mx-auto max-w-2xl text-center text-sm text-ink-mute text-pretty dark:text-white/55">
           {t('infrastructure.disclaimer')}
         </p>
-        <a
-          href="https://institucional.us.es/arqwellness/infraestructuras/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          <span>{t('infrastructure.viewAll')}</span>
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
+        <div className="mt-5 flex justify-center">
+          <a
+            href="https://institucional.us.es/arqwellness/infraestructuras/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            <span>{t('infrastructure.viewAll')}</span>
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </Section>
   );

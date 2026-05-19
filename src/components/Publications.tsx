@@ -123,18 +123,18 @@ const Publications: React.FC = () => {
                   </div>
                   <div className="space-y-5">
                     <div>
-                      <h4 className="eyebrow">{t('publications.doi')}</h4>
+                      <h4 className="eyebrow">{t('publications.openInstitutional')}</h4>
                       <a
-                        href={`https://doi.org/${pub.doi}`}
+                        href={pub.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group mt-2 flex w-full max-w-full items-center gap-2 rounded-lg border border-line bg-white px-3 py-2 transition-all duration-300 hover:border-brand-blue/40 hover:bg-brand-blue/[0.04] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-brand-blue-soft/40 dark:hover:bg-white/[0.07]"
                       >
                         <span className="shrink-0 rounded bg-ink/[0.06] px-1.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink-soft dark:bg-white/10 dark:text-white/70">
-                          DOI
+                          PUB
                         </span>
-                        <span className="min-w-0 flex-1 truncate font-mono text-xs text-ink-soft transition-colors group-hover:text-brand-blue dark:text-white/70 dark:group-hover:text-brand-blue-soft">
-                          {pub.doi}
+                        <span className="min-w-0 flex-1 truncate text-sm text-ink-soft transition-colors group-hover:text-brand-blue dark:text-white/70 dark:group-hover:text-brand-blue-soft">
+                          {pub.journal} · {pub.year}
                         </span>
                         <ArrowUpRight
                           className="h-3.5 w-3.5 shrink-0 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-blue dark:text-white/45 dark:group-hover:text-brand-blue-soft"

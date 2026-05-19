@@ -17,6 +17,10 @@
     "resources": "Resources",
     "outreach": "Outreach",
     "contact": "Contact",
+    "shortAbout": "Lab",
+    "shortInfrastructure": "Infra.",
+    "shortPublications": "Pubs",
+    "shortOutreach": "Outreach",
     "ariaPrimary": "Primary navigation",
     "ariaLang": "Change language",
     "openMenu": "Open menu",
@@ -43,25 +47,66 @@
   },
   "about": {
     "eyebrow": "About",
-    "title": "A laboratory for the architecture of wellbeing",
-    "lede": "ArqWellness Lab — formed by the PAIDI groups TEP-130 and TEP-1000 — brings together professors, researchers and clinicians from Preventive Medicine and Pediatrics around the indoor environment, energy and health in architecture.",
-    "longA": "Our work focuses on the control and management of indoor environments: assessing and improving conditions for comfort, ergonomics and occupant health, from a holistic view of the factors that shape the built habitat.",
-    "longB": "We gather specialists in environmental conditioning and energy efficiency — thermal, acoustic, lighting and air-quality aspects — covering both passive design and active building systems.",
-    "pillars": {
-      "mission": {
-        "title": "Mission",
-        "text": "To advance human wellbeing through healthy, comfortable and sustainable architectural environments."
+    "title": "About the lab",
+    "lede": "ArqWellness Lab brings together specialists from the PAIDI groups TEP-130 and TEP-1000 to understand, measure and optimise the indoor environment of buildings.",
+    "blocks": {
+      "multidisciplinary": {
+        "title": "A multidisciplinary team",
+        "body": "The lab is composed of faculty and researchers from the Department of Architectural Construction I at the Seville School of Architecture, together with professionals from Preventive Medicine and Pediatrics.",
+        "imageAlt": "ArqWellness Lab team — ETSA Sevilla"
       },
-      "vision": {
-        "title": "Vision",
-        "text": "To be an international reference in research on the indoor environment and its impact on health and energy performance."
+      "seniorJunior": {
+        "title": "Senior expertise, new generation",
+        "body": "Senior researchers with more than 20 years of academic experience work side by side with younger investigators trained in architecture, consultancy and knowledge transfer.",
+        "imageAlt": "ArqWellness Lab researchers"
       },
-      "approach": {
-        "title": "Approach",
-        "text": "We integrate technical and scientific knowledge with simulation, measurement and design tools to tackle environmental conditioning transversally."
+      "video": {
+        "eyebrow": "Lab vision",
+        "title": "Laboratory of Lighting, Energy and Wellness in Architecture",
+        "body": "The Lab works in close coordination with the PAIDI groups TEP-130 and TEP-1000 to understand, measure and optimise the indoor environment. It integrates comfort, ergonomics and health from a holistic view of the built habitat.",
+        "label": "Institutional video of the lab at work"
+      },
+      "trajectory": {
+        "eyebrow": "Trajectory",
+        "title": "Over 15 years researching wellbeing in inhabited spaces",
+        "body": "The lab's work has been consolidated over more than a decade and a half, developing advanced methodologies to evaluate and improve indoor conditions in architecture.",
+        "imageAlt": "Blower-door airtightness test in a haemodialysis setting"
+      },
+      "lightCabin": {
+        "eyebrow": "Lab facilities",
+        "title": "Controlled cabins and environments",
+        "body": "We operate lighting cabins, test cells and mobile modules that reproduce real-world conditions and allow a rigorous evaluation of comfort and efficiency.",
+        "imageAlt": "ArqWellness Lab lighting cabin"
+      },
+      "specialty": {
+        "eyebrow": "Technical specialisation",
+        "title": "Technical specialisation",
+        "body": "The team investigates and acts on all the factors that define environmental conditioning and energy efficiency in buildings.",
+        "items": {
+          "thermal": {
+            "title": "Thermal",
+            "text": "Hygrothermal comfort, demand and envelope behaviour."
+          },
+          "acoustic": {
+            "title": "Acoustic",
+            "text": "Noise control, transmission and indoor acoustic comfort."
+          },
+          "lighting": {
+            "title": "Lighting",
+            "text": "Daylight, electric lighting and biological response to light."
+          },
+          "iaq": {
+            "title": "Air quality",
+            "text": "Ventilation, particulates, CO₂ and occupant health."
+          }
+        },
+        "outro": "Includes both passive strategies tied to design and construction and active solutions related to building systems and services.",
+        "imageAlt1": "Passive strategies in existing buildings",
+        "imageAlt2": "Active heat-recovery systems",
+        "caption1": "Passive strategies · design and construction",
+        "caption2": "Active systems · services and heat recovery"
       }
-    },
-    "imageAlt": "ArqWellness Lab researchers in front of the ETSA building"
+    }
   },
   "team": {
     "eyebrow": "Team",
@@ -98,8 +143,8 @@
     "lines": {
       "comfort": {
         "number": "01",
-        "title": "Environmental comfort",
-        "summary": "Optimising the built environment for human wellbeing and energy efficiency.",
+        "title": "Hygrothermal comfort, perception and air",
+        "summary": "Hygrothermal comfort, perception of the indoor environment, health and air quality.",
         "intro": "We study the parameters that drive comfort indoors and their interaction with energy consumption.",
         "items": [
           "Thermal comfort across climate contexts",
@@ -112,8 +157,8 @@
       },
       "lighting": {
         "number": "02",
-        "title": "Lighting & health",
-        "summary": "How light shapes the human body beyond visual perception.",
+        "title": "Daylight, electric light and circadian response",
+        "summary": "Daylight, electric lighting and circadian response.",
         "intro": "We investigate the influence of daylight and artificial light on physiology, psychology and behaviour.",
         "items": [
           "Lighting, circadian rhythms and sleep quality",
@@ -126,8 +171,8 @@
       },
       "control": {
         "number": "03",
-        "title": "Control & integration",
-        "summary": "Smart systems for environmental control in buildings.",
+        "title": "Environmental variables and advanced control",
+        "summary": "Environmental variables and advanced control of the indoor environment.",
         "intro": "We design systems that monitor and regulate environmental parameters in inhabited spaces.",
         "items": [
           "Real-time environmental sensor networks",
@@ -272,31 +317,37 @@
     "disclaimer": "Representative selection. Full scientific output on PRISMA — University of Seville.",
     "viewAllTep130": "TEP-130 publications",
     "viewAllTep1000": "TEP-1000 publications",
+    "openInstitutional": "View reference",
     "items": {
-      "pub1": {
-        "title": "Daylighting design strategies for energy saving in historic buildings",
-        "abstract": "Research on daylighting strategies to improve energy efficiency in heritage buildings while preserving their historic value. Combines field measurements, simulation analyses and case studies.",
-        "keywords": ["Daylighting", "Heritage buildings", "Energy efficiency", "Conservation"]
+      "chronolightHospital": {
+        "title": "Effect of standard versus advanced dimmable lighting systems on the circadian rhythms of hospital personnel",
+        "abstract": "Impact of advanced dimmable lighting systems versus standard systems on the circadian rhythms of hospital personnel.",
+        "keywords": ["Circadian lighting", "Hospital", "Dimming", "HCL"]
       },
-      "pub2": {
-        "title": "Circadian lighting effects on hospital staff performance: A field study",
-        "abstract": "Field study examining the effects of circadian lighting on healthcare staff performance — alertness, cognitive function and subjective wellbeing — under different lighting conditions.",
-        "keywords": ["Circadian lighting", "Healthcare", "Staff performance", "HCL"]
+      "chronolightPathogens": {
+        "title": "Efficacy of the CHRONOlight biodynamic lighting system for control of nosocomial Gram-negative pathogens",
+        "abstract": "Efficacy of the CHRONOlight biodynamic lighting system in controlling nosocomial Gram-negative pathogens in healthcare environments.",
+        "keywords": ["CHRONOlight", "Biodynamic", "Nosocomial infections", "Healthcare"]
       },
-      "pub3": {
-        "title": "Thermal comfort assessment in Mediterranean university buildings",
-        "abstract": "Comprehensive thermal comfort assessment in Mediterranean university buildings, analysing seasonal variations and occupant preferences.",
-        "keywords": ["Thermal comfort", "Mediterranean climate", "University buildings", "Adaptive comfort"]
+      "hemodialysisIaq": {
+        "title": "Integral analysis of indoor environmental quality in a hemodialysis unit",
+        "abstract": "Integral indoor environmental quality analysis in a haemodialysis unit: indoor air quality and relative airborne disease risk.",
+        "keywords": ["IAQ", "Haemodialysis", "Airborne risk", "Health"]
       },
-      "pub4": {
-        "title": "Energy retrofitting strategies for historical buildings in Seville",
-        "abstract": "Analysis of energy retrofitting strategies for historical buildings in Seville, evaluating intervention effectiveness and cost-benefit ratios.",
-        "keywords": ["Energy retrofitting", "Historical buildings", "Heritage", "Seville"]
+      "vulnerableOccupants": {
+        "title": "Healthier indoor environments for vulnerable occupants: light, air quality, and airborne disease risk",
+        "abstract": "Analysis of light, air quality and airborne transmission risk in indoor environments occupied by vulnerable individuals.",
+        "keywords": ["Vulnerability", "IAQ", "Lighting", "Public health"]
       },
-      "pub5": {
-        "title": "Visual comfort and energy efficiency in educational buildings",
-        "abstract": "Examines the relationship between visual comfort and energy consumption in educational facilities through measurement and simulation.",
-        "keywords": ["Visual comfort", "Educational buildings", "Energy efficiency", "Lighting design"]
+      "dynamicLightingReview": {
+        "title": "New approaches in dynamic metrics for lighting control systems: a critical review",
+        "abstract": "Critical review of new dynamic metrics applied to lighting control systems, addressing accuracy, temporal behaviour and real-world applications.",
+        "keywords": ["Dynamic metrics", "Lighting control", "Daylight Autonomy", "Review"]
+      },
+      "mediterraneanSchools": {
+        "title": "Comparative study of Mediterranean school ventilation systems based on a predictive model",
+        "abstract": "Predictive model for the integrated assessment of energy use, thermal comfort and indoor air quality in ventilation systems of Mediterranean schools.",
+        "keywords": ["Ventilation", "Schools", "Mediterranean climate", "Energy"]
       }
     }
   },
@@ -400,17 +451,9 @@
         "title": "CO₂-drop ventilation calculation v1.3",
         "meta": "Spreadsheet to estimate ventilation flow from the CO₂ decay kinetics."
       },
-      "dao": {
-        "title": "DAo 3.5.3 plus — from DF to DA",
-        "meta": "Daylighting tool: from daylight factor to daylight autonomy."
-      },
       "hepa": {
         "title": "HEPA air purifier comparison (2021)",
         "meta": "PDF + Google sheet with selection criteria by cost, CADR and noise level."
-      },
-      "smartbuilding": {
-        "title": "Smartbuilding — intelligent building (2019)",
-        "meta": "VR application showcasing the AURA Solar Decathlon 2015 building controls."
       },
       "ediaqi": {
         "title": "EDIAQI — presentation (.pptx)",

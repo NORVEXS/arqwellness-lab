@@ -43,25 +43,11 @@ export const RESOURCES: Resource[] = [
     href: 'https://hdvirtual.us.es/discovirt/index.php/s/SLAcjAznNtDkJRn?openfile=true',
   },
   {
-    id: 'dao-353',
-    category: 'tool',
-    titleKey: 'resources.items.dao.title',
-    metaKey: 'resources.items.dao.meta',
-    href: 'https://hdvirtual.us.es/discovirt/index.php/s/3a5ZM2aADM3MDjN?openfile=true',
-  },
-  {
     id: 'hepa-comparison',
     category: 'tool',
     titleKey: 'resources.items.hepa.title',
     metaKey: 'resources.items.hepa.meta',
     href: 'https://hdvirtual.us.es/discovirt/index.php/s/7f2sZKDH7fYcRfJ',
-  },
-  {
-    id: 'smartbuilding',
-    category: 'tool',
-    titleKey: 'resources.items.smartbuilding.title',
-    metaKey: 'resources.items.smartbuilding.meta',
-    href: 'https://ra.sav.us.es/rv/imagen/smartbuilding/vtour/tour.html',
   },
   {
     id: 'ediaqi-pres',

@@ -1,4 +1,10 @@
-export function scrollToSection(id: string, extraOffset = 0): void {
+// Default breathing room between the header and the next section title.
+const DEFAULT_BREATHING_PX = 12;
+
+export function scrollToSection(
+  id: string,
+  extraOffset = DEFAULT_BREATHING_PX,
+): void {
   const el = document.getElementById(id);
   if (!el) return;
   const header = document.querySelector<HTMLElement>('header[role="banner"]');

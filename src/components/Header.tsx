@@ -61,33 +61,41 @@ const Header: React.FC = () => {
               width={1920}
               height={251}
               decoding="async"
-              className="block h-7 w-auto sm:h-8"
+              className="block h-7 w-auto sm:h-8 xl:h-9"
             />
           </span>
         </a>
 
-        {/* Desktop nav */}
+        {/* Desktop nav — sólo desde xl (1280+) */}
         <nav
           aria-label={t('nav.ariaPrimary')}
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-0.5 xl:flex"
         >
-          {NAV_IDS.map((id) => {
+          {NAV_IDS.filter((id) => id !== 'introduction').map((id) => {
             const isActive = active === id;
+            const shortMap: Partial<Record<typeof id, string>> = {
+              about: t('nav.shortAbout'),
+              infrastructure: t('nav.shortInfrastructure'),
+              publications: t('nav.shortPublications'),
+              outreach: t('nav.shortOutreach'),
+            };
+            const label = shortMap[id] ?? t(`nav.${id}`);
             return (
               <button
                 key={id}
                 type="button"
                 onClick={() => goTo(id)}
                 aria-current={isActive ? 'page' : undefined}
-                className={`group relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-300 ${
+                title={t(`nav.${id}`)}
+                className={`group relative rounded-full px-2.5 py-2 text-[13px] font-medium transition-colors duration-300 ${
                   isActive
                     ? 'text-brand-blue dark:text-brand-blue-soft'
                     : 'text-ink-soft hover:text-ink dark:text-white/70 dark:hover:text-white'
                 }`}
               >
-                <span>{t(`nav.${id}`)}</span>
+                <span>{label}</span>
                 <span
-                  className={`pointer-events-none absolute inset-x-3.5 -bottom-0.5 h-px bg-gradient-to-r from-brand-blue via-brand-purple to-brand-red transition-opacity duration-300 ${
+                  className={`pointer-events-none absolute inset-x-2.5 -bottom-0.5 h-px bg-gradient-to-r from-brand-blue via-brand-purple to-brand-red transition-opacity duration-300 ${
                     isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-30'
                   }`}
                 />
@@ -137,7 +145,7 @@ const Header: React.FC = () => {
 
           <button
             type="button"
-            className="hidden md:inline-flex lg:hidden btn-secondary !px-3 !py-1.5 !text-xs"
+            className="hidden md:inline-flex xl:hidden btn-secondary !px-3 !py-1.5 !text-xs"
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t('nav.closeMenu') : t('nav.openMenu')}
@@ -147,7 +155,7 @@ const Header: React.FC = () => {
 
           <button
             type="button"
-            className="rounded-full p-2 text-ink-soft transition-colors hover:bg-surface-alt hover:text-ink dark:text-white/75 dark:hover:bg-white/[0.06] dark:hover:text-white lg:hidden"
+            className="rounded-full p-2 text-ink-soft transition-colors hover:bg-surface-alt hover:text-ink dark:text-white/75 dark:hover:bg-white/[0.06] dark:hover:text-white xl:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t('nav.closeMenu') : t('nav.openMenu')}
@@ -159,7 +167,7 @@ const Header: React.FC = () => {
 
       {/* Mobile sheet */}
       <div
-        className={`lg:hidden ${
+        className={`xl:hidden ${
           mobileOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         } absolute inset-x-0 top-full origin-top transition-all duration-300`}
       >

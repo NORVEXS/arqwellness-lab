@@ -71,8 +71,21 @@ const Resources: React.FC = () => {
       <div className="mt-8 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((r, i) => {
           const Icon = CATEGORY_ICON[r.category];
+          const total = visible.length;
+          const isLastAlone3 =
+            i === total - 1 && total % 3 === 1 && total > 1; // 1 huérfano en grid-3
+          const isLastAlone2 =
+            i === total - 1 && total % 2 === 1 && total > 1; // 1 huérfano en grid-2
           return (
-            <Reveal key={r.id} delay={(i % 6) * 40} className="h-full">
+            <Reveal
+              key={r.id}
+              delay={(i % 6) * 40}
+              className={`h-full ${
+                isLastAlone2 ? 'sm:col-span-2 sm:mx-auto sm:max-w-[calc(50%-0.5rem)] sm:w-full' : ''
+              } ${
+                isLastAlone3 ? 'lg:col-span-3 lg:mx-auto lg:max-w-[calc(33.333%-0.667rem)] lg:w-full lg:col-start-auto' : ''
+              }`}
+            >
               <a
                 href={r.href}
                 target="_blank"

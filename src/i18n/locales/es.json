@@ -17,6 +17,10 @@
     "resources": "Recursos",
     "outreach": "Divulgación",
     "contact": "Contacto",
+    "shortAbout": "Lab",
+    "shortInfrastructure": "Infraestr.",
+    "shortPublications": "Pubs",
+    "shortOutreach": "Difusión",
     "ariaPrimary": "Navegación principal",
     "ariaLang": "Cambiar idioma",
     "openMenu": "Abrir menú",
@@ -43,25 +47,66 @@
   },
   "about": {
     "eyebrow": "Quiénes somos",
-    "title": "Un laboratorio para la arquitectura del bienestar",
-    "lede": "El equipo del ArqWellness Lab —integrado por los grupos PAIDI TEP-130 y TEP-1000— reúne a profesores, investigadores y facultativos de Medicina Preventiva y Pediátrica en torno al ambiente interior, la energía y la salud en arquitectura.",
-    "longA": "Desarrollamos nuestra labor enfocados en el control y gestión del ambiente interior de los edificios: evaluación y mejora de las condiciones para el confort, ergonomía y salud de los ocupantes, desde un acercamiento holístico de los factores que constituyen el hábitat construido.",
-    "longB": "Reunimos a especialistas en acondicionamiento ambiental y eficiencia energética: aspectos térmicos, acústicos, lumínicos y de calidad del aire, tanto los pasivos asociados a la construcción como los procesos activos ligados al diseño e integración de instalaciones y sistemas técnicos.",
-    "pillars": {
-      "mission": {
-        "title": "Misión",
-        "text": "Contribuir al bienestar humano a través de entornos arquitectónicos saludables, confortables y sostenibles."
+    "title": "Quiénes somos",
+    "lede": "ArqWellness Lab reúne a especialistas de los grupos PAIDI TEP-130 y TEP-1000 que trabajan de forma coordinada para comprender, medir y optimizar el ambiente interior de los edificios.",
+    "blocks": {
+      "multidisciplinary": {
+        "title": "Un equipo multidisciplinar",
+        "body": "El laboratorio está formado por profesorado e investigadores del Departamento de Construcciones Arquitectónicas I de la ETS de Arquitectura de Sevilla, junto con profesionales de Medicina Preventiva y Pediátrica.",
+        "imageAlt": "Equipo del ArqWellness Lab — ETSA Sevilla"
       },
-      "vision": {
-        "title": "Visión",
-        "text": "Ser un referente internacional en investigación sobre el ambiente interior y su impacto en la salud y la eficiencia energética."
+      "seniorJunior": {
+        "title": "Trayectoria y nueva generación",
+        "body": "Conviven perfiles senior con más de 20 años de experiencia universitaria y jóvenes investigadores con una sólida trayectoria en arquitectura, consultoría y transferencia de conocimiento.",
+        "imageAlt": "Investigadores del ArqWellness Lab"
       },
-      "approach": {
-        "title": "Enfoque",
-        "text": "Integramos conocimiento técnico-científico con simulación, medición y diseño para abordar el acondicionamiento ambiental de forma transversal."
+      "video": {
+        "eyebrow": "Visión del laboratorio",
+        "title": "Laboratorio de Iluminación, Energía y Bienestar en Arquitectura",
+        "body": "El Laboratorio trabaja de forma coordinada con los grupos PAIDI TEP-130 y TEP-1000 para comprender, medir y optimizar el ambiente interior de los edificios. Integra confort, ergonomía y salud desde una visión global del hábitat construido.",
+        "label": "Vídeo institucional del laboratorio en funcionamiento"
+      },
+      "trajectory": {
+        "eyebrow": "Trayectoria",
+        "title": "Más de 15 años investigando el bienestar en los espacios habitados",
+        "body": "La línea de trabajo del laboratorio se ha consolidado durante más de una década y media, desarrollando metodologías avanzadas para evaluar y mejorar las condiciones interiores en arquitectura.",
+        "imageAlt": "Ensayo de hermeticidad con blower door en hemodiálisis"
+      },
+      "lightCabin": {
+        "eyebrow": "Instalaciones del laboratorio",
+        "title": "Cabinas y entornos controlados",
+        "body": "Disponemos de cabinas de iluminación, celdas de ensayo y módulos móviles que permiten reproducir condiciones reales y evaluar de forma rigurosa el confort y la eficiencia.",
+        "imageAlt": "Cabina de iluminación del ArqWellness Lab"
+      },
+      "specialty": {
+        "eyebrow": "Especialización técnica",
+        "title": "Especialización técnica",
+        "body": "El equipo investiga y actúa sobre todos los factores que definen el acondicionamiento ambiental y la eficiencia energética en la edificación.",
+        "items": {
+          "thermal": {
+            "title": "Térmicos",
+            "text": "Confort higrotérmico, demanda y comportamiento de envolvente."
+          },
+          "acoustic": {
+            "title": "Acústicos",
+            "text": "Control de ruido, transmisión y confort acústico interior."
+          },
+          "lighting": {
+            "title": "Lumínicos",
+            "text": "Iluminación natural, eléctrica y respuesta biológica a la luz."
+          },
+          "iaq": {
+            "title": "Calidad del aire",
+            "text": "Ventilación, partículas, CO₂ y salud de los ocupantes."
+          }
+        },
+        "outro": "Incluye tanto estrategias pasivas vinculadas al diseño y la construcción, como soluciones activas relacionadas con instalaciones y sistemas técnicos.",
+        "imageAlt1": "Estrategias pasivas en edificios existentes",
+        "imageAlt2": "Sistemas activos de recuperación de calor",
+        "caption1": "Estrategias pasivas · diseño y construcción",
+        "caption2": "Sistemas activos · instalaciones y recuperación"
       }
-    },
-    "imageAlt": "Investigadores del ArqWellness Lab frente al edificio de la ETSA"
+    }
   },
   "team": {
     "eyebrow": "Equipo",
@@ -98,8 +143,8 @@
     "lines": {
       "comfort": {
         "number": "01",
-        "title": "Confort ambiental",
-        "summary": "Optimización del entorno construido para el bienestar humano y la eficiencia energética.",
+        "title": "Confort higrotérmico, percepción y aire",
+        "summary": "Confort higrotérmico, percepción del ambiente interior, salud y calidad del aire.",
         "intro": "Investigamos los factores que determinan el confort en el espacio interior y su interacción con el consumo energético.",
         "items": [
           "Confort térmico en distintos contextos climáticos",
@@ -112,8 +157,8 @@
       },
       "lighting": {
         "number": "02",
-        "title": "Iluminación y salud",
-        "summary": "Cómo la luz afecta al cuerpo humano más allá de la percepción visual.",
+        "title": "Iluminación natural, eléctrica y circadiana",
+        "summary": "Iluminación natural, iluminación eléctrica y respuesta circadiana.",
         "intro": "Estudiamos la influencia de la luz natural y artificial sobre la fisiología, la psicología y el comportamiento.",
         "items": [
           "Iluminación, ritmos circadianos y calidad del sueño",
@@ -126,8 +171,8 @@
       },
       "control": {
         "number": "03",
-        "title": "Control e integración",
-        "summary": "Sistemas inteligentes para el control ambiental en edificios.",
+        "title": "Variables ambientales y control avanzado",
+        "summary": "Variables ambientales y control avanzado del ambiente interior.",
         "intro": "Diseñamos sistemas que monitorizan y regulan parámetros ambientales en edificios habitados.",
         "items": [
           "Redes de sensores ambientales en tiempo real",
@@ -272,31 +317,37 @@
     "disclaimer": "Selección representativa. Producción científica completa en PRISMA — Universidad de Sevilla.",
     "viewAllTep130": "Publicaciones TEP-130",
     "viewAllTep1000": "Publicaciones TEP-1000",
+    "openInstitutional": "Ver referencia",
     "items": {
-      "pub1": {
-        "title": "Daylighting design strategies for energy saving in historic buildings",
-        "abstract": "Investigación sobre estrategias de iluminación natural para mejorar la eficiencia energética en edificios históricos preservando su valor patrimonial. Combina mediciones de campo, simulaciones y estudios de caso.",
-        "keywords": ["Iluminación natural", "Patrimonio", "Eficiencia energética", "Conservación"]
+      "chronolightHospital": {
+        "title": "Effect of standard versus advanced dimmable lighting systems on the circadian rhythms of hospital personnel",
+        "abstract": "Estudio sobre el impacto de sistemas avanzados de iluminación regulable frente a sistemas estándar en los ritmos circadianos del personal hospitalario.",
+        "keywords": ["Iluminación circadiana", "Hospital", "Dimming", "HCL"]
       },
-      "pub2": {
-        "title": "Circadian lighting effects on hospital staff performance: A field study",
-        "abstract": "Estudio de campo sobre los efectos de la iluminación circadiana en el rendimiento del personal sanitario: alerta, función cognitiva y bienestar subjetivo bajo distintas condiciones.",
-        "keywords": ["Iluminación circadiana", "Sanidad", "Rendimiento", "HCL"]
+      "chronolightPathogens": {
+        "title": "Efficacy of the CHRONOlight biodynamic lighting system for control of nosocomial Gram-negative pathogens",
+        "abstract": "Eficacia del sistema CHRONOlight de iluminación biodinámica en el control de patógenos nosocomiales Gram-negativos en entornos sanitarios.",
+        "keywords": ["CHRONOlight", "Biodinámica", "Infecciones nosocomiales", "Sanidad"]
       },
-      "pub3": {
-        "title": "Thermal comfort assessment in Mediterranean university buildings",
-        "abstract": "Evaluación integral del confort térmico en edificios universitarios mediterráneos, analizando variaciones estacionales y preferencias de los usuarios.",
-        "keywords": ["Confort térmico", "Clima mediterráneo", "Edificios universitarios", "Confort adaptativo"]
+      "hemodialysisIaq": {
+        "title": "Integral analysis of indoor environmental quality in a hemodialysis unit",
+        "abstract": "Análisis integral de la calidad del ambiente interior en una unidad de hemodiálisis: calidad del aire interior y riesgo relativo de enfermedades transmitidas por el aire.",
+        "keywords": ["IAQ", "Hemodiálisis", "Riesgo aéreo", "Salud"]
       },
-      "pub4": {
-        "title": "Energy retrofitting strategies for historical buildings in Seville",
-        "abstract": "Análisis de estrategias de rehabilitación energética en edificios históricos de Sevilla, evaluando la eficacia de distintas intervenciones y la relación coste-beneficio.",
-        "keywords": ["Rehabilitación energética", "Edificios históricos", "Conservación", "Sevilla"]
+      "vulnerableOccupants": {
+        "title": "Healthier indoor environments for vulnerable occupants: light, air quality, and airborne disease risk",
+        "abstract": "Análisis de luz, calidad del aire y riesgo de transmisión aérea en entornos interiores ocupados por personas vulnerables.",
+        "keywords": ["Vulnerabilidad", "IAQ", "Iluminación", "Salud pública"]
       },
-      "pub5": {
-        "title": "Visual comfort and energy efficiency in educational buildings",
-        "abstract": "Examina la relación entre las condiciones de confort visual y el consumo energético en centros educativos mediante medición y simulación.",
-        "keywords": ["Confort visual", "Edificios educativos", "Eficiencia energética", "Diseño lumínico"]
+      "dynamicLightingReview": {
+        "title": "New approaches in dynamic metrics for lighting control systems: a critical review",
+        "abstract": "Revisión crítica de nuevas métricas dinámicas aplicadas a sistemas de control lumínico, analizando precisión, comportamiento temporal y aplicaciones reales.",
+        "keywords": ["Métricas dinámicas", "Control lumínico", "Daylight Autonomy", "Revisión"]
+      },
+      "mediterraneanSchools": {
+        "title": "Comparative study of Mediterranean school ventilation systems based on a predictive model",
+        "abstract": "Modelo predictivo para la evaluación integrada de consumo energético, confort térmico y calidad del aire interior en sistemas de ventilación de escuelas mediterráneas.",
+        "keywords": ["Ventilación", "Escuelas", "Clima mediterráneo", "Energía"]
       }
     }
   },
@@ -400,17 +451,9 @@
         "title": "Cálculo de ventilación por descenso de CO₂ v1.3",
         "meta": "Hoja de cálculo para estimar el caudal de ventilación a partir de la cinética del descenso de CO₂."
       },
-      "dao": {
-        "title": "DAo 3.5.3 plus — de DF a DA",
-        "meta": "Herramienta de iluminación natural: paso de factor de luz diurna a autonomía de luz natural (Daylight Autonomy)."
-      },
       "hepa": {
         "title": "Comparativa de purificadores HEPA (2021)",
         "meta": "PDF + hoja Google con criterios de selección por coste, caudal (CADR) y nivel sonoro."
-      },
-      "smartbuilding": {
-        "title": "Smartbuilding — edificio inteligente (2019)",
-        "meta": "Aplicación de realidad virtual sobre los controles del edificio AURA del Solar Decathlon 2015."
       },
       "ediaqi": {
         "title": "EDIAQI — presentación (.pptx)",
