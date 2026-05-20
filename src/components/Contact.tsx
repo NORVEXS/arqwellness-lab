@@ -17,10 +17,12 @@ import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
 
-// FormSubmit.co — envío gratuito sin backend ni clave. La primera vez
-// envía un correo de activación a esta dirección; al confirmarlo una vez,
-// todos los mensajes posteriores se entregan automáticamente.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/tep130@us.es';
+// Web3Forms — servicio gratuito (≈250 envíos/mes) que reenvía a tep130@us.es.
+// Para activarlo: entrar en https://web3forms.com, introducir tep130@us.es,
+// copiar la "Access Key" que llega a esa bandeja y pegarla aquí abajo.
+// La clave es pública por diseño (solo reenvía al correo registrado), así que
+// es seguro dejarla en el código. Mientras esté vacía, el formulario usa mailto.
+const WEB3FORMS_ACCESS_KEY = '';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -28,39 +30,50 @@ const Contact: React.FC = () => {
   const { t } = useTranslation();
   const [status, setStatus] = useState<Status>('idle');
 
+  const sendViaMailto = (data: FormData) => {
+    const name = data.get('name') ?? '';
+    const subject = data.get('subject') ?? 'Contacto desde ArqWellness Lab';
+    const message = data.get('message') ?? '';
+    const email = data.get('email') ?? '';
+    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+    window.location.href = `mailto:tep130@us.es?subject=${encodeURIComponent(
+      String(subject),
+    )}&body=${body}`;
+  };
+
   const onSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Metadatos para FormSubmit
-    data.append('_subject', `[Web ArqWellness] ${data.get('subject') || 'Nuevo mensaje'}`);
-    data.append('_template', 'table');
-    data.append('_captcha', 'false');
+    // Sin clave configurada todavía → abrir el cliente de correo
+    if (!WEB3FORMS_ACCESS_KEY) {
+      sendViaMailto(data);
+      setStatus('success');
+      form.reset();
+      return;
+    }
+
+    data.append('access_key', WEB3FORMS_ACCESS_KEY);
+    data.append('from_name', 'ArqWellness Lab — Web');
+    data.append('subject', `[Web ArqWellness] ${data.get('subject') || 'Nuevo mensaje'}`);
 
     setStatus('sending');
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: data,
       });
       const json = await res.json().catch(() => ({}));
-      if (res.ok && (json.success === 'true' || json.success === true)) {
+      if (json.success) {
         setStatus('success');
         form.reset();
       } else {
         setStatus('error');
       }
     } catch {
-      // Último recurso: abrir el cliente de correo del usuario
-      const name = data.get('name') ?? '';
-      const subject = data.get('subject') ?? 'Contacto desde ArqWellness Lab';
-      const message = data.get('message') ?? '';
-      const body = encodeURIComponent(`${message}\n\n— ${name}`);
-      window.location.href = `mailto:tep130@us.es?subject=${encodeURIComponent(
-        String(subject),
-      )}&body=${body}`;
+      sendViaMailto(data);
       setStatus('success');
       form.reset();
     }
@@ -217,15 +230,8 @@ const Contact: React.FC = () => {
               </header>
 
               <form onSubmit={onSubmit} className="mt-7 grid gap-4 sm:grid-cols-2">
-                {/* Honeypot anti-spam (FormSubmit) */}
-                <input
-                  type="text"
-                  name="_honey"
-                  className="hidden"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  aria-hidden="true"
-                />
+                {/* Honeypot anti-spam (Web3Forms) */}
+                <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} aria-hidden="true" />
 
                 <label className="text-left sm:col-span-1">
                   <span className="eyebrow !text-ink-mute dark:!text-white/55">{t('contact.form.name')}</span>
