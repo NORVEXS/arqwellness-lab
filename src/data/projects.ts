@@ -11,9 +11,6 @@ export interface Project {
   href: string;
 }
 
-/** Fallback for projects without a dedicated public page yet */
-const GROUP_PAGE = 'https://institucional.us.es/proyectostep130/';
-
 import ediaqi from '../assets/images/project-logos/ediaqi.svg';
 import hemolight from '../assets/images/project-logos/hemolight.svg';
 import chronolux from '../assets/images/project-logos/chronolux.webp';
@@ -128,7 +125,7 @@ export const PROJECTS: Project[] = [
     logo: heriled,
     scope: 'Iluminación de patrimonio',
     topic: 'lighting',
-    href: GROUP_PAGE,
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=33396',
   },
   {
     id: 'metrorio',
@@ -164,6 +161,6 @@ export const PROJECTS: Project[] = [
     logo: metroSevilla,
     scope: 'Condiciones ambientales',
     topic: 'comfort',
-    href: GROUP_PAGE,
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=39499',
   },
 ];
