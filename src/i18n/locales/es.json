@@ -461,6 +461,24 @@
     "toDark": "Cambiar a modo oscuro",
     "toLight": "Cambiar a modo claro"
   },
+  "divulgacion": {
+    "eyebrow": "Divulgación e impacto",
+    "title": "Divulgación, workshops y eventos",
+    "intro": "El ArqWellness Lab acerca su investigación a la sociedad mediante talleres, congresos científicos, presencia en medios y actividades con estudiantes. Aquí reunimos los materiales abiertos y los recursos de divulgación del laboratorio.",
+    "workshops": {
+      "title": "Workshops y materiales",
+      "intro": "Presentaciones y materiales de los workshops impartidos por el laboratorio, de acceso abierto para la comunidad académica y profesional.",
+      "open": "Abrir material"
+    },
+    "media": {
+      "title": "Cobertura en medios",
+      "intro": "El trabajo del laboratorio ha aparecido en prensa generalista y especializada, divulgando el papel de la arquitectura en la salud y el bienestar."
+    },
+    "follow": {
+      "title": "Síguenos",
+      "intro": "Compartimos talleres, eventos y resultados de investigación en nuestras redes."
+    }
+  },
   "legal": {
     "back": "Volver al inicio",
     "updated": "Última actualización",

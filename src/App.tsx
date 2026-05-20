@@ -14,6 +14,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ui/ScrollToTop';
 import LegalPage, { LegalSlug } from './components/LegalPage';
+import DivulgacionPage from './components/DivulgacionPage';
 import { useRoute } from './hooks/useRoute';
 
 const LEGAL_SLUGS: LegalSlug[] = [
@@ -36,6 +37,7 @@ function App() {
 
   const cleanPath = path.replace(/^\/+|\/+$/g, '');
   const legalMatch = LEGAL_SLUGS.find((s) => cleanPath === s);
+  const isDivulgacion = cleanPath === 'divulgacion';
 
   return (
     <div className="min-h-screen bg-surface font-body text-ink">
@@ -43,6 +45,8 @@ function App() {
       <main id="main" tabIndex={-1}>
         {legalMatch ? (
           <LegalPage slug={legalMatch} />
+        ) : isDivulgacion ? (
+          <DivulgacionPage />
         ) : (
           <>
             <Hero />

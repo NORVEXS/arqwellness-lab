@@ -6,6 +6,7 @@ import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
 import { useReveal } from '../hooks/useReveal';
 import { useCountUp } from '../hooks/useCountUp';
+import { navigate } from '../hooks/useRoute';
 
 const STATS = ['collaborations', 'papers', 'media'] as const;
 
@@ -117,9 +118,11 @@ const Outreach: React.FC = () => {
         {/* Workshops y divulgación */}
         <Reveal delay={80} className="h-full">
           <a
-            href="https://institucional.us.es/arqwellness/investigacion/difusion/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/divulgacion"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('/divulgacion');
+            }}
             className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-purple/30 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-brand-purple/50"
           >
             <header className="flex items-start justify-between gap-3">

@@ -78,13 +78,15 @@ const Projects: React.FC = () => {
 
               {p.logo && (
                 <div className="mt-3 flex h-14 items-center justify-start sm:mt-5 sm:h-20 lg:h-24">
-                  <img
-                    src={p.logo}
-                    alt={`${p.name} — logo`}
-                    loading="lazy"
-                    decoding="async"
-                    className="max-h-full max-w-[75%] object-contain dark:[filter:invert(0.92)_hue-rotate(180deg)] sm:max-w-[80%]"
-                  />
+                  <span className="inline-flex h-full max-w-[78%] items-center rounded-lg dark:bg-white dark:px-2.5 dark:py-2 sm:max-w-[82%]">
+                    <img
+                      src={p.logo}
+                      alt={`${p.name} — logo`}
+                      loading="lazy"
+                      decoding="async"
+                      className="max-h-full w-auto object-contain"
+                    />
+                  </span>
                 </div>
               )}
 
