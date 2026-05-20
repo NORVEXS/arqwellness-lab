@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ArrowUpRight, Instagram, Newspaper, Sparkles } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Instagram, Newspaper } from 'lucide-react';
 import { navigate } from '../hooks/useRoute';
 import { useReveal } from '../hooks/useReveal';
 import { useCountUp } from '../hooks/useCountUp';
@@ -53,7 +53,7 @@ const ImpactStat: React.FC<{ value: string; label: string; index: number }> = ({
   const { num, prefix, suffix } = parseStat(value);
   const counted = useCountUp(num ?? 0, 1500, active && num !== null);
   return (
-    <div ref={ref} className="reveal" style={{ transitionDelay: `${index * 80}ms` }}>
+    <div ref={ref} className="reveal text-center sm:text-left" style={{ transitionDelay: `${index * 80}ms` }}>
       <div className="bg-gradient-to-br from-brand-blue to-brand-purple bg-clip-text font-display text-5xl font-semibold tracking-tight text-transparent sm:text-6xl">
         {num === null ? value : `${prefix}${counted}${suffix}`}
       </div>
@@ -75,152 +75,147 @@ const DivulgacionPage: React.FC = () => {
   return (
     <section
       aria-label={t(`${base}.title`)}
-      className="relative isolate overflow-hidden bg-surface pt-28 pb-24 dark:bg-surface-dark sm:pt-36"
+      className="relative isolate overflow-hidden bg-surface pb-24 dark:bg-surface-dark"
     >
       {/* Decorative wash */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[560px]"
         style={{
           background:
-            'radial-gradient(60% 70% at 80% -10%, rgba(59, 48, 130, 0.10) 0%, transparent 60%), radial-gradient(50% 60% at 10% 0%, rgba(45, 92, 136, 0.10) 0%, transparent 60%)',
+            'radial-gradient(55% 65% at 85% -5%, rgba(59, 48, 130, 0.12) 0%, transparent 60%), radial-gradient(50% 60% at 5% 5%, rgba(45, 92, 136, 0.10) 0%, transparent 60%)',
         }}
       />
 
-      <div className="container-x">
+      <div className="container-x pt-28 sm:pt-32">
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="mb-10 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute transition-colors hover:text-brand-blue dark:text-white/55 dark:hover:text-brand-blue-soft"
+          className="mb-12 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-mute transition-colors hover:text-brand-blue dark:text-white/55 dark:hover:text-brand-blue-soft"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           <span>{t('legal.back')}</span>
         </button>
 
-        <Reveal>
-          <span className="eyebrow">{t(`${base}.eyebrow`)}</span>
-          <h1 className="mt-4 max-w-3xl font-display text-display-lg font-semibold leading-[1.05] tracking-[-0.03em] text-ink display-balance dark:text-white">
-            {t(`${base}.title`)}
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-lg">
-            {t(`${base}.intro`)}
-          </p>
-        </Reveal>
-
-        {/* Alcance mediático */}
-        <div className="mt-20 grid items-center gap-10 lg:grid-cols-2">
+        {/* Hero split */}
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-soft shadow-soft dark:border-white/10 dark:bg-white/[0.04] dark:text-white/70">
-              <Newspaper className="h-3.5 w-3.5 text-brand-blue dark:text-brand-blue-soft" />
-              {t(`${base}.media.tag`)}
-            </span>
-            <h2 className="mt-4 font-display text-2xl font-semibold text-ink dark:text-white sm:text-3xl">
-              {t(`${base}.media.title`)}
-            </h2>
-            <p className="mt-4 text-ink-soft leading-relaxed text-pretty dark:text-white/70">
-              {t(`${base}.media.p1`)}
+            <span className="eyebrow">{t(`${base}.eyebrow`)}</span>
+            <h1 className="mt-4 font-display text-display-lg font-semibold leading-[1.04] tracking-[-0.03em] text-ink display-balance dark:text-white">
+              {t(`${base}.title`)}
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-lg">
+              {t(`${base}.intro`)}
             </p>
-            <p className="mt-4 text-ink-soft leading-relaxed text-pretty dark:text-white/70">
-              {t(`${base}.media.p2`)}
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {OUTLETS.map((m) => (
-                <span
-                  key={m}
-                  className="rounded-md border border-line bg-surface-alt px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft dark:border-white/10 dark:bg-white/[0.04] dark:text-white/65"
-                >
-                  {m}
-                </span>
-              ))}
-            </div>
           </Reveal>
           <Reveal delay={120}>
-            <figure className="group overflow-hidden rounded-3xl border border-line shadow-large ring-1 ring-black/[0.03] dark:border-white/10 dark:ring-white/5">
+            <figure className="group relative overflow-hidden rounded-3xl border border-line shadow-large ring-1 ring-black/[0.03] dark:border-white/10 dark:ring-white/5">
               <img
                 src={portada}
                 alt={t(`${base}.media.imageAlt`)}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
-                className="aspect-[16/10] h-full w-full object-cover transition-transform duration-700 ease-out-quart group-hover:scale-[1.04]"
+                className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 ease-out-quart group-hover:scale-[1.04]"
               />
             </figure>
           </Reveal>
         </div>
 
-        {/* Impacto */}
-        <Reveal>
-          <div
-            className="relative mt-20 overflow-hidden rounded-3xl border border-line bg-white p-8 shadow-soft dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none sm:p-12"
-          >
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-gradient-to-br from-brand-blue to-brand-purple opacity-[0.06]"
+        {/* Impact band */}
+        <div className="mt-16 grid gap-10 border-y border-line/70 py-10 dark:border-white/10 sm:mt-20 sm:grid-cols-3 sm:gap-8">
+          {STATS.map((k, i) => (
+            <ImpactStat
+              key={k}
+              index={i}
+              value={t(`${base}.impact.${k}.value`)}
+              label={t(`${base}.impact.${k}.label`)}
             />
-            <h2 className="font-display text-2xl font-semibold text-ink dark:text-white sm:text-3xl">
-              {t(`${base}.impact.title`)}
-            </h2>
-            <p className="mt-3 text-ink-soft dark:text-white/70">{t(`${base}.impact.intro`)}</p>
-            <div className="mt-10 grid gap-10 sm:grid-cols-3 sm:gap-8">
-              {STATS.map((k, i) => (
-                <ImpactStat
-                  key={k}
-                  index={i}
-                  value={t(`${base}.impact.${k}.value`)}
-                  label={t(`${base}.impact.${k}.label`)}
-                />
-              ))}
-            </div>
-          </div>
-        </Reveal>
+          ))}
+        </div>
 
-        {/* Construyendo bienestar */}
-        <Reveal>
-          <div className="mt-20 max-w-3xl">
-            <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-brand-purple dark:text-[#B9B2E8]">
-              <Sparkles className="h-3.5 w-3.5" />
-              {t(`${base}.building.tag`)}
+        {/* Alcance mediático */}
+        <div className="mt-20 grid gap-10 lg:grid-cols-12">
+          <Reveal className="lg:col-span-5">
+            <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-brand-blue dark:text-brand-blue-soft">
+              <Newspaper className="h-3.5 w-3.5" />
+              {t(`${base}.media.tag`)}
             </span>
             <h2 className="mt-4 font-display text-2xl font-semibold text-ink dark:text-white sm:text-3xl">
-              {t(`${base}.building.title`)}
+              {t(`${base}.media.title`)}
             </h2>
-            <p className="mt-4 text-ink-soft leading-relaxed text-pretty dark:text-white/70 sm:text-lg">
-              {t(`${base}.building.body`)}
-            </p>
+          </Reveal>
+          <div className="lg:col-span-7">
+            <Reveal delay={100}>
+              <p className="text-ink-soft leading-relaxed text-pretty dark:text-white/70">
+                {t(`${base}.media.p1`)}
+              </p>
+              <p className="mt-4 text-ink-soft leading-relaxed text-pretty dark:text-white/70">
+                {t(`${base}.media.p2`)}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {OUTLETS.map((m) => (
+                  <span
+                    key={m}
+                    className="rounded-md border border-line bg-surface-alt px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft dark:border-white/10 dark:bg-white/[0.04] dark:text-white/65"
+                  >
+                    {m}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
           </div>
+        </div>
+
+        {/* Construyendo bienestar — manifiesto */}
+        <Reveal>
+          <figure className="mt-20 border-l-2 border-brand-purple/40 pl-6 sm:pl-8">
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-purple dark:text-[#B9B2E8]">
+              {t(`${base}.building.tag`)}
+            </span>
+            <blockquote className="mt-4 max-w-3xl font-display text-2xl font-medium leading-snug text-ink display-balance dark:text-white sm:text-[28px]">
+              {t(`${base}.building.body`)}
+            </blockquote>
+          </figure>
         </Reveal>
 
         {/* Galería */}
         <Reveal>
-          <h2 className="mt-20 font-display text-2xl font-semibold text-ink dark:text-white sm:text-3xl">
-            {t(`${base}.gallery.title`)}
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-base">
-            {t(`${base}.gallery.intro`)}
-          </p>
+          <div className="mt-20 flex items-end justify-between gap-4">
+            <div>
+              <h2 className="font-display text-2xl font-semibold text-ink dark:text-white sm:text-3xl">
+                {t(`${base}.gallery.title`)}
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft text-pretty dark:text-white/70 sm:text-base">
+                {t(`${base}.gallery.intro`)}
+              </p>
+            </div>
+          </div>
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {GALLERY.map((src, i) => (
-            <Reveal key={i} delay={(i % 4) * 60}>
-              <figure className="group relative aspect-square overflow-hidden rounded-2xl border border-line shadow-soft dark:border-white/10">
-                <img
-                  src={src}
-                  alt={t(`${base}.galleryAlt`, { n: i + 1 })}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-[800ms] ease-out-quart group-hover:scale-110"
-                />
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                />
-              </figure>
-            </Reveal>
+            <figure
+              key={i}
+              className="group relative aspect-square w-full overflow-hidden rounded-2xl border border-line bg-surface-alt shadow-soft dark:border-white/10 dark:bg-white/[0.04]"
+            >
+              <img
+                src={src}
+                alt={t(`${base}.galleryAlt`, { n: i + 1 })}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[800ms] ease-out-quart group-hover:scale-110"
+              />
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </figure>
           ))}
         </div>
 
         {/* Síguenos */}
         <Reveal>
-          <div className="mt-20 overflow-hidden rounded-3xl bg-surface-dark p-8 text-white shadow-large sm:p-12"
+          <div
+            className="mt-20 overflow-hidden rounded-3xl bg-surface-dark p-8 text-white shadow-large sm:p-12"
             style={{
               backgroundImage:
                 'radial-gradient(60% 80% at 100% 0%, rgba(59, 48, 130, 0.35) 0%, transparent 60%), radial-gradient(50% 70% at 0% 100%, rgba(45, 92, 136, 0.30) 0%, transparent 60%)',
