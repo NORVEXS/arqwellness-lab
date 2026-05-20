@@ -462,21 +462,30 @@
     "toLight": "Cambiar a modo claro"
   },
   "divulgacion": {
-    "eyebrow": "Divulgación e impacto",
-    "title": "Divulgación, workshops y eventos",
-    "intro": "El ArqWellness Lab acerca su investigación a la sociedad mediante talleres, congresos científicos, presencia en medios y actividades con estudiantes. Aquí reunimos los materiales abiertos y los recursos de divulgación del laboratorio.",
-    "workshops": {
-      "title": "Workshops y materiales",
-      "intro": "Presentaciones y materiales de los workshops impartidos por el laboratorio, de acceso abierto para la comunidad académica y profesional.",
-      "open": "Abrir material"
-    },
+    "eyebrow": "Difusión",
+    "title": "Difusión",
+    "intro": "En ArqWellness entendemos la difusión como una responsabilidad esencial: compartir conocimiento, generar impacto social y promover una arquitectura que mejore la salud y el bienestar. A través de eventos, publicaciones, colaboraciones y presencia en medios, acercamos nuestros avances a la comunidad científica, profesional y ciudadana.",
+    "galleryAlt": "Actividad de difusión del ArqWellness Lab {{n}}",
     "media": {
-      "title": "Cobertura en medios",
-      "intro": "El trabajo del laboratorio ha aparecido en prensa generalista y especializada, divulgando el papel de la arquitectura en la salud y el bienestar."
+      "title": "Alcance mediático",
+      "p1": "Tenemos una presencia sólida en medios nacionales, reflejo del compromiso de nuestro equipo con la divulgación científica y la transferencia de conocimiento.",
+      "p2": "Entre los medios que han destacado nuestras iniciativas se encuentran El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press, entre muchos otros.",
+      "imageAlt": "Difusión del ArqWellness Lab en los medios"
+    },
+    "impact": {
+      "title": "Impacto",
+      "intro": "Datos que reflejan nuestra actividad y alcance.",
+      "collaborations": { "value": "+200", "label": "Colaboraciones institucionales" },
+      "publications": { "value": "+550", "label": "Publicaciones científicas" },
+      "media": { "value": "+70", "label": "Apariciones en medios" }
+    },
+    "building": {
+      "title": "Construyendo bienestar desde la arquitectura",
+      "body": "Cada paso que damos nace del deseo de transformar los espacios en lugares que cuiden de las personas. Nuestra investigación, nuestros proyectos y nuestras acciones reflejan una misma convicción: la arquitectura puede ser una herramienta poderosa para mejorar la salud, fomentar la conexión y crear entornos más humanos."
     },
     "follow": {
       "title": "Síguenos",
-      "intro": "Compartimos talleres, eventos y resultados de investigación en nuestras redes."
+      "intro": "Mantente al día de nuestras novedades y participa en la conversación sobre ciencia y tecnología aplicada."
     }
   },
   "legal": {

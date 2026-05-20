@@ -7,7 +7,12 @@ export interface Project {
   logo?: string;
   scope?: string; // free text shown as a small chip — keep it short
   topic: 'lighting' | 'air' | 'comfort' | 'energy' | 'health';
+  /** Project-specific URL (institutional site or SISIUS record) */
+  href: string;
 }
+
+/** Fallback for projects without a dedicated public page yet */
+const GROUP_PAGE = 'https://institucional.us.es/proyectostep130/';
 
 import ediaqi from '../assets/images/project-logos/ediaqi.svg';
 import hemolight from '../assets/images/project-logos/hemolight.svg';
@@ -33,6 +38,7 @@ export const PROJECTS: Project[] = [
     logo: ediaqi,
     scope: 'Calidad del aire interior',
     topic: 'air',
+    href: 'https://ediaqi.eu/',
   },
   {
     id: 'hemolight',
@@ -41,6 +47,7 @@ export const PROJECTS: Project[] = [
     logo: hemolight,
     scope: 'Luz y salud',
     topic: 'lighting',
+    href: 'https://institucional.us.es/hemolight/',
   },
   {
     id: 'chronolux',
@@ -49,6 +56,7 @@ export const PROJECTS: Project[] = [
     logo: chronolux,
     scope: 'Ritmos biológicos',
     topic: 'lighting',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=41911',
   },
   {
     id: 'chronolight',
@@ -57,6 +65,7 @@ export const PROJECTS: Project[] = [
     logo: chronolight,
     scope: 'Ritmos circadianos',
     topic: 'lighting',
+    href: 'https://institucional.us.es/chronolight/',
   },
   {
     id: 'carelight',
@@ -65,6 +74,7 @@ export const PROJECTS: Project[] = [
     logo: carelight,
     scope: 'Entornos asistenciales',
     topic: 'health',
+    href: 'https://institucional.us.es/carelightlite/',
   },
   {
     id: 'chroniclight',
@@ -73,6 +83,7 @@ export const PROJECTS: Project[] = [
     logo: chroniclight,
     scope: 'Exposición lumínica prolongada',
     topic: 'lighting',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=40032',
   },
   {
     id: 'neurolight',
@@ -81,6 +92,7 @@ export const PROJECTS: Project[] = [
     logo: neurolight,
     scope: 'Iluminación y cognición',
     topic: 'lighting',
+    href: 'https://institucional.us.es/neurolight',
   },
   {
     id: 'uncover',
@@ -89,6 +101,7 @@ export const PROJECTS: Project[] = [
     logo: uncover,
     scope: 'Diseño urbano y confort',
     topic: 'comfort',
+    href: 'https://institucional.us.es/uncover/',
   },
   {
     id: 'metrco2',
@@ -97,6 +110,7 @@ export const PROJECTS: Project[] = [
     logo: metrco2,
     scope: 'Medición de CO₂ interior',
     topic: 'air',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=34492',
   },
   {
     id: 'dynalight',
@@ -105,6 +119,7 @@ export const PROJECTS: Project[] = [
     logo: dynalight,
     scope: 'Iluminación dinámica adaptativa',
     topic: 'lighting',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=28492',
   },
   {
     id: 'heriled',
@@ -113,6 +128,7 @@ export const PROJECTS: Project[] = [
     logo: heriled,
     scope: 'Iluminación de patrimonio',
     topic: 'lighting',
+    href: GROUP_PAGE,
   },
   {
     id: 'metrorio',
@@ -121,6 +137,7 @@ export const PROJECTS: Project[] = [
     logo: metrorio,
     scope: 'Río de Janeiro',
     topic: 'comfort',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=39499',
   },
   {
     id: 'el-cubo-granada',
@@ -129,6 +146,7 @@ export const PROJECTS: Project[] = [
     logo: elCubo,
     scope: 'Edificio judicial',
     topic: 'energy',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=39024',
   },
   {
     id: 'wells-riley',
@@ -137,6 +155,7 @@ export const PROJECTS: Project[] = [
     logo: wellsRiley,
     scope: 'Herramienta online de riesgo aéreo',
     topic: 'air',
+    href: 'https://investigacion.us.es/sisius/sis_proyecto.php?idproy=39551',
   },
   {
     id: 'metro-sevilla',
@@ -145,5 +164,6 @@ export const PROJECTS: Project[] = [
     logo: metroSevilla,
     scope: 'Condiciones ambientales',
     topic: 'comfort',
+    href: GROUP_PAGE,
   },
 ];

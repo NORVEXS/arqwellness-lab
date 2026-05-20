@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
         {visible.map((p, i) => (
           <Reveal key={p.id} delay={(i % 6) * 50} className="h-full">
             <a
-              href="https://institucional.us.es/proyectostep130/"
+              href={p.href}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex h-full flex-col rounded-2xl border border-line bg-white p-4 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-line-strong/70 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-white/20 sm:p-5"

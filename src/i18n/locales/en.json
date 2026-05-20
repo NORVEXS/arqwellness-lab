@@ -462,21 +462,30 @@
     "toLight": "Switch to light mode"
   },
   "divulgacion": {
-    "eyebrow": "Outreach & impact",
-    "title": "Outreach, workshops and events",
-    "intro": "ArqWellness Lab brings its research to society through workshops, scientific conferences, media presence and activities with students. Here we gather the lab's open materials and outreach resources.",
-    "workshops": {
-      "title": "Workshops & materials",
-      "intro": "Presentations and materials from the workshops delivered by the lab, openly available to the academic and professional community.",
-      "open": "Open material"
-    },
+    "eyebrow": "Outreach",
+    "title": "Outreach",
+    "intro": "At ArqWellness we see outreach as an essential responsibility: sharing knowledge, generating social impact and promoting architecture that improves health and wellbeing. Through events, publications, collaborations and media presence, we bring our progress to the scientific, professional and public community.",
+    "galleryAlt": "ArqWellness Lab outreach activity {{n}}",
     "media": {
-      "title": "Media coverage",
-      "intro": "The lab's work has appeared in general and specialised press, communicating the role of architecture in health and wellbeing."
+      "title": "Media reach",
+      "p1": "We have a solid presence in national media, reflecting our team's commitment to science communication and knowledge transfer.",
+      "p2": "Outlets that have featured our initiatives include El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press, among many others.",
+      "imageAlt": "ArqWellness Lab outreach in the media"
+    },
+    "impact": {
+      "title": "Impact",
+      "intro": "Figures that reflect our activity and reach.",
+      "collaborations": { "value": "+200", "label": "Institutional collaborations" },
+      "publications": { "value": "+550", "label": "Scientific publications" },
+      "media": { "value": "+70", "label": "Media appearances" }
+    },
+    "building": {
+      "title": "Building wellbeing through architecture",
+      "body": "Every step we take stems from the desire to turn spaces into places that care for people. Our research, our projects and our actions reflect a single conviction: architecture can be a powerful tool to improve health, foster connection and create more human environments."
     },
     "follow": {
       "title": "Follow us",
-      "intro": "We share workshops, events and research results on our social channels."
+      "intro": "Stay up to date with our news and join the conversation about applied science and technology."
     }
   },
   "legal": {
