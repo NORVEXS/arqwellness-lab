@@ -319,6 +319,7 @@
       "description": "Apariciones en El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press y otros medios nacionales e internacionales."
     },
     "media": {
+      "badge": "Sección",
       "title": "Divulgación · workshops y eventos",
       "description": "Talleres, congresos científicos y actividades con estudiantes que llevan la investigación al espacio público.",
       "cta": "Ver actividad de divulgación"

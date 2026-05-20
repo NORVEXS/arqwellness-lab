@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, Newspaper, Megaphone, Database } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Newspaper, Megaphone, Library } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
@@ -115,7 +115,7 @@ const Outreach: React.FC = () => {
           </article>
         </Reveal>
 
-        {/* Workshops y divulgación */}
+        {/* Workshops y divulgación — tarjeta destacada (navegación interna) */}
         <Reveal delay={80} className="h-full">
           <a
             href="/divulgacion"
@@ -123,16 +123,24 @@ const Outreach: React.FC = () => {
               e.preventDefault();
               navigate('/divulgacion');
             }}
-            className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 shadow-soft transition-all duration-450 ease-out-quart hover:-translate-y-1 hover:border-brand-purple/30 hover:shadow-medium dark:border-white/10 dark:bg-surface-dark-alt dark:shadow-none dark:hover:border-brand-purple/50"
+            aria-label={t('outreach.media.title')}
+            className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-purple/25 bg-gradient-to-br from-brand-purple/[0.10] via-brand-blue/[0.05] to-transparent p-7 shadow-medium ring-1 ring-brand-purple/10 transition-all duration-450 ease-out-quart hover:-translate-y-1.5 hover:border-brand-purple/50 hover:shadow-large dark:border-brand-purple/40 dark:from-brand-purple/25 dark:via-brand-blue/10 dark:to-transparent dark:ring-brand-purple/20"
           >
+            {/* halo decorativo */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue opacity-[0.12] blur-xl transition-opacity duration-500 group-hover:opacity-25"
+            />
             <header className="flex items-start justify-between gap-3">
               <span
                 aria-hidden="true"
-                className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-purple/[0.08] text-brand-purple dark:bg-brand-purple/20 dark:text-[#B9B2E8]"
+                className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-purple to-brand-blue text-white shadow-medium transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3"
               >
                 <Megaphone className="h-5 w-5" />
               </span>
-              <ArrowUpRight className="h-5 w-5 text-ink-mute transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-purple dark:text-white/45 dark:group-hover:text-[#B9B2E8]" />
+              <span className="inline-flex items-center gap-1 rounded-full border border-brand-purple/30 bg-white/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-brand-purple backdrop-blur-sm dark:border-brand-purple/40 dark:bg-white/[0.06] dark:text-[#B9B2E8]">
+                {t('outreach.media.badge')}
+              </span>
             </header>
             <h3 className="mt-6 font-display text-xl font-semibold text-ink display-balance dark:text-white">
               {t('outreach.media.title')}
@@ -140,8 +148,9 @@ const Outreach: React.FC = () => {
             <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft text-pretty dark:text-white/70">
               {t('outreach.media.description')}
             </p>
-            <span className="mt-6 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple dark:text-[#B9B2E8]">
-              {t('outreach.media.cta')}
+            <span className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-brand-purple to-brand-blue px-4 py-2 text-sm font-medium text-white shadow-soft transition-all duration-300 group-hover:gap-3 group-hover:shadow-medium">
+              <span>{t('outreach.media.cta')}</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
             </span>
           </a>
         </Reveal>
@@ -153,7 +162,7 @@ const Outreach: React.FC = () => {
               aria-hidden="true"
               className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-red/[0.08] text-brand-red dark:bg-brand-red/20 dark:text-brand-red-soft"
             >
-              <Database className="h-5 w-5" />
+              <Library className="h-5 w-5" />
             </span>
             <h3 className="mt-6 font-display text-xl font-semibold text-ink display-balance dark:text-white">
               {t('outreach.references.title')}

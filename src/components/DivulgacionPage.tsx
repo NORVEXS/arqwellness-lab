@@ -169,7 +169,7 @@ const DivulgacionPage: React.FC = () => {
         {/* Construyendo bienestar — manifiesto */}
         <Reveal>
           <figure
-            className="relative mt-20 overflow-hidden rounded-3xl border border-line bg-surface-alt px-8 py-14 text-center dark:border-white/10 dark:bg-white/[0.03] sm:px-12 sm:py-16"
+            className="relative mt-16 overflow-hidden rounded-2xl border border-line bg-surface-alt px-6 py-7 text-center dark:border-white/10 dark:bg-white/[0.03] sm:px-8 sm:py-9"
           >
             <div
               aria-hidden="true"
@@ -182,7 +182,7 @@ const DivulgacionPage: React.FC = () => {
             <span className="inline-flex items-center justify-center font-mono text-[10px] uppercase tracking-[0.24em] text-brand-purple dark:text-[#B9B2E8]">
               {t(`${base}.building.tag`)}
             </span>
-            <blockquote className="mx-auto mt-5 max-w-3xl font-display text-2xl font-medium leading-snug text-ink display-balance dark:text-white sm:text-[30px]">
+            <blockquote className="mx-auto mt-3 max-w-2xl font-display text-lg font-medium leading-snug text-ink display-balance dark:text-white sm:text-xl">
               {t(`${base}.building.body`)}
             </blockquote>
           </figure>

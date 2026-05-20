@@ -319,6 +319,7 @@
       "description": "Appearances in El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press and other national and international outlets."
     },
     "media": {
+      "badge": "Section",
       "title": "Outreach · workshops and events",
       "description": "Workshops, scientific conferences and student activities that bring research into the public space.",
       "cta": "View outreach activity"
