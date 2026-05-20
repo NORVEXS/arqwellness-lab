@@ -467,6 +467,7 @@
     "intro": "En ArqWellness entendemos la difusión como una responsabilidad esencial: compartir conocimiento, generar impacto social y promover una arquitectura que mejore la salud y el bienestar. A través de eventos, publicaciones, colaboraciones y presencia en medios, acercamos nuestros avances a la comunidad científica, profesional y ciudadana.",
     "galleryAlt": "Actividad de difusión del ArqWellness Lab {{n}}",
     "media": {
+      "tag": "Presencia en medios",
       "title": "Alcance mediático",
       "p1": "Tenemos una presencia sólida en medios nacionales, reflejo del compromiso de nuestro equipo con la divulgación científica y la transferencia de conocimiento.",
       "p2": "Entre los medios que han destacado nuestras iniciativas se encuentran El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press, entre muchos otros.",
@@ -480,8 +481,13 @@
       "media": { "value": "+70", "label": "Apariciones en medios" }
     },
     "building": {
+      "tag": "Nuestra visión",
       "title": "Construyendo bienestar desde la arquitectura",
       "body": "Cada paso que damos nace del deseo de transformar los espacios en lugares que cuiden de las personas. Nuestra investigación, nuestros proyectos y nuestras acciones reflejan una misma convicción: la arquitectura puede ser una herramienta poderosa para mejorar la salud, fomentar la conexión y crear entornos más humanos."
+    },
+    "gallery": {
+      "title": "En imágenes",
+      "intro": "Workshops, congresos, visitas y actividades de divulgación del laboratorio."
     },
     "follow": {
       "title": "Síguenos",

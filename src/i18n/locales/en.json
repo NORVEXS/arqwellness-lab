@@ -467,6 +467,7 @@
     "intro": "At ArqWellness we see outreach as an essential responsibility: sharing knowledge, generating social impact and promoting architecture that improves health and wellbeing. Through events, publications, collaborations and media presence, we bring our progress to the scientific, professional and public community.",
     "galleryAlt": "ArqWellness Lab outreach activity {{n}}",
     "media": {
+      "tag": "Media presence",
       "title": "Media reach",
       "p1": "We have a solid presence in national media, reflecting our team's commitment to science communication and knowledge transfer.",
       "p2": "Outlets that have featured our initiatives include El País, Faro de Vigo, Antena 3 Noticias, El Periódico, Europa Press, among many others.",
@@ -480,8 +481,13 @@
       "media": { "value": "+70", "label": "Media appearances" }
     },
     "building": {
+      "tag": "Our vision",
       "title": "Building wellbeing through architecture",
       "body": "Every step we take stems from the desire to turn spaces into places that care for people. Our research, our projects and our actions reflect a single conviction: architecture can be a powerful tool to improve health, foster connection and create more human environments."
+    },
+    "gallery": {
+      "title": "In pictures",
+      "intro": "Workshops, conferences, visits and outreach activities of the lab."
     },
     "follow": {
       "title": "Follow us",
