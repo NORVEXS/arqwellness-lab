@@ -17,7 +17,10 @@ import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
+// FormSubmit.co — envío gratuito sin backend ni clave. La primera vez
+// envía un correo de activación a esta dirección; al confirmarlo una vez,
+// todos los mensajes posteriores se entregan automáticamente.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/tep130@us.es';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -30,8 +33,27 @@ const Contact: React.FC = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    if (!WEB3FORMS_ACCESS_KEY) {
-      // Fallback to mailto when no API key configured
+    // Metadatos para FormSubmit
+    data.append('_subject', `[Web ArqWellness] ${data.get('subject') || 'Nuevo mensaje'}`);
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
+
+    setStatus('sending');
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && (json.success === 'true' || json.success === true)) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      // Último recurso: abrir el cliente de correo del usuario
       const name = data.get('name') ?? '';
       const subject = data.get('subject') ?? 'Contacto desde ArqWellness Lab';
       const message = data.get('message') ?? '';
@@ -41,28 +63,6 @@ const Contact: React.FC = () => {
       )}&body=${body}`;
       setStatus('success');
       form.reset();
-      return;
-    }
-
-    setStatus('sending');
-    data.append('access_key', WEB3FORMS_ACCESS_KEY);
-    data.append('from_name', 'ArqWellness Lab — Web');
-    data.append('subject', String(data.get('subject') ?? 'Contacto desde la web'));
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data,
-      });
-      const json = await res.json();
-      if (json.success) {
-        setStatus('success');
-        form.reset();
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
     }
   };
 
@@ -217,8 +217,15 @@ const Contact: React.FC = () => {
               </header>
 
               <form onSubmit={onSubmit} className="mt-7 grid gap-4 sm:grid-cols-2">
-                {/* Honeypot */}
-                <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} />
+                {/* Honeypot anti-spam (FormSubmit) */}
+                <input
+                  type="text"
+                  name="_honey"
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
 
                 <label className="text-left sm:col-span-1">
                   <span className="eyebrow !text-ink-mute dark:!text-white/55">{t('contact.form.name')}</span>

@@ -18,6 +18,10 @@ const LegalPage: React.FC<{ slug: LegalSlug }> = ({ slug }) => {
   const blocks = t(`${base}.blocks`, { returnObjects: true }) as LegalBlock[];
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [base]);
+
+  useEffect(() => {
     document.title = `${t(`${base}.title`)} · ArqWellness Lab`;
   }, [t, base]);
 

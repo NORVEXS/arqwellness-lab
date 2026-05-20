@@ -69,6 +69,10 @@ const DivulgacionPage: React.FC = () => {
   const base = 'divulgacion';
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     document.title = `${t(`${base}.title`)} · ArqWellness Lab`;
   }, [t]);
 

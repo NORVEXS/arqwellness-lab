@@ -22,5 +22,7 @@ export function navigate(path: string) {
   }
   window.history.pushState({}, '', path);
   window.dispatchEvent(new PopStateEvent('popstate'));
-  window.scrollTo({ top: 0 });
+  // Scroll inmediato + tras el render (móvil ignora el inmediato si el DOM aún no cambió)
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => window.scrollTo(0, 0));
 }
