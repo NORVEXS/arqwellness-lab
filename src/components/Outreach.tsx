@@ -124,12 +124,12 @@ const Outreach: React.FC = () => {
               navigate('/divulgacion');
             }}
             aria-label={t('outreach.media.title')}
-            className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-purple/25 bg-gradient-to-br from-brand-purple/[0.10] via-brand-blue/[0.05] to-transparent p-7 shadow-medium ring-1 ring-brand-purple/10 transition-all duration-450 ease-out-quart hover:-translate-y-1.5 hover:border-brand-purple/50 hover:shadow-large dark:border-brand-purple/40 dark:from-brand-purple/25 dark:via-brand-blue/10 dark:to-transparent dark:ring-brand-purple/20"
+            className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-purple/20 bg-gradient-to-br from-brand-purple/[0.07] via-brand-purple/[0.02] to-transparent p-7 shadow-medium ring-1 ring-brand-purple/[0.07] transition-all duration-450 ease-out-quart hover:-translate-y-1.5 hover:border-brand-purple/40 hover:shadow-large dark:border-brand-purple/30 dark:from-brand-purple/[0.16] dark:via-brand-purple/[0.04] dark:to-transparent dark:ring-brand-purple/15"
           >
             {/* halo decorativo */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-gradient-to-br from-brand-purple to-brand-blue opacity-[0.12] blur-xl transition-opacity duration-500 group-hover:opacity-25"
+              className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-brand-purple opacity-[0.08] blur-xl transition-opacity duration-500 group-hover:opacity-[0.16]"
             />
             <header className="flex items-start justify-between gap-3">
               <span

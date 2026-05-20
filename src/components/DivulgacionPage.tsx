@@ -168,21 +168,15 @@ const DivulgacionPage: React.FC = () => {
 
         {/* Construyendo bienestar — manifiesto */}
         <Reveal>
-          <figure
-            className="relative mt-16 overflow-hidden rounded-2xl border border-line bg-surface-alt px-6 py-7 text-center dark:border-white/10 dark:bg-white/[0.03] sm:px-8 sm:py-9"
-          >
-            <div
+          <figure className="mx-auto mt-16 max-w-2xl text-center">
+            <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 -z-10 opacity-[0.5]"
-              style={{
-                background:
-                  'radial-gradient(60% 80% at 50% 0%, rgba(59, 48, 130, 0.10) 0%, transparent 65%)',
-              }}
+              className="mx-auto block h-px w-10 bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"
             />
-            <span className="inline-flex items-center justify-center font-mono text-[10px] uppercase tracking-[0.24em] text-brand-purple dark:text-[#B9B2E8]">
+            <span className="mt-5 inline-block font-mono text-[10px] uppercase tracking-[0.24em] text-brand-purple dark:text-[#B9B2E8]">
               {t(`${base}.building.tag`)}
             </span>
-            <blockquote className="mx-auto mt-3 max-w-2xl font-display text-lg font-medium leading-snug text-ink display-balance dark:text-white sm:text-xl">
+            <blockquote className="mt-3 font-display text-xl font-medium leading-snug text-ink display-balance dark:text-white sm:text-2xl">
               {t(`${base}.building.body`)}
             </blockquote>
           </figure>
