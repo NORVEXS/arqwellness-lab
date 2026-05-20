@@ -339,7 +339,8 @@
       "all": "Todos",
       "standard": "Normas",
       "tool": "Herramientas",
-      "workshop": "Workshops"
+      "workshop": "Workshops",
+      "video": "Vídeos"
     },
     "categories": {
       "standard": "Norma técnica",
@@ -351,6 +352,10 @@
     },
     "open": "Abrir recurso",
     "items": {
+      "youtube": {
+        "title": "Canal de YouTube — vídeos didácticos",
+        "meta": "Listas de reproducción del laboratorio: clases, charlas y divulgación sobre iluminación, calidad del aire y eficiencia energética."
+      },
       "une171380": {
         "title": "UNE 171380:2024 — Medición continua de CO₂ en interiores",
         "meta": "Norma técnica española que define el sistema de medición continua y registro de la concentración de CO₂ en espacios interiores."

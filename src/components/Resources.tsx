@@ -11,6 +11,7 @@ import {
   Lightbulb,
   Sun,
   HeartPulse,
+  Youtube,
 } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
@@ -27,6 +28,7 @@ const ICONS: Record<ResourceIcon, React.ElementType> = {
   Lightbulb,
   Sun,
   HeartPulse,
+  Youtube,
 };
 
 const CATEGORY_TONE: Record<ResourceCategory, string> = {
@@ -45,7 +47,7 @@ const CATEGORY_TONE: Record<ResourceCategory, string> = {
 };
 
 type Filter = 'all' | ResourceCategory;
-const FILTERS: Filter[] = ['all', 'standard', 'tool', 'workshop'];
+const FILTERS: Filter[] = ['all', 'standard', 'tool', 'workshop', 'video'];
 
 const Resources: React.FC = () => {
   const { t } = useTranslation();

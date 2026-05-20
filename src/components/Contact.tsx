@@ -22,7 +22,7 @@ import Reveal from './ui/Reveal';
 // copiar la "Access Key" que llega a esa bandeja y pegarla aquí abajo.
 // La clave es pública por diseño (solo reenvía al correo registrado), así que
 // es seguro dejarla en el código. Mientras esté vacía, el formulario usa mailto.
-const WEB3FORMS_ACCESS_KEY = '';
+const WEB3FORMS_ACCESS_KEY = '5627b08d-605c-4cc2-a8f6-7316ede5d3e6';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 

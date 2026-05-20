@@ -339,7 +339,8 @@
       "all": "All",
       "standard": "Standards",
       "tool": "Tools",
-      "workshop": "Workshops"
+      "workshop": "Workshops",
+      "video": "Videos"
     },
     "categories": {
       "standard": "Technical standard",
@@ -351,6 +352,10 @@
     },
     "open": "Open resource",
     "items": {
+      "youtube": {
+        "title": "YouTube channel — didactic videos",
+        "meta": "The lab's playlists: lectures, talks and outreach on lighting, indoor air quality and energy efficiency."
+      },
       "une171380": {
         "title": "UNE 171380:2024 — continuous indoor CO₂ measurement",
         "meta": "Spanish technical standard defining continuous measurement and CO₂ concentration logging in indoor spaces."

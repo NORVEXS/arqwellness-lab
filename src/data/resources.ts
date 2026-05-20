@@ -15,7 +15,8 @@ export type ResourceIcon =
   | 'Wind'
   | 'Lightbulb'
   | 'Sun'
-  | 'HeartPulse';
+  | 'HeartPulse'
+  | 'Youtube';
 
 export interface Resource {
   id: string;
@@ -27,6 +28,14 @@ export interface Resource {
 }
 
 export const RESOURCES: Resource[] = [
+  {
+    id: 'youtube-channel',
+    category: 'video',
+    icon: 'Youtube',
+    titleKey: 'resources.items.youtube.title',
+    metaKey: 'resources.items.youtube.meta',
+    href: 'https://www.youtube.com/@Campano/playlists',
+  },
   {
     id: 'une-171380',
     category: 'standard',
