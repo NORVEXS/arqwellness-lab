@@ -5,7 +5,7 @@ import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import Reveal from './ui/Reveal';
 import equipoA from '../assets/images/equipo-arqwellness-multidisciplinar.webp';
-import equipoB from '../assets/images/equipo-arqwellness-trayectoria.webp';
+import equipoB from '../assets/images/equipo-arqwellness-quienes-somos-2.webp';
 import hemodialisisBlower from '../assets/images/ensayo-hemodialisis-blower-door.webp';
 import cabinaIluminacionDetalle from '../assets/images/cabina-iluminacion-arqwellness-detalle.webp';
 import edificiosExistentes from '../assets/images/estrategias-pasivas-edificios.webp';

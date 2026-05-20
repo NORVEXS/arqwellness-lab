@@ -109,13 +109,13 @@ const DivulgacionPage: React.FC = () => {
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <figure className="group relative overflow-hidden rounded-3xl border border-line shadow-large ring-1 ring-black/[0.03] dark:border-white/10 dark:ring-white/5">
+            <figure className="group overflow-hidden rounded-3xl border border-line bg-surface-alt shadow-large ring-1 ring-black/[0.03] dark:border-white/10 dark:bg-white/[0.03] dark:ring-white/5">
               <img
                 src={portada}
                 alt={t(`${base}.media.imageAlt`)}
                 loading="eager"
                 decoding="async"
-                className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 ease-out-quart group-hover:scale-[1.04]"
+                className="h-auto w-full object-contain transition-transform duration-700 ease-out-quart group-hover:scale-[1.03]"
               />
             </figure>
           </Reveal>
@@ -168,11 +168,21 @@ const DivulgacionPage: React.FC = () => {
 
         {/* Construyendo bienestar — manifiesto */}
         <Reveal>
-          <figure className="mt-20 border-l-2 border-brand-purple/40 pl-6 sm:pl-8">
-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-brand-purple dark:text-[#B9B2E8]">
+          <figure
+            className="relative mt-20 overflow-hidden rounded-3xl border border-line bg-surface-alt px-8 py-14 text-center dark:border-white/10 dark:bg-white/[0.03] sm:px-12 sm:py-16"
+          >
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 -z-10 opacity-[0.5]"
+              style={{
+                background:
+                  'radial-gradient(60% 80% at 50% 0%, rgba(59, 48, 130, 0.10) 0%, transparent 65%)',
+              }}
+            />
+            <span className="inline-flex items-center justify-center font-mono text-[10px] uppercase tracking-[0.24em] text-brand-purple dark:text-[#B9B2E8]">
               {t(`${base}.building.tag`)}
             </span>
-            <blockquote className="mt-4 max-w-3xl font-display text-2xl font-medium leading-snug text-ink display-balance dark:text-white sm:text-[28px]">
+            <blockquote className="mx-auto mt-5 max-w-3xl font-display text-2xl font-medium leading-snug text-ink display-balance dark:text-white sm:text-[30px]">
               {t(`${base}.building.body`)}
             </blockquote>
           </figure>
