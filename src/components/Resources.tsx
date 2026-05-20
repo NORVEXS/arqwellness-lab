@@ -47,7 +47,7 @@ const CATEGORY_TONE: Record<ResourceCategory, string> = {
 };
 
 type Filter = 'all' | ResourceCategory;
-const FILTERS: Filter[] = ['all', 'standard', 'tool', 'workshop', 'video'];
+const FILTERS: Filter[] = ['all', 'standard', 'manual', 'tool', 'workshop', 'video'];
 
 const Resources: React.FC = () => {
   const { t } = useTranslation();

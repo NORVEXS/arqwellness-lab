@@ -338,6 +338,7 @@
     "filters": {
       "all": "Todos",
       "standard": "Normas",
+      "manual": "Manuales",
       "tool": "Herramientas",
       "workshop": "Workshops",
       "video": "Vídeos"
