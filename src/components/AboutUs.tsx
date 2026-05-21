@@ -10,6 +10,7 @@ import hemodialisisBlower from '../assets/images/ensayo-hemodialisis-blower-door
 import cabinaIluminacionDetalle from '../assets/images/cabina-iluminacion-arqwellness-detalle.webp';
 import edificiosExistentes from '../assets/images/estrategias-pasivas-edificios.webp';
 import sistemasRecuperacion from '../assets/images/sistemas-recuperacion-calor-edificios.webp';
+import labEspacioCentral from '../assets/images/laboratorio-espacio-central.webp';
 import { LEADS, SENIORS, OTHERS } from '../data/team';
 import TeamCard from './ui/TeamCard';
 
@@ -77,15 +78,12 @@ const AboutUs: React.FC = () => {
       <div className="mt-20 grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
         <Reveal className="lg:col-span-7">
           <figure className="overflow-hidden rounded-2xl bg-surface-dark shadow-large dark:ring-1 dark:ring-white/10">
-            <video
-              src="/iluminacion-laboratorio.mp4"
+            <img
+              src={labEspacioCentral}
+              alt={t('about.blocks.video.label')}
+              loading="lazy"
+              decoding="async"
               className="aspect-video w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-label={t('about.blocks.video.label')}
             />
           </figure>
         </Reveal>
