@@ -37,7 +37,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Inter', ...defaultTheme.fontFamily.sans],
+        display: ['"Bricolage Grotesque"', 'Inter', ...defaultTheme.fontFamily.sans],
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         body: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
