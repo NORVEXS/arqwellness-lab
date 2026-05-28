@@ -37,7 +37,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Bricolage Grotesque"', 'Inter', ...defaultTheme.fontFamily.sans],
+        display: ['"Source Serif 4"', 'Georgia', 'serif'],
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         body: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
